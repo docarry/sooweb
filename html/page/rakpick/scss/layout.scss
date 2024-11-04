@@ -1,0 +1,594 @@
+@charset "UTF-8";
+@import './_var.scss';
+
+
+// 모바일 헤더
+#m-header{
+    background-color: #fff;
+    border-bottom: solid 1px #ccc;
+    position: relative;
+    z-index: 50;
+    &.fix{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+    }
+    .m-headerBox{
+        width: 100%;
+        position: relative;
+        .m-headerList{
+            .iosBack{
+                width: 22px;
+                height: 22px;
+                border-top: solid 4px #333;
+                border-left: solid 4px #333;
+                transform: rotate(-45deg) translate(-10px, -10px);
+                border-radius: 3px;
+            }
+            h2{
+                a{
+                    display: block;
+                    img{
+                        max-width: 200px;
+                        width: 100%;
+                    }
+                }
+                .blind{
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    clip: rect(0 0 0 0);
+                    margin: -1px;
+                    overflow: hidden;
+                }
+            }
+
+            // 네비 햄버거 버튼
+            .navBtn{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                border: 0;
+                background-color: transparent;
+                z-index: 60;
+                transition:all 0.4s linear;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                &.slideOn{
+                    right: 20px;
+                    span{
+                        &:nth-child(1){
+                            transform: rotate(45deg);
+                            margin: 15px -8px -8px -8px;
+                        }
+                        &:nth-child(2){
+                            display: none;
+                        }
+                        &:nth-child(3){
+                            transform: rotate(-45deg);
+                        }
+                    }
+                    &+.m-nav{
+                        transform: translateY(0);
+                    }
+                }
+                span{
+                    display: block;
+                    width: 100%;
+                    height: 4px;
+                    background-color: #333;
+                    margin: 4px 0;
+                    border-radius: 2px;
+                }
+            }
+            .m-nav{
+                position: absolute;
+                width: 100%;
+                top: 99%;
+                left: 0;
+                z-index: 40;
+                background-color: #fff;
+                transform: translateY(-1200px);
+                .m-utility{
+                    gap: 8rem;
+                    li{
+                        .m-icon01{
+                            display: block;
+                            width: 70%;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .m-icon02{
+                            display: block;
+                            width: 70%;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        span{
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .m-depth01{
+                    > li{
+                        position: relative;
+                        &:nth-child(1) a::after,
+                        &:nth-child(4) a::after,
+                        &:nth-child(5) a::after{
+                            display: none;
+                        }
+                        > a{
+                            font-size: 1.6rem;
+                            font-weight: 500;
+                            color: #333;
+                            line-height: 2.6;
+                            position: relative;
+                        }
+                        span{
+                            a{
+                            font-size: 1.6rem;
+                            font-weight: 500;
+                            color: #333;
+                            line-height: 2.6;
+                            }
+                        }
+                        .m-depth02{
+                            height: 0;
+                            overflow: hidden;
+                            transition: height 0.4s ease-in-out;
+                            position: relative;
+                            width: 100%;
+                            top: 0;
+                            left: 0;
+                            background-color: #fff;
+                            &.open{
+                                height: auto;
+                                overflow: hidden;
+                            }
+                            li{
+                                a{
+                                    font-size: 1.2rem;
+                                    color: #333;
+                                    line-height: 2.6;
+                                }
+                            }
+                        }
+                    }
+                    .toggle-btn{
+                        display: inline-block;
+                        content: ''; /* 가상 요소와 같은 효과 */
+                        cursor: pointer;
+                        margin-left: 10px; /* 링크와 간격 조정 */
+                        width: 1rem;
+                        height: 1rem;
+                        border-right: solid 2px #333;
+                        border-bottom: solid 2px #333;
+                        transform: rotate(45deg);
+                        transition: all .4s ease-in-out;
+                        &.active {
+                            transform: rotate(225deg); /* 화살표 회전 */
+                            margin-top: 1rem; /* 추가 마진 */
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// PC 헤더
+#header{
+    position: relative;
+    background-color: #fff;
+    z-index: 40;
+    border-bottom: solid 1px #ccc;
+    &.fix{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+    }
+    .pc-header{
+        max-width: 1440px;
+        width: 100%;
+        h1{
+            a{
+                display: block;
+            }
+            .blind{
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                clip: rect(0 0 0 0);
+                margin: -1px;
+                overflow: hidden;
+            }
+        }
+        nav{
+            &:hover ~ .menuCover{
+                height: 150px;
+            }
+            .depth01{
+                &:hover .depth02{
+                    height: 150px;
+                }
+                > li{
+                    position: relative;
+                    &:hover > a{
+                        color: $mainColor01;
+                    }
+                    > a{
+                        display: block;
+                        line-height: 3;
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                        color: #505050;
+                        width: max-content;
+                    }
+                    .depth02{
+                        position: absolute;
+                        width: 100%;
+                        text-align: center;
+                        top: 100%;
+                        left: 0;
+                        height: 0;
+                        overflow: hidden;
+                        transition: all 0.6s ease-in-out;
+                        z-index: 30;
+                        background-color: $subColor04;
+                        li{
+                            position: relative;
+                            &:hover a{
+                                color: $mainColor01;
+                                text-decoration: underline;
+                            }
+                            a{
+                                display: block;
+                                line-height: 2.4;
+                                font-size: 1.15rem;
+                                color: $textDetail;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .utility{
+            li{
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                        min-width: 28px;
+                    }
+                }
+            }
+        }
+        .menuCover{
+            height: 0;
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            z-index: 20;
+            overflow: hidden;
+            transition: all 0.6s ease-in-out;
+            background-color: $subColor04;
+        }
+        #searchModal{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 22rem;
+            background-color: #fff;
+            z-index: 10;
+            opacity: 0; /* 처음에는 보이지 않음 */
+            transform: translateY(-2rem); /* 시작 위치를 위쪽으로 약간 이동 */
+            transition: opacity 0.6s ease, transform 0.6s ease; /* 부드러운 전환 */
+            visibility: hidden; /* 처음에는 보이지 않음 */
+            &.active {
+                opacity: 1; /* 완전히 보이도록 */
+                transform: translateY(0); /* 제자리에 오도록 */
+                visibility: visible; /* 모달이 보이도록 설정 */
+            }
+            .searchPopup{
+                max-width: 1440px;
+                width: 100%;
+                margin: 6rem auto;
+                .searchBox{
+                    margin: 0 auto;
+                    #searchText{
+                        border: solid 2px #333;
+                        width: 30rem;
+                        font-size: 1rem;
+                        text-indent: 3rem;
+                        border-radius: 3rem;
+                        height: 2.8rem;
+                        color: #333;
+                        outline: none;
+                        &::placeholder{
+                            color: $subPrice;
+                        }
+                        &:focus{
+                            border-color: $mainColor01;
+                        }
+                    }
+                }
+                .searchList{
+                    display: flex;
+                    font-size: 1rem;
+                    gap: 2rem;
+                    margin-top: 1.4rem;
+                    justify-content: center;
+                    li{
+                        a{
+                            display: block;
+                            color: $textDetail;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#searchModalBg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 25;
+    background-color: rgba(0,0,0, .5);
+    opacity: 0; /* 처음에는 보이지 않음 */
+    visibility: hidden; /* 처음에는 보이지 않음 */
+    transition: opacity 0.6s ease; /* 부드러운 전환 */
+    &.active {
+        opacity: 1; /* 완전히 보이도록 */
+        visibility: visible; /* 배경이 보이도록 설정 */
+    }
+}
+
+
+// PC 푸터
+#footer{
+    .footerContent{
+        @include containerSize1;
+        margin: 0 auto;
+        padding: 8rem 1rem;
+        .footerTop{
+            h3{
+                width: 200px;
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .infoList{
+                width: 100%;
+                .footerList{
+                    gap: 2rem;
+                    margin-left: 2rem;
+                    li{
+                        a{
+                            display: block;
+                            font-size: 1rem;
+                            color: $textDetail;
+                            font-weight: 700;
+                        }
+                    }
+                }
+                .snsList{
+                    li{
+                        a{
+                            display: block;
+                            display: flex;
+                            justify-content: flex-end;
+                            img{
+                                width: 70%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footerBottom{
+            .companyInfo{
+                .companyInfo01{
+                    color: $textDetail;
+                    font-size: 1rem;
+                    line-height: 2.2rem;
+                    margin-top: 2rem;
+                }
+                .copyright{
+                    color: $textDetail;
+                    font-size: 1rem;
+                    margin-top: 2rem;
+                }
+            }
+            .companyInfo02{
+                .cs{
+                    display: block;
+                    font-size: 1.6rem;
+                    color: $textDetail;
+                    font-weight: 700;
+                    line-height: 2.2rem;
+                    text-align: right;
+                    margin-top: 2rem;
+                }
+                .csNumber{
+                    display: block;
+                    font-size: 3rem;
+                    color: $mainColor01;
+                    font-weight: 900;
+                    line-height: 3.2rem;
+                    text-align: right;
+                }
+                .timeInfo{
+                    font-size: 1rem;
+                    color: $textDetail;
+                    line-height: 2.2rem;
+                    margin-top: 1rem;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+// 모바일 푸터
+#m-footer{
+    .footerContent{
+        @include containerSize1;
+        margin: 0 auto;
+        padding: 8rem 1rem;
+        h3{
+            width: 200px;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .infoList{
+            width: 100%;
+            gap: 1rem;
+            padding: 1rem;
+            .footerList{
+                gap: 1rem;
+                li{
+                    a{
+                        display: block;
+                        font-size: 1rem;
+                        color: $textDetail;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .snsList{
+                li{
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: flex-end;
+                        img{
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+        .companyInfo{
+            .companyInfo01{
+                color: $textDetail;
+                font-size: 1rem;
+                line-height: 2.2rem;
+                margin-top: 1rem;
+            }
+            .copyright{
+                color: $textDetail;
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+        }
+        .companyInfo02{
+            .cs{
+                display: block;
+                font-size: 1.6rem;
+                color: $textDetail;
+                font-weight: 700;
+                line-height: 2.2rem;
+                margin-top: 2rem;
+            }
+            .csNumber{
+                display: block;
+                font-size: 3rem;
+                color: $mainColor01;
+                font-weight: 900;
+                line-height: 3.2rem;
+            }
+            .timeInfo{
+                font-size: 1rem;
+                color: $textDetail;
+                line-height: 2.2rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+
+// fix Button
+#fixBtn{
+    position: fixed;
+    width: 3rem;
+    height: 8rem;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 2;
+    display: none !important;
+    &.btnShow{
+        display: flex !important;
+    }
+    .kakaoBtn{
+        background-color: $subColor04;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        box-shadow: 0 0 0.4rem #ccc;
+        transition: all .4s ease-in-out;
+        &:hover{
+            background-color: $mainColor01;
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            img{
+                width: 60%;
+            }
+        }
+    }
+    .topBtn{
+        width: 3rem;
+        height: 3rem;
+        box-shadow: 0 0 0.4rem #ccc;
+        transition: all .4s ease-in-out;
+        background-color: $subColor04;
+        border-radius: 50%;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            &:hover{
+                background-color: $mainColor01;
+            }
+            &:hover span{
+                border-color: $subColor04;
+            }
+            span{
+                border-top: solid 3px #275902;
+                border-right: solid 3px #275902;
+                display: block;
+                width: 1rem;
+                height: 1rem;
+                transform: rotate(-45deg) translate(-2px, 3px);
+                transition: all .4s ease-in-out;
+            }
+        }
+    }
+}

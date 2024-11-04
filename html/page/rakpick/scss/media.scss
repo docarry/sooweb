@@ -1,0 +1,1706 @@
+// 미디어쿼리
+@media screen and (max-width: 1660px) {
+    #main{
+        #dataInfo{
+            .dataContent{
+                .dataBg{
+                    .dataList{
+                        gap: 6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1280px) {
+    #header{
+        nav{
+            &:hover ~ .menuCover{
+                height: 120px;
+            }
+            .depth01{
+                &:hover .depth02{
+                    height: 120px;
+                }
+                > li{
+                    > a{
+                        font-size: 1.15rem;
+                        line-height: 2.4;
+                    }
+                    .depth02{
+                        li{
+                            a{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #main{
+        #mainBanner{
+            height: 80vh;
+            .swiper{
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .slideText{
+                            top: 16%;
+                            h3{
+                                font-size: 3.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #rankingContainer{
+            .rankingContent{
+                .rankingBox{
+                    > li{
+                        &::before{
+                            line-height: 1.7;
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+        #subscriptionContainer{
+            .subscriptionContent{
+                padding: 0 1rem;
+                .subscriptionBox{
+                    > li{
+                        .subscriptionName{
+                            font-size: 1.6rem;
+                            margin-top: 1rem;
+                        }
+                        .price{
+                            li{
+                                .price01{
+                                    font-size: 1.2rem;
+                                }
+                                .price02{
+                                    font-size: 2rem;
+                                }
+                                .price03{
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                        .inList{
+                            .inListBox{
+                                .wishIn{
+                                    span{}
+                                }
+                                .cartIn{
+                                    span{}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #dataInfo{
+            .dataContent{
+                .dataBg{
+                    height: 40vh;
+                    .dataList{
+                        gap: 5rem;
+                        > li{
+                            .data01,
+                            .data02,
+                            .data03{
+                                li{
+                                    .dataText01{
+                                        font-size: 1.6rem;
+                                    }
+                                    .dataText02{
+                                        font-size: 4rem;
+                                        span{
+                                            font-size: 2rem;
+                                        }
+                                    }
+                                    .dataText03{
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1102px) {
+    #main{
+        #rankingContainer{
+            .rankingContent{
+                .rankingBox{
+                    > li{
+                        .inList{
+                            padding: 0 40px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+    #main{
+        #rankingContainer{
+            .rankingContent{
+                .rankingBox{
+                    > li{
+                        &:hover .inList{
+                            bottom: 34%;
+                        }
+                        &::before{
+                            line-height: 1.35;
+                            font-size: 2rem;
+                            height: 12%;
+                        }
+                        ul{
+                            .userProduct{
+                                font-size: 1.2rem;
+                            }
+                        }
+                        .inList{
+                            .inListBox{
+                                width: 94%;
+                                padding: 10px 20px;
+                                .wishIn{
+                                    img{
+                                        width: 28%;
+                                    }
+                                    .inListText{
+                                        font-size: 1rem;
+                                    }
+                                }
+                                .inListLine{
+                                    margin: 0 16px;
+                                    height: 28px;
+                                }
+                                .cartIn{
+                                    img{
+                                        width: 36%;
+                                    }
+                                    .inListText{
+                                        font-size: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #coachingContainer{
+            .coachingInfo01{
+                .infoImg{
+                    gap: 4rem;
+                }
+            }
+        }
+    }
+    #footer{
+        .footerContent{
+            .footerTop{
+                .infoList{
+                    .footerList{
+                        gap: 1rem;
+                        margin-left: 1rem;
+                    }
+                    .snsList{
+                        width: 14rem;
+                        li{
+                            a{
+                                img{
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+    #main{
+        #mainBanner{
+            .swiper-button-next{
+                display: none;
+            }
+            .swiper-button-prev{
+                display: none;
+            }
+            .swiper{
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .slideText{
+                            top: 18%;
+                            .text01{
+                                font-size: 1.6rem;
+                            }
+                            h3{
+                                font-size: 3.3rem;
+                            }
+                            .text02{
+                                font-size: 1.6rem;
+                            }
+                            a{
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #rankingContainer{
+            .rankingContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 70px;
+                }
+                .rankingBox{
+                    > li{
+                        &:hover .inList{
+                            bottom: 36%;
+                        }
+                        &::before{
+                            line-height: 1.5;
+                            font-size: 1.2rem;
+                            height: 11%;
+                        }
+                        ul{
+                            .userProduct{
+                                font-size: 1rem;
+                            }
+                        }
+                        .inList{
+                            padding: 0 50px 0;
+                            .inListBox{
+                                padding: 8px 12px;
+                                .wishIn{
+                                    img{
+                                        width: 30%;
+                                    }
+                                    .inListText{
+                                        font-size: .8rem;
+                                        margin-left: 4px;
+                                    }
+                                }
+                                .inListLine{
+                                    margin: 0 10px;
+                                    height: 20px;
+                                }
+                                .cartIn{
+                                    img{
+                                        width: 35%;
+                                    }
+                                    .inListText{
+                                        font-size: .8rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #coachingContainer{
+            h2{
+                font-size: 2.2rem;
+            }
+            .subTitle{
+                font-size: 1.2rem;
+                padding: 10px 0 70px;
+            }
+        }
+        #reviewContainer{
+            .reviewContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 70px;
+                }
+                #review-Swiper{
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            .reviewBox{
+                                .reviewTitle{
+                                    a{
+                                    display: block;
+                                    width: 100%; /*반드시 위드값이 존재 해야함*/
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #subscriptionContainer{
+            .subscriptionContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 70px;
+                }
+                padding: 0 1rem;
+                .subscriptionBox{
+                    > li{
+                        .subscriptionName{
+                            font-size: 1.2rem;
+                            margin-top: 1rem;
+                        }
+                        .price{
+                            li{
+                                .price01{
+                                    font-size: 0.8rem;
+                                }
+                                .price02{
+                                    font-size: 1.6rem;
+                                }
+                                .price03{
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                        .inList{
+                            .inListBox{
+                                .wishIn{
+                                    span{}
+                                }
+                                .cartIn{
+                                    span{}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #instagramContainer{
+            .instagramContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 70px;
+                }
+            }
+        }
+        #dataInfo{
+            .dataContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 70px;
+                }
+                .dataBg{
+                    height: 30vh;
+                    .dataList{
+                        gap: 6rem;
+                        > li{
+                            .data01,
+                            .data02,
+                            .data03{
+                                li{
+                                    .dataText01{
+                                        font-size: 1rem;
+                                    }
+                                    .dataText02{
+                                        font-size: 2.8rem;
+                                        span{
+                                            font-size: 1rem;
+                                        }
+                                    }
+                                    .dataText03{
+                                        font-size: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #footer{
+        .footerContent{
+            .footerTop{
+                .infoList{
+                    .footerList{
+                        gap: 1rem;
+                        margin-left: 1rem;
+                    }
+                    .snsList{
+                        width: 14rem;
+                        li{
+                            a{
+                                img{
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    #main{
+        #coachingContainer{
+            .coachingInfo01{
+                .infoImg{
+                    gap: 2.6rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 860px) {
+    .disN{
+        display: block;
+    }
+    .disB{
+        display: none;
+    }
+    #main{
+        #coachingContainer{
+            .coachingInfo01{
+                .coachingText01{
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                }
+                .coachingText02{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .col-md-4{
+        width: 50%;
+    }
+
+    .disN02{
+        display: block;
+    }
+
+    #m-header{
+        .m-headerBox{
+            .m-headerList{
+                .m-nav{
+                    .m-utility{
+                        gap: 90px;
+                    }
+                }
+            }  
+        }
+    }
+    #main{
+        #mainBanner{
+            height: 70vh;
+            .swiper{
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .slideText{
+                            top: 16%;
+                            .text01{
+                                font-size: 1.45rem;
+                            }
+                            h3{
+                                font-size: 2.3rem;
+                                font-weight: 700;
+                            }
+                            .text02{
+                                font-size: 1.3rem;
+                            }
+                            a{
+                                font-size: 1.2rem;
+                                span{
+                                    width: 12px;
+                                    height: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #rankingContainer{
+            margin-top: 120px;
+            .rankingContent{
+                h2{
+                    font-size: 2rem;
+                }
+                .subTitle{
+                    font-size: 1.1rem;
+                    padding: 10px 0 60px;
+                }
+                .rankingBox{
+                    > li{
+                        &::before{
+                            line-height: 1.8;
+                            font-size: 1.4rem;
+                        }
+                        .inList{
+                            padding: 0 70px 0;
+                            .inListBox{
+                                .inListLine{
+                                    margin: 0 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #coachingContainer{
+            h2{
+                font-size: 2rem;
+            }
+            .subTitle{
+                font-size: 1.1rem;
+                padding: 10px 0 60px;
+            }
+            .coachingInfo01{
+                .coachingText01{
+                    font-size: 2.2rem;
+                }
+                .coachingText02{
+                    font-size: 1.6rem;
+                }
+                .infoImg{
+                    li{
+                        img{
+                            width: 70%;
+                        }
+                        .infoText{
+                            font-size: 1.4rem;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+            .coachingInfo02{
+                .coachingText03{
+                    font-size: 1.6rem;
+                }
+            }
+            .coachingBtn{
+                width: 500px;
+                a{
+                    font-size: 1.8rem;
+                    &::after{
+                        width: 16px;
+                        height: 16px;
+                        border-top: solid 3px #fff;
+                        border-left: solid 3px #fff;
+                    }
+                }
+            }
+        }
+        #reviewContainer{
+            .reviewContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 70px;
+                }
+                #review-Swiper{
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            .reviewBox{
+                                > li{
+                                    > a{
+                                        .reviewBoxCover{
+                                            .coverText{
+                                                font-size: 1.6rem;
+                                                img{
+                                                    width: 1.4rem;
+                                                    margin-left: 6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .user-ns{
+                                        padding: 1rem 0 .6rem;
+                                        li{
+                                            a{
+                                                img{
+                                                    width: 2.6rem;
+                                                }
+                                                span{
+                                                    margin-left: .8rem;
+                                                    font-size: 1.4rem;
+                                                }
+                                            }
+                                            span{
+                                                margin-left: .4rem;
+                                                font-size: 1.4rem;
+                                            }
+                                        }
+                                    }
+                                }
+                                .reviewTitle{
+                                    padding: 0 1rem 0rem;
+                                    a{
+                                        font-weight: 600;
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                                .reviewText{
+                                    padding: 1rem 1rem 0;
+                                    a{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                                .reviewDate{
+                                    padding: 1rem 1rem 2rem;
+                                    a{
+                                        font-size: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #subscriptionContainer{
+            .subscriptionContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 70px;
+                }
+                .subscriptionBox{
+                    > li{
+                        .subscriptionName{
+                            font-size: .8rem;
+                            margin-top: 1rem;
+                        }
+                        .price{
+                            li{
+                                .price01{
+                                    font-size: 0.8rem;
+                                }
+                                .price02{
+                                    font-size: 1.2rem;
+                                }
+                                .price03{
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                        .inList{
+                            .inListBox{
+                                .wishIn{
+                                    span{}
+                                }
+                                .cartIn{
+                                    span{}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #instagramContainer{
+            .instagramContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 70px;
+                }
+            }
+        }
+        #dataInfo{
+            .dataContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 70px;
+                }
+                .dataBg{
+                    height: 26vh;
+                    .dataList{
+                        gap: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 616px) {
+    #main{
+        #rankingContainer{
+            .rankingContent{
+                .rankingBox{
+                    > li{
+                        .inList{
+                            padding: 0 50px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #m-footer{
+        .footerContent{
+            padding: 5rem 1rem;
+            h3{
+                width: 200px;
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .infoList{
+                width: 100%;
+                gap: 1rem;
+                padding: 1rem;
+                .footerList{
+                    gap: 1rem;
+                    li{
+                        a{
+                            display: block;
+                            font-size: .6rem;
+                        }
+                    }
+                }
+            }
+            .companyInfo{
+                .companyInfo01{
+                    font-size: .6rem;
+                    line-height: 1.4rem;
+                    margin-top: 1rem;
+                }
+                .copyright{
+                    font-size: .6rem;
+                    margin-top: 1rem;
+                }
+            }
+            .companyInfo02{
+                .cs{
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    margin-top: 2rem;
+                }
+                .csNumber{
+                    font-size: 2rem;
+                    line-height: 2rem;
+                }
+                .timeInfo{
+                    font-size: .6rem;
+                    line-height: 1.4rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    html, body{
+        font-size: 14px;
+    }
+    .col-md-4{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #m-header{
+        .m-headerBox{
+            .m-headerList{
+                .navBtn{
+                    top: 24px;
+                    span{
+                        width: 70%;
+                        margin: 2px 0;
+                    }
+                    &.slideOn{
+                        span{
+                            &:nth-child(1){
+                                transform: rotate(45deg);
+                                margin: 8px -8px -6px -8px;
+                            }
+                        }
+                    }
+                }
+                h1{
+                    a{
+                        img{
+                            width: 70%;
+                        }
+                    }
+                }
+                .m-nav{
+                    .m-depth01{
+                        > li{
+                            > a{
+                                font-size: 1.2rem;
+                            }
+                            span{
+                                a{
+                                    font-size: 1.2rem;
+                                }
+                            }
+                            .m-depth02{
+                                li{
+                                    a{
+                                        font-size: 1rem;                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .m-utility{
+                        gap: 50px;
+                        li{
+                            span{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+                .iosBack{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+    #main{
+        #mainBanner{
+            height: 60vh;
+            .swiper{
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .slideText{
+                            .text01{
+                                font-size: 1.6rem;
+                            }
+                            h3{
+                                font-size: 2.4rem;
+                                font-weight: 700;
+                            }
+                            .text02{
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #rankingContainer{
+            margin-top: 100px;
+            .rankingContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 50px;
+                }
+                .rankingBox{
+                    > li{
+                        &::before{
+                            font-size: 2.2rem;
+                        }
+                        &:hover .inList{
+                            bottom: 28%;
+                        }
+                        ul{
+                            .userImg{
+                                width: 12%;
+                            }
+                            .userProduct{
+                                font-size: 1.8rem;
+                            }
+                        }
+                        .inList{
+                            padding: 0 100px 0;
+                            .inListBox{
+                                padding: 10px 16px;
+                                .wishIn{
+                                    .inListText{
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                                .inListLine{
+                                    margin: 0 20px;
+                                    height: 30px;
+                                }
+                                .cartIn{
+                                    img{
+                                        width: 36%;
+                                    }
+                                    .inListText{
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #coachingContainer{
+            margin-top: 80px;
+            padding: 120px 0 80px;
+            h2{
+                font-size: 2.2rem;
+            }
+            .subTitle{
+                font-size: 1.2rem;
+                padding: 10px 0 50px;
+            }
+            .coachingInfo01{
+                .infoImg{
+                    gap: 2rem;
+                    padding: 4rem 0 4rem;
+                }
+                .coachingText01{
+                    padding: 4rem 0 3rem;
+                }
+            }
+            .coachingBtn{
+                width: 400px;
+                a{
+                    font-size: 1.6rem;
+                    &::after{
+                        width: 12px;
+                        height: 12px;
+                        border-top: solid 2px #fff;
+                        border-left: solid 2px #fff;
+                        transform: rotate(135deg) translate(-6px, -8px);
+                    }
+                }
+            }
+        }
+        #reviewContainer{
+            .reviewContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 50px;
+                }
+                #review-Swiper{
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            .reviewBox{
+                                > li{
+                                    > a{
+                                        .reviewBoxCover{
+                                            .coverText{
+                                                font-size: 2rem;
+                                                img{
+                                                    width: 1.8rem;
+                                                    margin-left: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .user-ns{
+                                        padding: 2rem 0 1rem;
+                                        li{
+                                            a{
+                                                img{
+                                                    width: 4rem;
+                                                }
+                                                span{
+                                                    margin-left: 1.2rem;
+                                                    font-size: 2rem;
+                                                }
+                                            }
+                                            span{
+                                                margin-left: .6rem;
+                                                font-size: 2rem;
+                                            }
+                                        }
+                                    }
+                                }
+                                .reviewTitle{
+                                    padding: 0 1.6rem 0rem;
+                                    a{
+                                        font-weight: 600;
+                                        font-size: 2rem;
+                                    }
+                                }
+                                .reviewText{
+                                    padding: 1rem 1.6rem 0;
+                                    a{
+                                        font-size: 2rem;
+                                    }
+                                }
+                                .reviewDate{
+                                    padding: 2rem 1.6rem 3rem;
+                                    a{
+                                        font-size: 1.6rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #subscriptionContainer{
+            .subscriptionContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 50px;
+                }
+                padding: 0 1rem;
+                .subscriptionBox{
+                    > li{
+                        width: 90%;
+                        margin: 0 auto 3rem;
+                        .subscriptionName{
+                            font-size: 1.6rem;
+                            margin-top: 1rem;
+                        }
+                        .price{
+                            li{
+                                .price01{
+                                    font-size: 1.2rem;
+                                }
+                                .price02{
+                                    font-size: 2rem;
+                                }
+                                .price03{
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                        .inList{
+                            .inListBox{
+                                .wishIn{
+                                    span{}
+                                }
+                                .cartIn{
+                                    span{}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #instagramContainer{
+            .instagramContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 50px;
+                }
+            }
+        }
+        #dataInfo{
+            .dataContent{
+                h2{
+                    font-size: 2.2rem;
+                }
+                .subTitle{
+                    font-size: 1.2rem;
+                    padding: 10px 0 50px;
+                }
+                .dataBg{
+                    height: 70vh;
+                    .dataList{
+                        > li{
+                            margin: 4rem auto;
+                            .data01,
+                            .data02,
+                            .data03{
+                                li{
+                                    width: 100%;
+                                    .dataText01{
+                                        font-size: 1.6rem;
+                                    }
+                                    .dataText02{
+                                        font-size: 4rem;
+                                        span{
+                                            font-size: 2rem;
+                                        }
+                                    }
+                                    .dataText03{
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 522px) {
+    .disN{
+        display: block;
+    }
+
+    #m-header{
+        .m-headerBox{
+            .m-headerList{
+                .m-nav{
+                    .m-utility{
+                        gap: 50px;
+                    }
+                    .m-depth01{
+                        padding: 2rem !important;
+                    }
+                }
+            }  
+        }
+    }
+
+    #main{
+        #mainBanner{
+            .swiper{
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .slideText{
+                            top: 12%;
+                            .text02{
+                                font-size: 1rem;
+                                margin-top: 16px !important;
+                            }
+                            a{
+                                margin: 16px 0 0 0 !important;
+                                padding: 10px 16px !important;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #coachingContainer{
+            .coachingInfo01{
+                .coachingText01{
+                    font-size: 2rem;
+                    padding: 5rem 0 2rem;
+                }
+                .coachingText02{
+                    font-size: 1.4rem;
+                }
+                .infoImg{
+                    gap: 1rem;
+                    padding: 0 0 5rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 482px) {
+    .disN01{
+        display: block;
+    }
+
+    #main{
+        #rankingContainer{
+            .rankingContent{
+                .rankingBox{
+                    > li{
+                        &::before{
+                            font-size: 1.8rem;
+                        }
+                        ul{
+                            .userProduct{
+                                font-size: 1.6rem;
+                            }
+                        }
+                        .inList{
+                            padding: 0 60px 0;
+                        }
+                    }
+                }
+            }
+        }
+        #coachingContainer{
+            .coachingInfo01{
+                .coachingText01{
+                    font-size: 1.8rem;
+                    padding: 4rem 0 2rem;
+                }
+                .coachingText02{
+                    font-size: 1.2rem;
+                }
+                .infoImg{
+                    gap: 1rem;
+                    padding: 0 0 4rem;
+                    li{
+                        .infoText{
+                            font-size: 1rem;
+                            margin-top: .8rem;
+                        }
+                    }
+                }
+            }
+            .coachingInfo02{
+                .coachingText03{
+                    font-size: 1.4rem;
+                    padding: 4rem 0;
+                }
+            }
+            .coachingBtn{
+                width: 300px;
+                a{
+                    font-size: 1.2rem;
+                    &::after{
+                        width: 10px;
+                        height: 10px;
+                        border-top: solid 2px #fff;
+                        border-left: solid 2px #fff;
+                        transform: rotate(135deg) translate(-6px, -8px);
+                    }
+                }
+            }
+        }
+        #subscriptionContainer{
+            .subscriptionContent{
+                .subscriptionBox{
+                    > li{
+                        .subscriptionName{
+                            font-size: 1.2rem;
+                            margin-top: 1rem;
+                        }
+                        .price{
+                            li{
+                                .price01{
+                                    font-size: 0.8rem;
+                                }
+                                .price02{
+                                    font-size: 1.6rem;
+                                }
+                                .price03{
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                        .inList{
+                            .inListBox{
+                                .wishIn{
+                                    span{}
+                                }
+                                .cartIn{
+                                    span{}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 393px) {
+    #main{
+        #rankingContainer{
+            margin-top: 80px;
+            .rankingContent{
+                h2{
+                    font-size: 2rem;
+                }
+                .subTitle{
+                    font-size: 1rem;
+                }
+                .rankingBox{
+                    > li{
+                        ul{
+                            .userProduct{
+                                font-size: 1.4rem;
+                            }
+                        }
+                        .inList{
+                            padding: 0 50px 0;
+                        }
+                    }
+                }
+            }
+        }
+        #coachingContainer{
+            padding: 100px 0 80px;
+            h2{
+                font-size: 2rem;
+            }
+            .subTitle{
+                font-size: 1rem;
+                padding: 10px 0 40px;
+            }
+            .coachingInfo01{
+                .coachingText01{
+                    font-size: 1.6rem;
+                    padding: 3rem 0 1rem;
+                }
+                .coachingText02{
+                    font-size: 1rem;
+                }
+                .infoImg{
+                    gap: 1rem;
+                    padding: 2rem 0 3rem;
+                    li{
+                        .infoText{
+                            font-size: .8rem;
+                            margin-top: .6rem;
+                        }
+                    }
+                }
+            }
+            .coachingInfo02{
+                .coachingText03{
+                    font-size: 1rem;
+                    padding: 3rem 0;
+                }
+            }
+            .coachingBtn{
+                width: 250px;
+                a{
+                    font-size: 1rem;
+                    &::after{
+                        width: 8px;
+                        height: 8px;
+                        border-top: solid 2px #fff;
+                        border-left: solid 2px #fff;
+                        transform: rotate(135deg) translate(-4px, -6px);
+                    }
+                }
+            }
+        }
+        #reviewContainer{
+            .reviewContent{
+                h2{
+                    font-size: 2rem;
+                }
+                .subTitle{
+                    font-size: 1rem;
+                }
+            }
+        }
+        #subscriptionContainer{
+            .subscriptionContent{
+                h2{
+                    font-size: 2rem;
+                }
+                .subTitle{
+                    font-size: 1rem;
+                }
+            }
+        }
+        #instagramContainer{
+            .instagramContent{
+                h2{
+                    font-size: 2rem;
+                }
+                .subTitle{
+                    font-size: 1rem;
+                }
+            }
+        }
+        #dataInfo{
+            .dataContent{
+                h2{
+                    font-size: 2rem;
+                }
+                .subTitle{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 371px) {
+    .disN{
+        display: block;
+    }
+
+    #main{
+        #rankingContainer{
+            .rankingContent{
+                .rankingBox{
+                    > li{
+                        &:hover{
+                            bottom: 32%;
+                        }
+                        &::before{
+                            font-size: 1.5rem;
+                        }
+                        ul{
+                            .userProduct{
+                                font-size: 1.4rem;
+                            }
+                        }
+                        .inList{
+                            padding: 0 50px 0;
+                            .inListBox{
+                                .wishIn{
+                                    .inListText{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                                .cartIn{
+                                    .inListText{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #subscriptionContainer{
+            .subscriptionContent{
+                .subscriptionBox{
+                    > li{
+                        .subscriptionName{
+                            font-size: .8rem;
+                            margin-top: 1rem;
+                        }
+                        .price{
+                            li{
+                                .price01{
+                                    font-size: 0.8rem;
+                                }
+                                .price02{
+                                    font-size: 1.2rem;
+                                }
+                                .price03{
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                        .inList{
+                            .inListBox{
+                                .wishIn{
+                                    span{}
+                                }
+                                .cartIn{
+                                    span{}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #m-footer{
+        .footerContent{
+            h3{
+                width: 150px;
+            }
+            .infoList{
+                .footerList{
+                    gap: .5rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 349px) {
+    .m-moreBtn{
+        width: 210px;
+    }
+    
+    #main{
+        #rankingContainer{
+            .rankingContent{
+                .rankingBox{
+                    > li{
+                        &:hover .inList{
+                            bottom: 32%;
+                        }
+                        .inList{
+                            padding: 0 30px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #m-footer{
+        .footerContent{
+            padding: 3rem 1rem;
+            .infoList{
+                width: 100%;
+                gap: 1rem;
+                padding: 1rem;
+                .footerList{
+                    gap: .3rem;
+                    li{
+                        a{
+                            display: block;
+                            font-size: .6rem;
+                        }
+                    }
+                }
+            }
+            .companyInfo{
+                .companyInfo01{
+                    font-size: .5rem;
+                    line-height: 1.4rem;
+                    margin-top: 1rem;
+                }
+                .copyright{
+                    font-size: .5rem;
+                    margin-top: 1rem;
+                }
+            }
+            .companyInfo02{
+                .cs{
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    margin-top: 2rem;
+                }
+                .csNumber{
+                    font-size: 2rem;
+                    line-height: 2rem;
+                }
+                .timeInfo{
+                    font-size: .5rem;
+                    line-height: 1.4rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    html, body{
+        font-size: 12px;
+    }
+
+    #m-header{
+        .m-headerBox{
+            .m-headerList{
+                .m-nav{
+                    .m-utility{
+                        gap: 30px;
+                    }
+                }
+                .navBtn{
+                    top: 14px;
+                    span{
+                        width: 60%;
+                        margin: 2px 0;
+                    }
+                }
+            }  
+        }
+    }
+
+    #main{
+        #rankingContainer{
+            margin-top: 80px;
+            .rankingContent{
+                p{
+                    font-size: 1rem;
+                    padding: 10px 0 40px;
+                }
+                .rankingBox{
+                    > li{
+                        &::before{
+                            font-size: 1.6rem;
+                        }
+                        ul{
+                            .userProduct{
+                                font-size: 1.4rem;
+                            }
+                        }
+                        .inList{
+                            .inListBox{
+                                .wishIn{
+                                    .inListText{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                                .cartIn{
+                                    .inListText{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

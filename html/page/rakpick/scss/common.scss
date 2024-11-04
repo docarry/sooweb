@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import './_var.scss';
+
+html, body{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    background-color: #f2f2f2;
+}
+
+// 맞춤 클래스
+.disN{
+    display: none;
+}
+.disN01{
+    display: none;
+}
+.disN02{
+    display: none;
+}
+.disB{
+    display: block;
+}
+.textB{
+    color: #333 !important;
+}
+.textW{
+    color: #fff !important;
+}
+.borderB{
+    border-color: #333 !important;
+}
+.borderW{
+    border-color: #fff !important;
+}
+.stroyN{
+    display: none;
+}
+.eventN{
+    display: none;
+}
+.memN{
+    display: none;
+}
+.subscrN{
+    display: none;
+}
+.rankingN{
+    display: none;
+}
+.coachingN{
+    display: none;
+}
+// 모바일 버튼
+.m-moreBtn{
+    width: 260px;
+    border: solid 1px #C4C4C4;
+    margin: 50px auto;
+    a{
+        font-size: 1.2rem;
+        line-height: 3;
+        color: #333;
+        font-weight: 500;
+        &::after{
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-top: solid 2px #333;
+            border-left: solid 2px #333;
+            display: inline-block;
+            transform: rotate(135deg) translate(-7px, -8px);
+        }
+    }
+}

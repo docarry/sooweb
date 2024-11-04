@@ -1,0 +1,44 @@
+<?php include_once("../layout/header.html"); ?>
+
+<!-- 체험단 페이지 -->
+<main id="tester">
+    <img src="/img/banner/tester.jpg" alt="체험단 신청 배너입니다" class="testerBg">
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-8 col-md-offset-2 m-auto">
+    			<div class="contact-form">
+    				<h2>체험단 신청</h2>
+    				<form action="#" method="post">
+    					<div class="row">
+    						<div class="col-sm-6">
+    							<div class="form-group">
+    								<label for="inputName">이름</label>
+    								<input type="text" class="form-control" id="inputName" required>
+    							</div>
+    						</div>
+    						<div class="col-sm-6">
+    							<div class="form-group">
+    								<label for="inputEmail">Email</label>
+    								<input type="email" class="form-control" id="inputEmail" required>
+    							</div>
+    						</div>
+    					</div>            
+    					<div class="form-group">
+    						<label for="inputSubject">제목</label>
+    						<input type="text" class="form-control" id="inputSubject" required>
+    					</div>
+    					<div class="form-group">
+    						<label for="inputMessage">신청내용</label>
+    						<textarea class="form-control" id="inputMessage" rows="5" required></textarea>
+    					</div>
+    					<div class="text-center">
+    						<button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> 신청하기</button>
+    					</div>            
+    				</form>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</main>
+
+<?php include_once("../layout/footer.html"); ?>

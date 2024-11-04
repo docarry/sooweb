@@ -1,0 +1,309 @@
+@charset "UTF-8";
+@import '_vs.scss';
+
+// 카페24클래식타입 폰트
+@font-face {
+    font-family: 'Cafe24ClassicType-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.cafe24-classic{
+    font-family: 'Cafe24ClassicType-Regular';
+}
+
+html, body{
+    background-color: #fff;
+    font-size: 16px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#header{
+    padding: 0 260px;
+    height: 82px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999999;
+    h1{
+        a{
+            display: block;
+            img{
+                width: 3.125rem;
+            }
+        }
+    }
+    nav{
+        .depth01{
+            gap: 5rem;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            a{
+                color: #FFF;
+            }
+        }
+    }
+}
+
+#fullpage{
+    .banner{
+        background: url('/redesign/vidalsassoon/img/bannder.jpeg') no-repeat center / cover;
+    }
+    .collection{
+        background: url('/redesign/vidalsassoon/img/collection-bg.gif') no-repeat center / cover;
+        position: relative;
+        &::before{
+            content: '';
+            background-color: rgba(32, 32, 42, 0.90);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .fp-overflow{
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            h2{
+                color: #FFF;
+                text-align: center;
+                font-size: 2.5rem;
+                margin-top: 7rem;
+                &::after{
+                    @include vs-dot;
+                }
+            }
+            #collection-slide{
+                max-width: 1400px;
+                width: 100%;
+                margin: auto auto;
+                .swiper-wrapper{
+                    padding: 0 0 5rem;
+                    .swiper-slide {
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0;
+                        transition: 0.5s;
+                        img {
+                            width: 500px;
+                            height: 500px;
+                            object-fit: cover;
+                            margin-top: 2rem;
+                        }
+                        .red{
+                            color: #B50836;
+                            font-size: 1.5rem;
+                            margin: 3.125rem 0 .625rem;
+                            transition: 0.5s;
+                            opacity: 1;
+                        }
+                        .name{
+                            color: #fff;
+                            font-size: 1.5rem;
+                            transition: 0.5s;
+                            opacity: 1;
+                        }
+                        &.swiper-slide-active{
+                            opacity: 1;
+                        }
+                        &.swiper-slide-prev,
+                        &.swiper-slide-next{
+                            opacity: .3;
+                            transform: scale(0.8);
+                            .red,
+                            .name{
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+                .swiper-pagination-bullets.swiper-pagination-horizontal{
+                    margin-bottom: 1rem;
+                }
+                .swiper-pagination-bullet {
+                    width: 30px;
+                    height: 1px;
+                    background-color: #ccc;
+                    margin: 0;
+                    border-radius: 0;
+                }
+                .swiper-pagination-bullet-active {
+                    width: 30px;
+                    height: 3px;
+                    background-color: #B50836;
+                }
+                .swiper-button-prev{
+                    width: 40px;
+                    height: 40px;
+                    border-top: solid 1px #ccc;
+                    border-right: solid 1px #ccc;
+                    transform: rotate(-135deg);
+                    left: 30%;
+                    &::after{
+                        content: '';
+                    }
+                }
+                .swiper-button-next{
+                    width: 40px;
+                    height: 40px;
+                    border-top: solid 1px #ccc;
+                    border-right: solid 1px #ccc;
+                    transform: rotate(45deg);
+                    right: 30%;
+                    &::after{
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+    .device{
+        background: url('/redesign/vidalsassoon/img/device-bg.jpg') no-repeat center / cover;
+        position: relative;
+        overflow: hidden;
+        &::before{
+            content: '';
+            background-color: rgba(0, 0, 0, 0.70);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        h2{
+            position: absolute;
+            width: max-content;
+            height: max-content;
+            top: 0;
+            left: 50%;
+        }
+        .fp-overflow{
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            overflow-y: visible;
+            h2{
+                color: #FFF;
+                text-align: center;
+                font-size: 2.5rem;
+                margin-top: 7rem;
+                top: 10%;
+                left: 54%;
+                padding: 0 0 0 260px;
+                &::after{
+                    @include vs-dot;
+                }
+            }
+            #device-slide{
+                width: 100%;
+                overflow: hidden;
+                margin-left: calc(50% - 700px);
+                box-sizing: border-box;
+                .swiper-wrapper{
+                    padding: 10rem 0 0;
+                    left: 10%;
+                    .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.5s;
+                        opacity: .5;
+                        margin-top: 9%;
+                        margin-left: -4%;
+                        img {
+                            width: 400px;
+                            height: 400px;
+                            object-fit: cover;
+                            margin-top: 2rem;
+                            border-radius: 1.25rem;
+                        }
+                        &.swiper-slide-active{
+                            opacity: 1;
+                            margin-top: 1%;
+                            margin-left: 2%;
+                            img{
+                                width: 550px;
+                                height: 550px;
+                            }
+                        }
+                        // &.swiper-slide-prev,
+                        &.swiper-slide-next{
+                            opacity: .5;
+                            margin-left: 0%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .category{
+        background: url('/redesign/vidalsassoon/img/category-bg.jpg') no-repeat center / cover;
+        position: relative;
+        overflow: hidden;
+        &::before{
+            content: '';
+            background: rgba(8, 11, 33, 0.50);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        .fp-overflow{
+            width: 100%;
+            height: 100%;
+            z-index: 6;
+            .category-tab{
+                max-width: 1400px;
+                width: 100%;
+                margin: 0 auto;
+                h2{
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 2.5rem;
+                    margin-top: 7rem;
+                    &::after{
+                        @include vs-dot;
+                    }
+                }
+                #v-pills-tabContent{
+                    .tab-pane{
+                        display: flex;
+                        gap: 80px;
+                        a{
+                            display: flex;
+                            width: 350px;
+                            height: 600px;
+                            background: #1E222D;
+                            border-radius: 20px;
+                            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+                            align-items: center;
+                            img{
+                                width: 100%;
+                            }
+                            .img004{
+                                transform: rotate(30deg);
+                            }
+                            .img005{
+                                width: 92%;
+                                transform: rotate(30deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+// 컬러
+$mainColor01 : #275902;
+$mainColor02 : #488C03;
+$subColor01 : #AFD91A;
+$subColor02 : #DCF235;
+$subColor03 : #FF6D00;
+$subColor04 : #fff;
+$textDefault : #333;
+$textSubTitle : #8A8A8A;
+$textDetail : #505050;
+$subPrice : #BDBDBD;
+
+@mixin containerSize1{
+    max-width: 1440px;
+    width: 100%;
+}
+@mixin containerH2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+@mixin containerHSubText{
+    font-size: 1.2rem;
+    color: $textSubTitle;
+    padding: 10px 0 80px;
+}
+@mixin textDefault{
+    display: block;
+    color: $textDefault;
+}
+@mixin moreBtn{
+    display: block;
+    line-height: 3.4;
+    margin: 8rem auto;
+    font-size: 2.4rem;
+    font-weight: 500;
+    border: solid .1rem #C4C4C4;
+    color: $textDefault;
+    width: 42.45vh;
+}
+@mixin moreBtnIcon{
+    border-top: solid 0.2rem $textDefault;
+    border-right: solid 0.2rem $textDefault;
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    transform: rotate(45deg) translate(1rem, -1rem);
+}
+@mixin moreBtnHb{
+    color: $mainColor02;
+    border-color: $mainColor02;
+}
+@mixin imgHb{
+    transform: scale(1);
+    transition: all .4s ease-in-out;
+}
+@mixin imgHbSize{
+    transform: scale(1.3);
+}

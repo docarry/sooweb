@@ -1,0 +1,145 @@
+/* noto-sans-kr */
+.noto-sans-kr-100 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.noto-sans-kr-200 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.noto-sans-kr-300 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.noto-sans-kr-400 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.noto-sans-kr-500 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.noto-sans-kr-600 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.noto-sans-kr-700 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.noto-sans-kr-800 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.noto-sans-kr-900 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*****************************************************************
+S-CoreDream
+*****************************************************************/
+.fontSC1 {
+	font-family: 'S-Core1';
+}
+.fontSC2 {
+	font-family: 'S-Core2';
+}
+.fontSC3 {
+	font-family: 'S-Core3';
+}
+.fontSC4 {
+	font-family: 'S-Core4';
+}
+.fontSC5 {
+	font-family: 'S-Core5';
+}
+.fontSC6 {
+	font-family: 'S-Core6';
+}
+.fontSC7 {
+	font-family: 'S-Core7';
+}
+.fontSC8 {
+	font-family: 'S-Core8';
+}
+@font-face {
+	font-family: 'S-Core1';
+	src: url('../fonts/s-core-dream/S-Core1.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core2';
+	src: url('../fonts/s-core-dream/S-Core2.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core3';
+	src: url('../fonts/s-core-dream/S-Core3.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core4';
+	src: url('../fonts/s-core-dream/S-Core4.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core5';
+	src: url('../fonts/s-core-dream/S-Core5.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core6';
+	src: url('../fonts/s-core-dream/S-Core6.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core7';
+	src: url('../fonts/s-core-dream/S-Core7.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core';
+	src: url('../fonts/s-core-dream/S-Core8.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core';
+	src: url('../fonts/s-core-dream/S-Core9.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

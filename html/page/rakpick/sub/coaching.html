@@ -1,0 +1,240 @@
+<?php include_once("../layout/header.html"); ?>
+
+<!-- 맞춤코칭 페이지 -->
+<main id="coaching">
+
+    <section class="coachingImg between boxOp">
+        <div class="container">
+            <div class="global-headline">
+                <div class="animate-top">
+                    <h3 class="sub-headline01">
+                        <span class="first-letter01">맞춤코칭</span>
+                    </h3>
+                </div>
+                <div class="animate-bottom">
+                    <h4 class="headline01">지금 상담해보세요</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2>맞춤코칭 신청하기</h2>
+    <form>
+        
+        <table>
+            <tr>
+                <th colspan="2">개인정보</th>
+            </tr>
+            <tr>
+                <td>이름:</td>
+                <td><input type="text" name="fullName" required /></td>
+            </tr>
+            <tr>
+                <td>생년월일:</td>
+                <td><input type="date" name="dob" required /></td>
+            </tr>
+            <tr>
+                <td>성별:</td>
+                <td>
+                    <label><input type="radio" name="gender" value="Male" required> 남</label>
+                    <label><input type="radio" name="gender" value="Female" required> 여</label>
+                    <label><input type="radio" name="gender" value="Other" required> 알수없음</label>
+                </td>
+            </tr>
+            <tr>
+                <td>연락처:</td>
+                <td><input type="text" name="contactNumber" required /></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="emailAddress" required /></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th colspan="2">건강 및 영양 설문</th>
+            </tr>
+            <tr>
+                <td>가장 관리가 필요한 <br class="coachingN">질환 1개만 선택해주세요.</td>
+                <td>
+                    <label><input type="radio" name="illness" value="n1" required> 해당없음</label><br>
+                    <label><input type="radio" name="illness" value="n2"> 당뇨</label><br>
+                    <label><input type="radio" name="illness" value="n3"> 고혈압</label><br>
+                    <label><input type="radio" name="illness" value="n4"> 콜레스테롤</label><br>
+                    <label><input type="radio" name="illness" value="n5"> 비만</label><br>
+                    <label><input type="radio" name="illness" value="n7"> 지방간</label><br>
+                    <label><input type="radio" name="illness" value="n6"> 중성지방</label>
+                </td>
+            </tr>
+            <tr>
+                <td>평소 활동량은 어느정도 인가요?</td>
+                <td>
+                    <label><input type="radio" name="activity" value="n1"> 많음</label><br>
+                    <label><input type="radio" name="activity" value="n2" required> 보통</label><br>
+                    <label><input type="radio" name="activity" value="n3"> 적음</label><br>
+                    <label><input type="radio" name="activity" value="n4"> 없음</label>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>어떤 건강정보에 관심이 있나요?</td>
+                <td><input type="text" name="attentionHealth" /></td>
+            </tr> -->
+            <tr>
+                <td>국물 요리를 드실때 <br class="coachingN">주로 건더기만 드시나요?</td>
+                <td>
+                    <label><input type="radio" name="ingredient" value="Yes" required> 네</label>
+                    <label><input type="radio" name="ingredient" value="No"> 아니요</label>
+                </td>
+            </tr>
+            <tr>
+                <td>알러지가 있거나 <br class="coachingN">못 먹는 음식을 알려주세요.</td>
+                <td><input type="text" name="allergy" /></td>
+            </tr>
+            <tr>
+                <td>어떤 건강정보에 관심이 있나요? <br class="coachingN">(중복 선택 가능)</td>
+                <td>
+                    <label><input type="checkbox" name="attentionHealth" value="none"> 해당없음</label><br>
+                    <label><input type="checkbox" name="attentionHealth" value="weight"> 체중조절</label><br>
+                    <label><input type="checkbox" name="attentionHealth" value="Hypertension"> 근력</label><br>
+                    <label><input type="checkbox" name="attentionHealth" value="muscular"> 피로회복</label><br>
+                    <label><input type="checkbox" name="attentionHealth" value="blood"> 혈행개선</label><br>
+                    <label><input type="checkbox" name="attentionHealth" value="skin"> 피부건강</label><br>
+                    <label><input type="checkbox" name="attentionHealth" value="digestion"> 소화기</label>
+                    <!-- <label><input type="checkbox" name="conditions" value="Allergies"> Allergies (please specify): <input type="text" name="allergiesDetails"></label><br>
+                    <label><input type="checkbox" name="conditions" value="Other"> Other (please specify): <input type="text" name="otherConditions"></label> -->
+                </td>
+            </tr>
+            <tr>
+                <td>술을 얼마나 자주 드시나요?</td>
+                <td>
+                    <label><input type="radio" name="familyHistory" value="n1" required> 최근 1년간 전혀 마시지 않았어요.</label><br>
+                    <label><input type="radio" name="familyHistory" value="n2"> 두 세달에 1번 정도 마셔요</label><br>
+                    <label><input type="radio" name="familyHistory" value="n3"> 한달에 1번정도 마셔요.</label><br>
+                    <label><input type="radio" name="familyHistory" value="n4"> 한달에 2~4번 마셔요.</label><br>
+                    <label><input type="radio" name="familyHistory" value="n5"> 일주일에 2~3번 마셔요.</label><br>
+                    <label><input type="radio" name="familyHistory" value="n6"> 일주일에 4번 이상 마셔요.</label>
+                </td>
+            </tr>
+        </table>
+        
+        <!-- <table>
+            <tr>
+                <th colspan="2">Pregnancy History</th>
+            </tr>
+            <tr>
+                <td>Have you ever been pregnant?</td>
+                <td>
+                    <label><input type="radio" name="pregnancyHistory" value="Yes"> Yes</label>
+                    <label><input type="radio" name="pregnancyHistory" value="No" required> No</label>
+                </td>
+            </tr>
+            <tr>
+                <td>If yes, please provide details:</td>
+                <td>
+                    <label>Number of pregnancies: <input type="text" name="numPregnancies" /></label><br>
+                    <label>Number of live births: <input type="text" name="numLiveBirths" /></label><br>
+                    <label>Number of miscarriages: <input type="text" name="numMiscarriages" /></label><br>
+                    <label>Complications during pregnancies (if any): <input type="text" name="pregnancyComplications" /></label>
+                </td>
+            </tr>
+        </table> -->
+
+        <!-- <table>
+            <tr>
+                <th colspan="2">Aesthetic Procedures</th>
+            </tr>
+            <tr>
+                <td>Have you ever undergone any aesthetic or cosmetic procedures?</td>
+                <td>
+                    <label><input type="radio" name="aestheticProcedures" value="Yes"> Yes</label>
+                    <label><input type="radio" name="aestheticProcedures" value="No" required> No</label>
+                </td>
+            </tr>
+            <tr>
+                <td>If yes, please list the procedures and dates:</td>
+                <td><input type="text" name="aestheticProcedureDetails" /></td>
+            </tr>
+        </table> -->
+
+        <table>
+            <tr>
+                <th colspan="2">현재 사용 중인 의약품</th>
+            </tr>
+            <tr>
+                <td>현재 사용 중인 모든 약물 및 <br class="coachingN">보충제(용량 및 빈도 포함)를 알려주세요.</td>
+                <td>
+                    <textarea name="currentMedications" rows="4" placeholder="약 종류, 복용량, 빈도수..."></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <!-- <table>
+            <tr>
+                <th colspan="2">Lifestyle and Habits</th>
+            </tr>
+            <tr>
+                <td>Do you smoke?</td>
+                <td>
+                    <label><input type="radio" name="smoke" value="Yes"> Yes</label>
+                    <label><input type="radio" name="smoke" value="No" required> No</label>
+                </td>
+            </tr>
+            <tr>
+                <td>If yes, how many cigarettes per day?</td>
+                <td><input type="text" name="cigarettesPerDay" /></td>
+            </tr>
+            <tr>
+                <td>Do you consume alcohol?</td>
+                <td>
+                    <label><input type="radio" name="alcohol" value="Yes"> Yes</label>
+                    <label><input type="radio" name="alcohol" value="No" required> No</label>
+                </td>
+            </tr>
+            <tr>
+                <td>If yes, how many drinks per week?</td>
+                <td><input type="text" name="drinksPerWeek" /></td>
+            </tr>
+            <tr>
+                <td>Do you exercise regularly?</td>
+                <td>
+                    <label><input type="radio" name="exercise" value="Yes"> Yes</label>
+                    <label><input type="radio" name="exercise" value="No" required> No</label>
+                </td>
+            </tr>
+            <tr>
+                <td>If yes, please describe the type and frequency of exercise:</td>
+                <td><input type="text" name="exerciseDetails" /></td>
+            </tr>
+        </table> -->
+
+        <table>
+            <tr>
+                <th colspan="2">추가 정보</th>
+            </tr>
+            <!-- <tr>
+                <td>What is the reason for your medical tourism visit?</td>
+                <td><textarea name="medicalTourismReason" rows="4"></textarea></td>
+            </tr> -->
+            <tr>
+                <td>특별히 우려되는 사항이나 <br class="coachingN">질문이 있으신가요?</td>
+                <td><textarea name="doctorConcerns" rows="4"></textarea></td>
+            </tr>
+            <!-- <tr>
+                <td>Is there any other information you would like to share?</td>
+                <td><textarea name="additionalInformation" rows="4"></textarea></td>
+            </tr> -->
+        </table>
+
+        <table>
+            <tr class="bgNone">
+                <td class="d-flex"><input type="submit" value="신청하기" /></td>
+            </tr>
+        </table>
+        
+    </form>
+    
+</main>
+
+
+<?php include_once("../layout/footer.html"); ?>

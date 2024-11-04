@@ -1,0 +1,37 @@
+<?php include_once("../layout/header.html"); ?>
+
+<!-- 장바구니 페이지 -->
+<main id="cart">
+    <h2>장바구니</h2>
+    <article class="shopping-cart-wrapper d-flex flex-column">
+        <table class="table is-fullwidth shopping-cart">
+            <thead>
+                <tr>
+                    <th><abbr title="Position"></abbr></th>
+                    <th></th>
+                    <th>가격</th>
+                    <th>개수</th>
+                    <th>금액</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+        <div class="totals">
+            <div class="totals-item">
+                <label>금액</label>
+                <div class="totals-value" id="cart-subtotal">￦0</div>
+            </div>
+            <div class="totals-item">
+                <label>부가세 (10%)</label>
+                <div class="totals-value" id="cart-tax">￦0</div>
+            </div>
+            <div class="totals-item totals-item-total">
+                <label>총 결제금액</label>
+                <div class="totals-value" id="cart-total">￦0</div>
+            </div>
+            <button class="checkout">결제하기</button>
+        </div>
+    </article>
+</main>
+
+<?php include_once("../layout/footer.html"); ?>

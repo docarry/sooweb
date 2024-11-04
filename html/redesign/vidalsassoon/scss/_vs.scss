@@ -1,0 +1,10 @@
+@mixin vs-dot{
+    content: '';
+    width: .875rem;
+    height: .875rem;
+    background-color: #B50836;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: .625rem;
+    transform: translateY(.25rem);
+}

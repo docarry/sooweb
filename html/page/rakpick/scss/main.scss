@@ -1,0 +1,3439 @@
+@import './_var.scss';
+
+
+#main{
+
+    // 메인 슬라이드 배너
+    #mainBanner{
+        width: 100%;
+        .swiper-button-next{
+            color: $subColor04;
+            right: 5%;
+        }
+        .swiper-button-prev{
+            color: $subColor04;
+            left: 5%;
+        }
+        .swiper-button-next.swiper-button-disabled,
+        .swiper-button-prev.swiper-button-disabled{
+            opacity: 1;
+        }
+        .swiper{
+            width: 100%;
+            height: 100%;
+            .swiper-wrapper{
+                .swiper-slide{
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .slideText{
+                        position: absolute;
+                        width: 80%;
+                        left: 12%;
+                        top: 18%;
+                        .text01{
+                            font-size: 1.8rem;
+                            line-height: 2;
+                        }
+                        h3{
+                            font-size: 4.5rem;
+                            font-weight: 600;
+                        }
+                        .text02{
+                            font-size: 1.8rem;
+                        }
+                        a{
+                            display: block;
+                            color: #fff;
+                            font-size: 1.6rem;
+                            border: solid 1px #fff;
+                            width: max-content;
+                            text-align: center;
+                            span{
+                                border-top: solid 2px #fff;
+                                border-right: solid 2px #fff;
+                                display: inline-block;
+                                width: 16px;
+                                height: 16px;
+                                transform: rotate(45deg);
+                                margin: 0 0 1px 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // 명예의전당 컨테이너
+    #rankingContainer{
+        margin-top: 160px;
+        .rankingContent{
+            max-width: 1440px;
+            width: 100%;
+            h2{
+                @include containerH2;
+                a{
+                    @include textDefault;
+                }
+            }
+            .subTitle{
+                @include containerHSubText;
+            }
+            .rankingBox{
+                counter-reset: number;
+                a{
+                    color: $textDefault;
+                }
+                > li{
+                    padding: 3rem;
+                    position: relative;
+                    &::before{
+                        content: counter(number);
+                        counter-increment: number;
+                        position: absolute;
+                        top: 0;
+                        left: 1.5rem;
+                        display: inline-block;
+                        width: 14%;
+                        height: 13%;
+                        line-height: 1.8;
+                        background: #ff6d00;
+                        color: #fff;
+                        font-size: 2.4rem;
+                        font-weight: 500;
+                        text-align: center;
+                        z-index: 1;
+                    }
+                    &:hover .imgBox img{
+                        @include imgHbSize;
+                    }
+                    &:hover .inList{
+                        opacity: 1;
+                        bottom: 30%;
+                    }
+                    .imgBox{
+                        display: block;
+                        width: 100%;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            @include imgHb;
+                        }
+                    }
+                    ul{
+                        .userImg{
+                            display: block;
+                            width: 14%;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .userProduct{
+                            display: block;
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                            a{
+                                span{
+                                    color: $mainColor01;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .inList{
+                        position: absolute;
+                        width: 100%;
+                        bottom: 20%;
+                        left: 0;
+                        opacity: 0;
+                        padding: 0px 60px 0;
+                        transition: all .4s ease-in-out;
+                        .inListBox{
+                            width: 80%;
+                            background-color: rgba(255, 255, 255, .9);
+                            padding: 10px;
+                            border-radius: 50px;
+                            .wishIn{
+                                img{
+                                    width: 30%;
+                                }
+                                .inListText{
+                                    font-size: 1.2rem;
+                                    color: #797979;
+                                }
+                            }
+                            .inListLine{
+                                width: 1px;
+                                height: 30px;
+                                background-color: rgba(121, 121, 121, .4);
+                                margin: 0 20px;
+                            }
+                            .cartIn{
+                                img{
+                                    width: 36%;
+                                }
+                                .inListText{
+                                    font-size: 1.2rem;
+                                    color: #797979;
+                                }
+                            }
+                        }
+                    }
+                        
+                }
+            }
+        }
+        .m-moreBtn{
+            width: 260px;
+            border: solid 1px #C4C4C4;
+            margin : 0 auto 50px;
+            a{
+                font-size: 1.2rem;
+                line-height: 3;
+                color: #333;
+                font-weight: 500;
+                &::after{
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-top: solid 2px #333;
+                    border-left: solid 2px #333;
+                    display: inline-block;
+                    transform: rotate(135deg) translate(-7px, -8px);
+                }
+            }
+        }
+    }
+
+
+    // 맞춤코칭 컨테이너
+    #coachingContainer{
+        margin-top: 100px;
+        padding: 160px 0 120px;
+        background-color: $subColor04;
+        h2{
+            @include containerH2;
+            a{
+                @include textDefault;
+            }
+        }
+        .subTitle{
+            @include containerHSubText;
+        }
+        .subBanner{
+            width: 100%;
+        }
+        .coachingInfo01{
+            width: 100%;
+            background-color: #2E915C;
+            .coachingText01{
+                font-size: 2rem;
+                font-weight: 700;
+                color: $subColor04;
+                padding: 6rem 0 3rem;
+            }
+            .coachingText02{
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $subColor04;
+            }
+            .infoImg{
+                padding: 6rem 0 6rem;
+                li{
+                    .infoText{
+                        font-size: 1.2rem;
+                        color: $subColor04;
+                        margin-top: 2rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .coachingInfo02{
+            .coachingText03{
+                font-size: 1.5rem;
+                font-weight: 500;
+                padding: 6rem 0;
+            }
+        }
+        .coachingBtn{
+            width: 600px;
+            background-color: $mainColor01;
+            margin : 0 auto 50px;
+            &:hover{
+                background-color: $subColor01;
+            }
+            &:hover a{
+                color: $mainColor01;
+            }
+            &:hover a::after{
+                border-color: $mainColor01;
+            }
+            a{
+                font-size: 2rem;
+                line-height: 3;
+                color: #fff;
+                font-weight: 500;
+                &::after{
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    border-top: solid 4px #fff;
+                    border-left: solid 4px #fff;
+                    display: inline-block;
+                    transform: rotate(135deg) translate(-8px, -12px);
+                }
+            }
+        }
+    }
+
+
+    // 고객후기 컨테이너
+    #reviewContainer{
+        @include containerSize1;
+        margin: 0 auto;
+        padding: 160px 0 120px;
+        .reviewContent{
+            h2{
+                @include containerH2;
+                a{
+                    @include textDefault;
+                }
+            }
+            .subTitle{
+                @include containerHSubText;
+            }
+            #review-Swiper{
+                width: 100%;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .reviewBox{
+                            width: 100%;
+                            background-color: $subColor04;
+                            > li{
+                                &:hover .reviewBoxCover{
+                                    opacity: 1;
+                                }
+                                > a{
+                                    display: block;
+                                    position: relative;
+                                    .reviewBoxCover{
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        background-color: rgba(0, 0, 0, .5);
+                                        opacity: 0;
+                                        transition: all .4s ease-in-out;
+                                        .coverText{
+                                            font-size: 2rem;
+                                            color: #fff;
+                                            img{
+                                                width: 1.8rem;
+                                                display: inline-block;
+                                                margin-left: 10px;
+                                            }
+                                        }
+                                    }
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                                .user-ns{
+                                    padding: 2rem 0 1rem;
+                                    li{
+                                        a{
+                                            img{
+                                                width: 3rem;
+                                            }
+                                            span{
+                                                margin-left: 1.2rem;
+                                                font-size: 1.2rem;
+                                                color: $textDetail;
+                                            }
+                                        }
+                                        > img{
+                                            width: 24px;
+                                        }
+                                        span{
+                                            margin-left: .6rem;
+                                            font-size: 1.2rem;
+                                            color: $textDetail;
+                                        }
+                                    }
+                                }
+                            }
+                            .reviewTitle{
+                                padding: 0 1.6rem 0rem;
+                                a{
+                                    color: $textDefault;
+                                    font-weight: 600;
+                                    font-size: 1.3rem;
+                                }
+                            }
+                            .reviewText{
+                                padding: 1rem 1.6rem 0;
+                                width: 100%;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                a{
+                                    color: $textDefault;
+                                    font-size: 1rem;
+                                }
+                            }
+                            .reviewDate{
+                                padding: 2rem 1.6rem 3rem;
+                                a{
+                                    color: $textDefault;
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .reviewBtn{
+                @include moreBtn;
+                transition: all .4s ease-in-out;
+                &:hover,
+                &:hover span{
+                    @include moreBtnHb;
+                }
+                span{
+                    @include moreBtnIcon;
+                    transition: all .4s ease-in-out;
+                }
+            }
+        }
+    }
+
+
+    // 정기배송 컨테이너
+    #subscriptionContainer{
+        padding: 160px 0 120px;
+        background-color: $subColor04;
+        .subscriptionContent{
+            @include containerSize1;
+            margin: 0 auto;
+            h2{
+                @include containerH2;
+                a{
+                    @include textDefault;
+                }
+            }
+            .subTitle{
+                @include containerHSubText;
+            }
+            .subscriptionBox{
+                > li{
+                    position: relative;
+                    &:hover .imgBox02 img{
+                        @include imgHbSize;
+                    }
+                    &:hover .inList{
+                        opacity: 1;
+                        bottom: 26%;
+                    }
+                    width: 48%;
+                    .imgBox02{
+                        display: block;
+                        width: 100%;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            @include imgHb;
+                        }
+                    }
+                    .subscriptionName{
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        margin-top: 2rem;
+                        display: block;
+                        color: #333;
+                    }
+                    .price{
+                        li{
+                            .price01{
+                                font-size: 1.6rem;
+                                text-decoration: line-through;
+                                color: $subPrice;
+                            }
+                            .price02{
+                                font-size: 2rem;
+                                color: $textDefault;
+                                font-weight: 800;
+                            }
+                            .price03{
+                                font-size: 2rem;
+                                color: $subColor03;
+                                font-weight: 800;
+                            }
+                        }
+                    }
+                    .inList{
+                        position: absolute;
+                        width: 100%;
+                        bottom: 18%;
+                        left: 0;
+                        padding: 0 12rem 0;
+                        opacity: 0;
+                        transition: all .4s ease-in-out;
+                        .inListBox{
+                            width: 80%;
+                            background-color: rgba(255, 255, 255, .9);
+                            padding: 1.2rem;
+                            border-radius: 4rem;
+                            .wishIn{
+                                border-right: solid 0.1rem rgba(121, 121, 121, 0.4);
+                                margin-right: 2rem;
+                                span{
+                                    font-size: 2.4rem;
+                                    color: #797979;
+                                    padding: 0 2rem 0 1rem;
+                                }
+                            }
+                            .cartIn{
+                                span{
+                                    font-size: 2.4rem;
+                                    color: #797979;
+                                    padding: 0 1rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // .subBtn{
+            //     padding-bottom: 3rem;
+            //     .subscriptionBtn{
+            //         transition: all .4s ease-in-out;
+            //         @include moreBtn;
+            //         &:hover,
+            //         &:hover span{
+            //             @include moreBtnHb;
+            //         }
+            //         span{
+            //             @include moreBtnIcon;
+            //             transition: all .4s ease-in-out;
+            //         }
+            //     }
+            // }
+        }
+    }
+
+
+    // 인스타그램 컨테이너
+    #instagramContainer{
+        @include containerSize1;
+        margin: 0 auto;
+        padding: 160px 0 120px;
+        .instagramContent{
+            h2{
+                @include containerH2;
+                a{
+                    @include textDefault;
+                }
+            }
+            .subTitle{
+                @include containerHSubText;
+            }
+            #instagramBox01{
+                width: 100%;
+                height: 100%;
+                .instagramBoxList{
+                    .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20%;
+                        padding: .75rem;
+                        a{
+                            display: block;
+                            img {
+                                width: 100%;
+                                height: 16rem;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+            #instagramBox02{
+                width: 100%;
+                height: 100%;
+                .instagramBoxList{
+                        .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20%;
+                        padding: .75rem;
+                        a{
+                            display: block;
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                                height: 16rem;
+                            }
+                        }
+                    }
+                }
+                // li{
+                //     width: 20%;
+                //     padding: .75rem;
+                //     a{
+                //         display: block;
+                //         img{
+                //             width: 100%;
+                //             object-fit: cover;
+                //             height: 25rem;
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+    
+
+    // 데이터 카운팅 컨테이너
+    #dataInfo{
+        padding: 160px 0 120px;
+        background-color: $subColor04;
+        .dataContent{
+            h2{
+                @include containerH2;
+                a{
+                    @include textDefault;
+                }
+            }
+            .subTitle{
+                @include containerHSubText;
+            }
+            .dataBg{
+                width: 100%;
+                height: 60vh;
+                background: url('/img/banner/datainfo01.jpg') no-repeat center / cover;
+                background-color: rgba(0,0,0,.5);
+                background-blend-mode: overlay;
+                background-attachment: fixed;
+                .dataList{
+                    gap: 10rem;
+                    > li{
+                        .data01,
+                        .data02,
+                        .data03{
+                            li{
+                                .dataText01{
+                                    font-size: 2rem;
+                                    color: $subColor04;
+                                    font-weight: 700;
+                                }
+                                .dataText02{
+                                    font-size: 6rem;
+                                    color: $subColor04;
+                                    font-weight: 900;
+                                    span{
+                                        font-size: 3rem;
+                                        font-weight: 500;
+                                    }
+                                }
+                                .dataText03{
+                                    font-size: 1.8rem;
+                                    color: $subColor04;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 이벤트 페이지
+#eventContainer{
+    background-color: $subColor04;
+    padding: 0 0 12rem;
+    .eventContent{
+        h2{
+            padding: 6rem 0 2rem;
+            font-size: 3rem;
+            color: #333;
+            text-align: center;
+        }
+        #myTab{
+            .nav-item{
+                width: 33.333%;
+                a{
+                    font-size: 1.5rem;
+                    text-align: center;
+                    padding: 2rem;
+                    color: #8A8A8A
+                }
+                .active{
+                    color: #275902;
+                    font-weight: 500;
+                }
+                .nav-link{
+                    border-bottom: $subPrice;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    margin-bottom: 0;
+                }
+                #img-tab{}
+                #end-tab{}
+                #winner-tab{}
+            }
+        }
+        #myTabContent{
+            .tab-pane{
+                margin-top: 2rem;
+            }
+            #img{
+                .imgImgList{
+                    li{
+                        width: 50%;
+                        padding: 3rem 3rem 1rem;
+                        a{
+                            display: block;
+                            img{
+                                width: 100%;
+                            }
+                            .eventText01{
+                                font-size: 1.125rem;
+                                color: $textDefault;
+                                font-weight: 500;
+                                margin-top: 1rem;
+                                &.endEvent{
+                                    color: #797979;
+                                }
+                            }
+                            .eventText02{
+                                color: #797979;
+                                font-size: 1rem;
+                                .endText{
+                                    background-color: #797979;
+                                    border-radius: 0.8rem;
+                                    color: $subColor04;
+                                    padding: 0 1rem 0;
+                                    margin-right: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #end{
+                .endImgList{
+                    li{
+                        width: 50%;
+                        padding: 3rem 3rem 1rem;
+                        a{
+                            display: block;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .eventText01{
+                            font-size: 1.125rem;
+                            color: $textDefault;
+                            font-weight: 500;
+                            margin-top: 1rem;
+                            &.endEvent{
+                                color: #797979;
+                            }
+                        }
+                        .eventText02{
+                            color: #797979;
+                            font-size: 1rem;
+                            span{
+                                background-color: #797979;
+                                border-radius: 0.8rem;
+                                color: $subColor04;
+                                padding: 0 1rem 0;
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            #winner{
+                padding: 3rem 10rem 3rem;
+                .winnerList{
+                    > li{
+                        padding-bottom: 2rem;
+                        .listText{
+                            padding-bottom: 2rem;
+                            border-bottom: solid .1rem #ccc;
+                            &:hover a{
+                                color: $mainColor01;
+                            }
+                            .winnerNotice{
+                                font-size: 1.125rem;
+                                color: $textDefault;
+                            }
+                            .winnerDate{
+                                font-size: 1rem;
+                                color: $textDetail;
+                            }
+                        }
+                        p{
+                            padding: 6rem 4rem;
+                            font-size: 1rem;
+                            background-color: #f2f2f2;
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // 이벤트 페이지 버튼
+        #pageBtn{
+            margin-top: 4rem;
+            .eventBtnList{
+                .page-item{
+                    padding: 0 .6rem 0;
+                    &.active .page-link{
+                        background-color: $mainColor01;
+                        padding: .4rem .8rem .4rem;
+                        color: $subColor04;
+                    }
+                    a{
+                        font-size: 1rem;
+                        color: $textDetail;
+                        padding: .4rem .8rem .4rem;
+                        border-radius: .6rem;
+                        .pageLeft{
+                            border-top: solid 2px $textDetail;
+                            border-right: solid 2px $textDetail;
+                            display: block;
+                            width: 1rem;
+                            height: 1rem;
+                            transform: rotate(-135deg);
+                        }
+                        .pageRight{
+                            border-top: solid 2px $textDetail;
+                            border-right: solid 2px $textDetail;
+                            display: block;
+                            width: 1rem;
+                            height: 1rem;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    .page-link{
+                        border: none;
+                        &:focus{
+                        background-color: $mainColor01;
+                        padding: .4rem .8rem .4rem;
+                        border-radius: 0.6rem;
+                        color: $subColor04;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 990px) {
+    .eventN{
+        display: block;
+    }
+    #eventContainer{
+        padding: 0 0 6rem;
+        .eventContent{
+            h2{
+                padding: 4rem 0 2rem;
+                font-size: 2rem;
+            }
+            #myTab{
+                .nav-item{
+                    a{
+                        font-size: 1rem;
+                        padding: 1rem;
+                    }
+                }
+            }
+            #myTabContent{
+                .tab-pane{
+                    margin-top: 1rem;
+                    .imgImgList{
+                        display: block !important;
+                        li{
+                            width: 100% !important;
+                            padding: 2rem 1rem 1rem !important;
+                        }
+                    }
+                    .endImgList{
+                        display: block !important;
+                        li{
+                            width: 100% !important;
+                            padding: 2rem 1rem 1rem !important;
+                        }
+                    }
+                }
+                #winner{
+                    padding: 2rem 1rem 1rem;
+                    .winnerList{
+                        > li{
+                            .listText{
+                                padding-bottom: 1rem;
+                                .winnerNotice{
+                                    font-size: 1rem;
+                                }
+                            }
+                            p{
+                                padding: 2rem;
+                            }
+                        }  
+                    }
+                }
+            } 
+        }
+    }
+}
+
+
+// 자주묻는질문 페이지
+#faqContainer{
+    background-color: $subColor04;
+    padding: 0 0 20rem;
+    .faqContent{
+        h2{
+            padding: 6rem 0 2rem;
+            font-size: 3rem;
+            color: #333;
+            text-align: center;
+        }
+        dl{
+            padding: 4rem 14rem 6rem;
+            background-color: #f2f2f2;
+            dt{
+                padding: 2rem;
+                font-size: 1.125rem;
+                border-bottom: solid .1rem $mainColor01;
+                color: $mainColor01;
+                cursor: pointer;
+                &:hover{
+                    color: $mainColor02;
+                }
+                &:hover .arrow{
+                    border-color: $mainColor02;
+                }
+                .arrow{
+                    width: 1rem;
+                    height: 1rem;
+                    border-bottom: solid 2px $mainColor01;
+                    border-left: solid 2px $mainColor01;
+                    display: block;
+                    transform: rotate(-45deg);
+                    &.rotated{
+                        transform: rotate(135deg);
+                        margin-top: 10px;
+                    }
+                }
+            }
+            dd{
+                padding: 4rem;
+                font-size: 1rem;
+                border-bottom: 0.1rem solid $mainColor01;
+                display: none;
+                &:last-child{
+                    border: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 990px) {
+    #faqContainer{
+        padding: 0 0 6rem;
+        .faqContent{
+            h2{
+                padding: 4rem 0 2rem;
+                font-size: 2rem;
+            }
+            dl{
+                padding: 2rem 1rem 4rem;
+                dt{
+                    padding: 1rem;
+                    font-size: 1rem;
+                    .text{
+                        display: block;
+                        width: 90%;
+                        overflow: hidden; 
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+                dd{
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+// 이용약관 페이지
+#agreementContainer{
+    background-color: $subColor04;
+    padding: 0 0 20rem;
+    .agreementContent{
+        h2{
+            padding: 12rem 0 4rem;
+            font-size: 3rem;
+            color: #333;
+            text-align: center;
+            border-bottom: solid 0.01rem var(--bs-border-color);
+        }
+        p{
+            padding: 4rem 14rem 6rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+
+// 공지사항 페이지
+#noticeContainer{
+    background-color: $subColor04;
+    padding: 0 0 20rem;
+    .noticeContent{
+        h2{
+            padding: 6rem 0 2rem;
+            margin-bottom: 4rem;
+            font-size: 3rem;
+            color: #333;
+            text-align: center;
+        }
+        dl{
+            padding: 0rem 8rem;
+            cursor: pointer;    
+            dt{
+                padding: 2rem;
+                font-size: 1.125rem;
+                border-top: 0.1rem solid #C4C4C4;
+                &:last-of-type{
+                    border-bottom: 0.1rem solid #C4C4C4;
+                }
+                .notiNum{
+                    padding: 0 3rem 0 0;
+                    color: #8A8A8A;
+                }
+            }
+            dd{
+                padding: 6rem 4rem;
+                font-size: 1rem;
+                background-color: #eeeeee;
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 990px) {
+    #noticeContainer{
+        padding: 0 0 6rem;
+        .noticeContent{
+            h2{
+                padding: 4rem 0 2rem;
+                font-size: 2rem;
+            }
+            .noticeBox{
+                padding: 0rem 1rem;
+                dt{
+                    padding: 1rem;
+                    font-size: 1rem;
+                    .noticeTitle{
+                        display: block;
+                        width: 70%;
+                        overflow: hidden; 
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    .notiNum{
+                        padding: 0 1rem 0 0;
+                    }
+                }
+                dd{
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+// 멤버십 페이지
+#membershipContainer{
+    background-color: $subColor04;
+    .membershipContent{
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .memBox{
+        .new_mem_cpn{
+            padding: 6rem 0rem 6rem;
+            > p{
+                font-size: 2rem;
+                line-height: 2;
+            }
+            h2{
+                margin: 1rem 0;
+                font-size: 2.6rem;
+                font-weight: 700;
+                margin-bottom: 8rem;
+            }
+            .cpn{
+                margin-top: 4rem;
+                h4{
+                    position: relative;
+                    padding: 1rem 0 0 4rem;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    line-height: 1.6;
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        top: 8%;
+                        left: 0;
+                        width: 3.4rem;
+                        height: 4rem;
+                        background: url("../img/coupon/mem_bnf_chk.png") no-repeat center;
+                    }                    
+                }
+                .cpuList{
+                    height: 14rem;
+                    > li{
+                        width: 23%;
+                        height: 100%;
+                        img{
+                            min-width: 200px;
+                            max-width: 300px;
+                        }
+                        ul{
+                            margin-left: 1rem;
+                            .text01{
+                                font-size: 2rem;
+                                color: $mainColor01;
+                                font-weight: 500;
+                            }
+                            .text02{
+                                font-size: 3rem;
+                                font-weight: 800;
+                                text-indent: 4rem;
+                            }
+                            .text03{
+                                font-size: 3rem;
+                                font-weight: 800;
+                                text-indent: 3rem;
+                            }    
+                            .text04{
+                                font-size: 3rem;
+                                font-weight: 800;
+                                text-indent: 0.4rem;
+                            } 
+                            .text05{
+                                font-size: 2rem;
+                                color: $mainColor01;
+                                font-weight: 500;
+                            }  
+                            .text06{
+                                margin-top: .6rem;
+                                font-size: 2rem;
+                                font-weight: 900;
+                            }  
+                            .text07{
+                                margin-top: .6rem;
+                                font-size: 2.4rem;
+                                font-weight: 800;
+                                text-indent: 2rem;
+                            }  
+                        }
+                    }
+                    .con01{
+                        background: url('/img/coupon/bg_mem_cpn.png') no-repeat center / contain;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .cupN{
+                        opacity: 0;
+                    }
+                }                
+            }
+            .memBtn {
+                width: 26rem;
+                height: 5rem;
+                margin: 2rem auto 4rem;
+                background-color: #50b953;
+                border-radius: 1rem;
+                &:hover{
+                    background-color: $subColor02;
+                }
+                &:hover a{
+                    color: $mainColor01;
+                }
+                a{
+                    display: block;
+                    color: $subColor04;
+                    font-size: 2rem;
+                    text-align: center;
+                    font-weight: 700;
+                }
+            }
+            .pointBox{
+                position: relative;
+                padding: 8rem 0 6rem 9rem;
+                background-color: #D8FFC8;
+                margin-bottom: 10rem;
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    z-index: 5;
+                    top: 22px;
+                    left: -36px;
+                    width: 193px;
+                    height: 154px;
+                    background: url("../img/coupon/mem_bnf_point.png") 0 0 no-repeat;
+                }
+                h3{
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+                > p{
+                    font-size: 1.4rem;
+                }
+                .pointBtn{
+                    position: absolute;
+                    bottom: 6rem;
+                    right: 4rem;
+                    margin-top: 0;
+                    .btn {
+                        position: relative;
+                        background-color: #50b953;
+                        outline: none;
+                        cursor: pointer;
+                        color: #fff;
+                        border-radius: 1rem;
+                        &:hover{
+                            background-color: $subColor02;
+                            color: #275902;
+                        }
+                        p{
+                            font-size: 1.4rem;
+                            padding: 0 4rem;
+                        }
+                    }
+                }                
+            }
+        }
+    }
+}
+@media (max-width: 1399px) {
+    #membershipContainer{
+        .memBox{
+            .new_mem_cpn{
+                .cpn{
+                    h4{
+                        font-size: 1.2rem;
+                    }
+                    .cpuList{
+                        > li{
+                            ul{
+                                .text01{
+                                    font-size: 1.2rem;
+                                }
+                                .text02{
+                                    font-size: 1.2rem;
+                                }
+                                .text03{
+                                    font-size: 1.2rem;
+                                }
+                                .text04{
+                                    font-size: 1.2rem;
+                                }
+                                .text05{
+                                    font-size: 1.2rem;
+                                }  
+                                .text06{
+                                    font-size: 1.2rem;
+                                }  
+                                .text07{
+                                    font-size: 1.2rem;
+                                }  
+                            }
+                        }
+                    }
+                }
+                .pointBox {
+                    .pointBtn {
+                        .btn{
+                            p{
+                                padding: 0 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .memN{
+        display: block;
+    }
+    #membershipContainer{
+        .memBox{
+            .new_mem_cpn{
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                p{
+                    font-size: 1.4rem;
+                    line-height: 1.6;
+                }
+                h2{
+                    font-size: 2rem;
+                }
+                .cpn{
+                    margin-top: 0;
+                    height: auto;
+                    .cpuList{
+                        flex-direction: column;
+                        height: auto;
+                        > li{
+                            width: 65%;
+                            height: 8rem;
+                            margin: 1rem 0;
+                            ul{
+                                margin-left: 0;
+                                .text01{
+                                    font-size: 1rem;
+                                }
+                                .text02{
+                                    font-size: 1rem;
+                                    text-indent: 1rem;
+                                }
+                                .text03{
+                                    font-size: 1rem;
+                                    text-indent: 1rem;
+                                }
+                                .text04{
+                                    font-size: 1rem;
+                                    text-indent: 0;
+                                }
+                                .text05{
+                                    font-size: 1rem;
+                                }
+                                .text06{
+                                    font-size: 1rem;
+                                    text-indent: 0;
+                                }
+                                .text07{
+                                    font-size: 1rem;
+                                    text-indent: 1rem;
+                                }
+                            }
+                        }
+                        .cpnH{
+                            height: 2rem;
+                        }
+                        .cpnH01{
+                            height: 4rem;
+                        }
+                    }
+                    h4{
+                        font-size: 1rem;
+                    }
+                }
+                .con01{
+                    justify-content: center;
+                }
+                .con02{
+                    height: 55vh;
+                }
+                .memBtn {
+                    width: 14rem;
+                    height: 4rem;
+                    margin: 2rem auto 4rem;
+                    border-radius: .6rem;
+                    a{
+                        font-size: 1.2rem;
+                    }
+                }
+                .pointBox{
+                    padding: 15rem 0 13rem 3rem;
+                    margin-bottom: 0rem;
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        font-size: 1rem;
+                    }
+                    h3{
+                        font-size: 1.6rem;
+                    }
+                    .pointBtn{
+                        bottom: 6rem;
+                        right: 2rem;
+                        .btn{
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}
+
+
+// 로그인 페이지
+:root {
+	--color-white: #ffffff;
+	--color-light: #f1f5f9;
+	--color-black: #121212;
+	--color-night: #001632;
+
+	--color-red: #f44336;
+	--color-blue: #1a73e8;
+	--color-gray: #80868b;
+	--color-grayish: #dadce0;
+
+	--shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+		0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	--shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+#loginContainer{
+    .loginContent{
+
+    // Components
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 80rem;
+        min-height: 100vh;
+        width: 100%;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    .ion {
+        &-logo-apple {
+            font-size: 1.65rem;
+            line-height: inherit;
+            margin-right: 0.5rem;
+            color: var(--color-black);
+        }
+        &-logo-google {
+            font-size: 1.65rem;
+            line-height: inherit;
+            margin-right: 0.5rem;
+            color: var(--color-red);
+        }
+        &-logo-facebook {
+            font-size: 1.65rem;
+            line-height: inherit;
+            margin-right: 0.5rem;
+            color: var(--color-blue);
+        }
+    }
+
+    .text {
+        font-family: inherit;
+        line-height: inherit;
+        text-transform: unset;
+        text-rendering: optimizeLegibility;
+
+        &-large {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-black);
+        }
+
+        &-normal {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-black);
+        }
+
+        &-links {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #275902;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+        .wrapper {
+            max-width: 28rem;
+            width: 100%;
+            margin: 2rem auto;
+            padding: 2rem 2.5rem;
+            border: none;
+            outline: none;
+            border-radius: 0.25rem;
+            color: var(--color-black);
+            background: var(--color-white);
+
+            .form {
+                width: 100%;
+                height: auto;
+                margin-top: 2rem;
+
+                .input-control {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 1.25rem;
+                }
+
+                .input-field {
+                    font-family: inherit;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: inherit;
+                    width: 100%;
+                    height: auto;
+                    padding: 0.75rem 1.25rem;
+                    border: none;
+                    outline: none;
+                    border-radius: 2rem;
+                    color: var(--color-black);
+                    background: rgb(72, 140, 3, 0.2);
+                    text-transform: unset;
+                    text-rendering: optimizeLegibility;
+                }
+
+                .input-submit {
+                    font-family: inherit;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    line-height: inherit;
+                    cursor: pointer;
+                    min-width: 40%;
+                    height: auto;
+                    padding: 0.65rem 1.25rem;
+                    border: none;
+                    outline: none;
+                    border-radius: 2rem;
+                    color: var(--color-white);
+                    background: #488C03;
+                    box-shadow: var(--shadow-medium);
+                    text-transform: capitalize;
+                    text-rendering: optimizeLegibility;
+                }
+            }
+
+            .striped {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: 1rem 0;
+
+                &-line {
+                    flex: auto;
+                    flex-basis: auto;
+                    border: none;
+                    outline: none;
+                    height: 2px;
+                    background: var(--color-grayish);
+                }
+
+                &-text {
+                    font-family: inherit;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    line-height: inherit;
+                    color: var(--color-black);
+                    margin: 0 1rem;
+                }
+            }
+
+            .method {
+                &-control {
+                    margin-bottom: 1rem;
+                }
+
+                &-action {
+                    font-family: inherit;
+                    font-size: 0.95rem;
+                    font-weight: 500;
+                    line-height: inherit;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: auto;
+                    padding: 0.35rem 1.25rem;
+                    outline: none;
+                    border: 2px solid var(--color-grayish);
+                    border-radius: 2rem;
+                    color: var(--color-black);
+                    background: var(--color-white);
+                    text-transform: capitalize;
+                    text-rendering: optimizeLegibility;
+                    transition: all 0.35s ease;
+
+                    &:hover {
+                        background: var(--color-light);
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+// 이용후기 리뷰 페이지
+#review {
+	padding: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    h2{
+        text-align: center;
+        padding: 6rem 0 0rem;
+        margin-bottom: 4rem;
+        font-size: 3rem;
+        color: #333;
+        text-align: center;
+    }
+    .gallery {
+        width: 100%;
+        max-width: 1440px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .gallery-item {
+        box-shadow: 2px 2px 8px -1px #ccc;
+        width: 400px;
+        height: 400px;
+        margin: 20px;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .gallery-item-image {
+                bottom: 8rem;
+            }
+        }
+        .gallery-item-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: lightblue;
+            z-index: 20;
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease;
+            bottom: 0;
+            overflow: hidden;
+            object-fit: cover;
+            display: flex;
+            justify-content: center;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .gallery-item-description {
+            color: #333;
+            font-size: 1rem;
+            width: 100%;
+            height: 8rem;
+            padding: .5rem .8rem;
+            background: #fff;
+            position: absolute;
+            bottom: 0;
+            h3{
+                a{
+                    font-size: 1.2rem;
+                    color: #333;
+                }
+            }
+            > a{
+                color: #333;
+            font-size: 1rem;
+            }
+        }
+    }
+
+    // 이용후기 페이지 버튼
+    #pageBtn{
+        margin-top: 4rem;
+        .eventBtnList{
+            .page-item{
+                padding: 0 .6rem 0;
+                &.active .page-link{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    color: $subColor04;
+                }
+                a{
+                    font-size: 1rem;
+                    color: $textDetail;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: .6rem;
+                    .pageLeft{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(-135deg);
+                    }
+                    .pageRight{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(45deg);
+                    }
+                }
+                .page-link{
+                    border: none;
+                    &:focus{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: 0.6rem;
+                    color: $subColor04;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 마이페이지
+.myPage {
+    max-width: 1250px;
+    margin: 30px auto 30px;
+    padding: 0 !important;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10);
+
+    .myPageH {
+        background: #eee;
+        background-image: url("/img/mypage/CK_tc01560006791.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 250px;
+        i{
+            position: relative;
+    cursor: pointer;
+    right: -96%;
+    top: 25px;
+    font-size: 18px !important;
+    color: #fff;
+        }
+      }
+      .myPageBox {
+        padding: 20px 20px 0px 20px;
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+          
+          .photo {
+            width: 200px;
+            height: 200px;
+            margin-top: -120px;
+            border-radius: 100px;
+            border: 4px solid #fff;
+          }
+          
+          .active {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            position: absolute;
+            right: calc(50% - 70px);
+            top: 50px;
+            background-color: #FFC107;
+            border: 3px solid #fff;
+          }
+          .name {
+            margin-top: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 18pt;
+            color: #777;
+          }
+          
+          .info {
+            margin-top: -5px;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11pt;
+            color: #aaa;
+          }
+          
+          .stats {
+            margin-top: 25px;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ededed;
+            font-family: 'Montserrat', sans-serif;
+          }
+          
+          
+          .number-stat {
+            padding: 0px;
+            font-size: 14pt;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            color: #aaa;
+          }
+          
+          .desc-stat {
+            font-size: 10pt;
+            color: #bbb;
+          }
+          
+          .desc {
+            text-align: center;
+            margin-top: 25px;
+            margin: 25px 40px;
+            color: #999;
+            font-size: 11pt;
+            font-family: 'Montserrat', sans-serif;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ededed;
+          }
+          
+          .social {
+            margin: 5px 0 12px 0;
+            text-align: center;
+            display: inline-block;
+            font-size: 20pt;
+          }
+          
+          .social i {
+            cursor: pointer;
+            margin: 0 15px;
+          }
+          
+          .social i:nth-child(1)  { color: #4267b2; }
+          .social i:nth-child(2)  { color: #1da1f2; }
+          .social i:nth-child(3)  { color: #bd081c; }
+          .social i:nth-child(4)  { color: #36465d; }
+          
+          .right {
+            padding: 0 25px 0 25px !important;
+          }
+          
+          .nav {
+            display: inline-flex;
+          }
+          
+          .nav li {
+            margin: 40px 30px 0 10px;
+            cursor: pointer;
+            font-size: 13pt;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: #888;
+          }
+          
+          .nav li:hover, .nav li:nth-child(1)  { 
+            color: #999;
+            border-bottom: 2px solid #999;
+          }
+          
+          .follow {
+            position: absolute;
+            right: 8%;
+            top: 35px;
+            font-size: 11pt;
+            background-color: #42b1fa;
+            color: #fff;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all .4s;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+          }
+          
+          .follow:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2), 0 0 15px rgba(0,0,0,0.2);
+          }
+          
+          .gallery  {
+            margin-top: 35px;
+          }
+          
+          .gallery div {
+            margin-bottom: 30px;
+          }
+          
+          .gallery img {
+            box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10);
+            width: auto; 
+            height: auto;
+            cursor: pointer;
+            max-width: 100%;
+          }
+  }
+
+}
+
+
+// 락픽스토리 페이지
+#rakpickstory {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    .boxOp {
+        padding: 3.9rem 0;
+        overflow: hidden;
+    }
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+    p {
+        font-size: 1.4rem;
+    
+    }
+    .container {
+        width: 100%;
+        max-width: 122.5rem;
+        margin: 0 auto;
+        padding: 0 2.4rem;
+    }
+    .padding-right {
+        padding-right: 7rem;
+
+    }
+
+    // /*Hero ends here*/
+    .hero   {
+        width: 100%;
+        height: 100vh;
+        background: url("/img/rakpickstory/CK_tica0140006197.jpg") no-repeat center / cover;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .sub-headline {
+        font-size: 3rem;
+        color: #488C03;
+        font-weight: 700;
+        line-height: .4;
+        letter-spacing: 2px;
+        opacity: 0;
+        animation: fadeUp .5s forwards;
+        animation-delay: .5s ;
+    }
+    .sub-headline01 {
+        font-size: 4rem;
+        color: #488C03;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        opacity: 0;
+        animation: fadeUp .5s forwards;
+        animation-delay: .5s ;
+        .first-letter01 {
+            text-transform: uppercase;
+            font-size: 5rem;
+        }
+    }
+    .first-letter {
+        text-transform: uppercase;
+        font-size: 4rem;
+    }
+    .storyTitle {
+        font-size: 5rem;
+        color: #275902;
+        font-weight: 700;
+        line-height: .4;
+        letter-spacing: 2px;
+        opacity: 0;
+        animation: fadeUp .5s forwards;
+        animation-delay: .5s ;
+        .first-letter {
+            text-transform: uppercase;
+            font-size: 6rem;
+        }
+    }
+    .headline {
+    color:#fff;
+    font-size: 3.7rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    line-height: 2;
+    animation: scale .5s forwards;
+    }
+    .headline01 {
+        color:#fff;
+        font-size: 3.7rem;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        line-height: 2;
+        animation: scale .5s forwards;
+        }
+    .storyTitleSub {
+        color:#fff;
+        font-size: 3.7rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: .5rem;
+        line-height: 2;
+        animation: scale .5s forwards;
+        }
+    .separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -1rem;
+    }
+    .line {
+        width: 100%;
+    max-width: 8.4rem;
+    height: .25rem;
+    background-color: #fff;
+    position: relative;
+    animation: grow 2s forwards;
+    animation-delay: .9s;
+    opacity: 0;
+    }
+    .asterisk {
+        font-size: 1.2rem;
+        color:  #AFD91A;
+        margin:0 1.6rem;
+        opacity: 0; 
+        animation: spin  .5s forwards;
+        animation-delay: .7s;
+    }
+    .single-animation {
+        opacity: 0;
+        animation: fadeDown .5s forwards;
+        animation-delay: 1.5s ;
+    
+    
+    }
+    
+    .headline-description h5 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    }
+    .btn {
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-right: -2px;
+    }
+    
+    .cta-btn {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: #fff;
+    padding: .9rem 1.8rem;
+    color:  #515151;
+    border-radius: .4rem;
+    }
+    
+    .cta-btn:hover,
+    .cta-btn:focus {
+        color: #fff;
+        background-color: #488C03;
+    }
+    
+    // /*Discover our story section */
+    .global-headline {
+        text-align: center;
+        margin-top: 3.9rem;
+    }
+    
+    .discover-our-story .global-headline {
+        margin-top: 6.9rem;
+    }
+    .global-headline .asterisk {
+        color: #AFD91A;
+        margin: 2.4rem 0;
+    }
+    
+    .headline-dark {
+        color: #ccc;
+    }
+    .global-headline .sub-headline {
+        letter-spacing: -.1px;
+        line-height: 1.2;
+    }
+    .restaurant-info {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .restaurant-description  {
+        line-height: 1.6;
+        margin-bottom: 2.4rem;
+    }
+    .restaurant-info-img{
+        img{
+            width: 80%;
+            max-width: 100%;
+            margin-left: auto;
+        }
+    }
+    .restaurant-info {
+        div{
+            flex: 1;
+        }
+    }
+    
+    // /*Tasteful recipes */
+    .tasteful-recipes {
+    background: url("/img/rakpickstory/salad-2068217.jpg") no-repeat 0 100% / cover;
+    background-color: rgba(0, 0, 0, .6);
+    background-blend-mode: overlay;
+    }
+    .between {
+    
+        min-height: 65vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    // /*Discover Our Menu*/
+    
+    .image-group  {
+    
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    
+    
+    .discover-our-menu .restaurant-description {
+    
+        padding-top: 3rem;
+        margin-bottom: 0;
+    }
+    
+    // /*The perfect blend */
+    
+    .perfect-blend {
+        background: url("/img/rakpickstory/ai-generated-8655605.jpg") no-repeat 0 100% / cover;
+        background-color: rgba(0, 0, 0, .6);
+        background-blend-mode: overlay;
+    }
+    
+    // /*footer */
+    #subFooter {
+    
+        padding: 7.9rem;
+        background-color: #121212;
+        color: #fff;
+    text-align: center;
+    position: relative;
+    }
+    
+    .back-to-top {
+    
+        width: 7rem;
+        height: 7rem;
+        background-color: #121212;
+        position: absolute;
+        top:2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+    
+    }
+    
+    .back-to-top i {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    padding:2rem;
+    animation: Up 2s infinite;
+    
+    }
+    .footer-content {
+    overflow: hidden;
+    
+    }
+    .footer-content h4 {
+    
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        font-weight: 100;
+        margin-right: -.5rem;
+    
+    }
+    .footer-content-divider {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    
+    .footer-content .asterisk {
+    
+        margin: 2.4rem 0;
+        
+    }
+    .footer-content-about {
+        max-width: 55rem;
+        margin: 4rem auto 0;
+    }
+    .footer-content-about p{
+    line-height: 2;
+    
+    }
+
+}
+// /* 락픽스토리 미디어쿼리 media queries  */
+// 990까지
+@media (max-width: 990px) {
+    #rakpickstory{
+        .hero{
+            height: 50vh;
+        }
+        .storyTitle{
+            font-size: 4rem;
+            .storyTitle{
+                font-size: 5rem;
+            }
+        }
+        .first-letter{
+            font-size: 3rem;
+        }
+        .sub-headline{
+            font-size: 2rem;
+        }
+        .global-headline .sub-headline {
+            line-height: 1.2;
+        }
+        p{
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .restaurant-info-img{
+            img{
+                width: 80%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+        .between{
+            min-height: 50vh;
+        }
+        .sub-headline01{
+            font-size: 3rem;
+            line-height: 1.2;
+            .first-letter01{
+                font-size: 4rem;
+            }
+        }
+        .headline01{
+            font-size: 2rem;
+            line-height: 3;
+        }
+        .discover-our-menu .restaurant-description{
+            padding-top: 0;
+        }
+        #subFooter{
+            padding: 1rem;
+        }
+        .footer-content h4{
+            margin-top: 8rem;
+        }
+        .restaurant-info {
+            display: block;
+        }
+        .footer-content-divider {
+        display: block;
+        }
+        .padding-right {
+            padding-right: 0;
+    
+        }
+    } 
+}
+
+// /*Animmationss*/
+@keyframes fadeUp {
+
+    0% {
+        transform: translateY(4rem);
+
+
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+
+@keyframes scale {
+
+    0% {
+        transform: scale(2);
+
+
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+
+
+@keyframes grow {
+
+    0% {
+        width: 0;
+        ;
+
+
+    }
+
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(0);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+
+@keyframes fadeDown {
+
+    0% {
+        transform: translateY(-1rem);
+
+
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes Up {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+
+
+    100% {
+        opacity: 0;
+        transform: translateY(-1rem);
+
+    }
+}
+
+
+// 장바구니 페이지
+#cart{
+    h2{
+        padding: 6rem 0 2rem;
+        font-size: 3rem;
+        color: #333;
+        text-align: center;
+    }
+    a{
+        color: #FF6D00;
+    }
+    background-color: #fff;
+    .shopping-cart-wrapper {
+        margin: 0 auto;
+        max-width: 1440px;
+        width: 100%;
+        padding: 4rem 10rem 10rem;
+    }
+    .totals{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .totals .totals-item {
+        display: flex;
+        width: 14rem;
+        margin-bottom: 10px;
+        justify-content: space-between;
+    }
+    .totals .totals-item label {
+        text-align: right;
+    }
+    
+    .totals-value {
+        width: 21%;
+        text-align: right;
+    }
+    .checkout {
+        border: 0;
+        margin-top: 20px;
+        padding: 6px 25px;
+        background-color: #6b6;
+        color: #fff;
+        font-size: 1.4rem;
+        border-radius: 3px;
+        width: 14rem;
+    }
+    
+    .checkout:hover {
+        background-color: #494;
+    }
+}
+@media (max-width: 990px) {
+    #cart{
+        .shopping-cart-wrapper{
+            padding: 4rem 1rem 6rem;
+            .cart-item{
+                font-size: .7rem;
+            }
+        }
+    }
+}
+
+
+// 베스트 페이지
+#best{
+    .best-list{
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 2rem;
+        margin: 0 auto;
+        h2{
+            text-align: center;
+            padding: 6rem 0 0rem;
+            margin-bottom: 4rem;
+            font-size: 3rem;
+            color: #333;
+            text-align: center;
+        }
+    }
+    .product-grid3 {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .product-grid3:before {
+        content: "";
+        height: 81%;
+        width: 100%;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, .1);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .5s ease 0s;
+    }
+
+    .product-grid3:hover:before {
+        opacity: 1;
+        height: 98%;
+    }
+
+    .product-grid3 .product-image3 {
+        position: relative;
+    }
+
+    .product-grid3 .product-image3 a {
+        display: block;
+    }
+
+    .product-grid3 .product-image3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-grid3 .pic-1 {
+        opacity: 1;
+        transition: all .5s ease-out 0s;
+    }
+
+    .product-grid3:hover .pic-1 {
+        opacity: 0;
+    }
+
+    .product-grid3 .pic-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all .5s ease-out 0s;
+    }
+
+    .product-grid3:hover .pic-2 {
+        opacity: 1;
+    }
+
+    .product-grid3 .social {
+        width: 120px;
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -23px;
+        transform: scale(0);
+        transition: all .3s ease 0s;
+    }
+
+    .product-grid3:hover .social {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .product-grid3:hover .product-discount-label,
+    .product-grid3:hover .product-new-label,
+    .product-grid3:hover .title {
+        opacity: 0;
+    }
+
+    .product-grid3 .social li {
+        display: inline-block;
+    }
+
+    .product-grid3 .social li a {
+        color: #e67e22;
+        background: #fff;
+        font-size: 1.125rem;
+        line-height: 3.125rem;
+        width: 3.125rem;
+        height: 3.125rem;
+        border: 1px solid rgba(0, 0, 0, .1);
+        border-radius: 50%;
+        margin: 0 2px;
+        display: block;
+        transition: all .3s ease 0s;
+    }
+
+    .product-grid3 .social li a:hover {
+        background: #e67e22;
+        color: #fff;
+    }
+
+    .product-grid3 .product-discount-label,
+    .product-grid3 .product-new-label {
+        background-color: #e67e22;
+        color: #fff;
+        font-size: 1rem;
+        padding: 0.125rem 0.625rem;
+        position: absolute;
+        right: 0.625rem;
+        top: 0.625rem;
+        transition: all .3s;
+    }
+
+    .product-grid3 .product-content {
+        z-index: -1;
+        padding: .9375rem;
+        text-align: left;
+    }
+
+    .product-grid3 .title {
+        font-size: .875rem;
+        text-transform: capitalize;
+        margin: 0 0 .4375rem;
+        transition: all .3s ease 0s;
+    }
+
+    .product-grid3 .title a {
+        color: #414141;
+    }
+
+    .product-grid3 .price {
+        color: #000;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-right: 2px;
+        display: inline-block;
+    }
+
+    .product-grid3 .price span {
+        color: #909090;
+        font-size: .875rem;
+        font-weight: 500;
+        letter-spacing: 0;
+        text-decoration: line-through;
+        text-align: left;
+        display: inline-block;
+        margin-top: -2px;
+    }
+
+    .product-grid3 .rating {
+        padding: 0;
+        list-style: none;
+        text-align: right;
+        display: block;
+    }
+
+    .product-grid3 .rating li {
+        color: #ffd200;
+        font-size: .75rem;
+        display: inline-block;
+    }
+
+    .product-grid3 .rating li.disable {
+        color: #dcdcdc;
+    }
+
+    // 베스트 페이지 버튼
+    #pageBtn{
+        margin-top: 4rem;
+        .eventBtnList{
+            .page-item{
+                padding: 0 .6rem 0;
+                &.active .page-link{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    color: $subColor04;
+                }
+                a{
+                    font-size: 1rem;
+                    color: $textDetail;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: .6rem;
+                    .pageLeft{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(-135deg);
+                    }
+                    .pageRight{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(45deg);
+                    }
+                }
+                .page-link{
+                    border: none;
+                    &:focus{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: 0.6rem;
+                    color: $subColor04;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:680px) {
+    #best{
+        .product-grid3 .title{
+            font-size: .8rem;
+        }
+        .product-grid3 .rating li{
+            font-size: .6rem;
+        }
+        .product-grid3 .product-content{
+            padding: .2rem;
+        }
+        .product-grid3 .price{
+            font-size: .8rem;
+        }
+        .product-grid3 .price span{
+            font-size: .7rem;
+        }
+    }
+}
+@media only screen and (max-width:575px) {
+    #best{
+        .product-grid3{
+            padding: 2rem;
+        }
+        .product-grid3 .title{
+            font-size: 1rem;
+        }
+        .product-grid3 .rating li{
+            font-size: .75rem;
+        }
+        .product-grid3 .product-content{
+            padding: .4rem;
+        }
+        .product-grid3 .price{
+            font-size: 1rem;
+        }
+        .product-grid3 .price span{
+            font-size: .8rem;
+        }
+    }
+}
+
+
+// 정기배송 페이지
+#subscription{
+    .sub-list{
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 2rem;
+        margin: 0 auto;
+        h2{
+            text-align: center;
+            padding: 6rem 0 0rem;
+            margin-bottom: 4rem;
+            font-size: 3rem;
+            color: #333;
+            text-align: center;
+        }
+    }
+    .product-grid3 {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .product-grid3:before {
+        content: "";
+        height: 81%;
+        width: 100%;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, .1);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .5s ease 0s;
+    }
+
+    .product-grid3:hover:before {
+        opacity: 1;
+        height: 98%;
+    }
+
+    .product-grid3 .product-image3 {
+        position: relative;
+    }
+
+    .product-grid3 .product-image3 a {
+        display: block;
+    }
+
+    .product-grid3 .product-image3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-grid3 .pic-1 {
+        opacity: 1;
+        transition: all .5s ease-out 0s;
+    }
+
+    .product-grid3:hover .pic-1 {
+        opacity: 0;
+    }
+
+    .product-grid3 .pic-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all .5s ease-out 0s;
+    }
+
+    .product-grid3:hover .pic-2 {
+        opacity: 1;
+    }
+
+    .product-grid3 .social {
+        width: 120px;
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -23px;
+        transform: scale(0);
+        transition: all .3s ease 0s;
+    }
+
+    .product-grid3:hover .social {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .product-grid3:hover .product-discount-label,
+    .product-grid3:hover .product-new-label,
+    .product-grid3:hover .title {
+        opacity: 0;
+    }
+
+    .product-grid3 .social li {
+        display: inline-block;
+    }
+
+    .product-grid3 .social li a {
+        color: #e67e22;
+        background: #fff;
+        font-size: 1.125rem;
+        line-height: 3.125rem;
+        width: 3.125rem;
+        height: 3.125rem;
+        border: 1px solid rgba(0, 0, 0, .1);
+        border-radius: 50%;
+        margin: 0 2px;
+        display: block;
+        transition: all .3s ease 0s;
+    }
+
+    .product-grid3 .social li a:hover {
+        background: #e67e22;
+        color: #fff;
+    }
+
+    .product-grid3 .product-discount-label,
+    .product-grid3 .product-new-label {
+        background-color: #e67e22;
+        color: #fff;
+        font-size: 1rem;
+        padding: 0.125rem 0.625rem;
+        position: absolute;
+        right: 0.625rem;
+        top: 0.625rem;
+        transition: all .3s;
+    }
+
+    .product-grid3 .product-content {
+        z-index: -1;
+        padding: .9375rem;
+        text-align: left;
+    }
+
+    .product-grid3 .title {
+        font-size: .875rem;
+        text-transform: capitalize;
+        margin: 0 0 .4375rem;
+        transition: all .3s ease 0s;
+    }
+
+    .product-grid3 .title a {
+        color: #414141;
+    }
+
+    .product-grid3 .price {
+        color: #000;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-right: 2px;
+        display: inline-block;
+    }
+
+    .product-grid3 .price span {
+        color: #909090;
+        font-size: .875rem;
+        font-weight: 500;
+        letter-spacing: 0;
+        text-decoration: line-through;
+        text-align: left;
+        display: inline-block;
+        margin-top: -2px;
+    }
+
+    .product-grid3 .rating {
+        padding: 0;
+        list-style: none;
+        text-align: right;
+        display: block;
+    }
+
+    .product-grid3 .rating li {
+        color: #ffd200;
+        font-size: .75rem;
+        display: inline-block;
+    }
+
+    .product-grid3 .rating li.disable {
+        color: #dcdcdc;
+    }
+
+    // 정기배송 페이지 버튼
+    #pageBtn{
+        margin-top: 4rem;
+        .eventBtnList{
+            .page-item{
+                padding: 0 .6rem 0;
+                &.active .page-link{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    color: $subColor04;
+                }
+                a{
+                    font-size: 1rem;
+                    color: $textDetail;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: .6rem;
+                    .pageLeft{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(-135deg);
+                    }
+                    .pageRight{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(45deg);
+                    }
+                }
+                .page-link{
+                    border: none;
+                    &:focus{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: 0.6rem;
+                    color: $subColor04;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:720px) {
+    .subscrN{
+        display: block;
+    }
+    #subscription{
+        .product-grid3 .title{
+            font-size: .8rem;
+        }
+        .product-grid3 .rating li{
+            font-size: .6rem;
+        }
+        .product-grid3 .product-content{
+            padding: .2rem;
+        }
+        .product-grid3 .price{
+            font-size: .8rem;
+        }
+        .product-grid3 .price span{
+            font-size: .7rem;
+        }
+    }
+}
+@media only screen and (max-width:575px) {
+    .subscrN{
+        display: none;
+    }
+    #subscription{
+        .product-grid3{
+            padding: 2rem;
+        }
+        .product-grid3 .title{
+            font-size: 1rem;
+        }
+        .product-grid3 .rating li{
+            font-size: .75rem;
+        }
+        .product-grid3 .product-content{
+            padding: .4rem;
+        }
+        .product-grid3 .price{
+            font-size: 1rem;
+        }
+        .product-grid3 .price span{
+            font-size: .8rem;
+        }
+    }
+}
+
+
+// 명예의전당 페이지
+// /* Variables */
+$whiteColor: #fff;
+$grayColor: #DFE2E4;
+$blackColor: #A3A8CD;
+$yellowColor: #275902;
+$sizeH: 9.375rem;
+// /* Card */
+#ranking {
+    background-color: #fff;
+    .rankingBox{
+        display: block;
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 0 2rem 0;
+    /* Title */
+        .title {
+            text-align: center;
+            h2{
+                padding: 6rem 0 0;
+                font-size: 3rem;
+                color: $yellowColor;
+                text-align: center;
+            }
+            p {
+                color: $blackColor;
+                margin-top: .5rem;
+                margin-bottom: 1.5625rem;
+            }
+        }
+
+        /* Rancking */
+        .box {
+            display: flex;
+            align-items: center;
+            width: 80%; 
+            height: $sizeH;
+            margin: 1.25rem auto 1.25rem auto;
+        }
+
+        /* Number */
+        .number {
+            font-weight: bold;
+            font-size: 3.125rem;
+            width: 3.125rem; 
+            height: $sizeH;
+            line-height: $sizeH;
+            color: $grayColor;
+            margin-right: 1.5625rem; 
+            margin-left: 1.5625rem;
+        }
+
+        /* Cover */
+        .cover {
+            height: $sizeH;
+            margin-right: 1.5625rem;
+            display: flex;
+            align-items: center;
+        }
+        .cover img {
+            height: 5rem;
+            border-radius: 100%;
+        }
+
+        /* Name */
+        .name {
+            height: $sizeH;
+            line-height: $sizeH;
+            font-size: 1.125rem;
+            color: $blackColor;
+            span {
+                font-weight: bold;
+                color: #333 ;
+            }
+        }
+
+        /* Button */
+        .link {
+            text-align: right;
+            margin-right: 1.5625rem;
+            margin-left: auto;
+            padding: .5625rem .75rem;
+            font-size: .875rem;
+            background-color: $yellowColor; 
+            color: #fff;
+            border: none;
+        }
+
+        /* Separator */
+        .separator {
+            width: 80%;
+            height: 1px;
+            margin: auto;
+            background-color: $grayColor;
+        }
+
+        /* :hover */
+        .box:hover {
+            box-shadow: 1px 1px 2.5rem 0px $grayColor;
+            .number {
+                color: $yellowColor;
+            }
+            .name {
+                span{
+                    color: $yellowColor;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 990px) {
+    #ranking{
+        .rankingBox{
+            padding: 0 1rem 2rem;
+        }
+    }
+}
+@media (max-width: 768px) {
+    #ranking{
+        .rankingBox{
+            .box {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}
+@media (max-width: 580px) {
+    .rankingN{
+        display: block;
+    }
+    #ranking{
+        .rankingBox{
+            .box {
+                width: 100%;
+                margin: 0;
+                height: 8rem;
+            }
+            .cover{
+                margin-right: 1rem;
+            }
+            .cover img {
+                height: 3rem;
+            }
+            .number {
+                font-size: 2rem;
+                margin-right: 0;
+                margin-left: 0;
+            }
+            .name {
+                height: auto;
+                line-height: normal;
+                font-size: .9rem;
+                color: $blackColor;
+            }
+            .link{
+                text-align: center;
+                margin-right: 0;
+                padding: .4rem 0.2rem;
+                font-size: .875rem;
+            }
+            .separator{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// 체험단 페이지
+#tester{
+    background-color: #fff;
+    .testerBg{
+        width: 100%;
+        object-fit: cover;
+    }
+    .contact-form {
+        padding: 50px;
+        margin: 30px auto;
+    }	
+    .contact-form h2 {
+        font-size: 42px;
+        margin: 0 0 50px;
+        text-align: center;
+    }
+    .contact-form .form-group {
+        margin-bottom: 20px;
+    }
+    .contact-form .form-control, .contact-form .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+	.contact-form .form-control {
+		border-color: #275902;
+	}
+	.contact-form .form-control:focus {
+		border-color: #275902;
+		box-shadow: 0 0 8px #275902;
+	}
+    .contact-form .btn-primary {
+        min-width: 202px;
+        max-width: 250px;
+        color: #fff;
+        background: #275902;
+        margin-top: 20px;
+        border: none;
+    }
+    .contact-form .btn-primary:hover {
+        background: #488C03;
+    }
+    .contact-form .btn-primary i {
+        margin-right: 5px;
+    }
+    .contact-form label {
+        opacity: 0.9;
+    }
+    .contact-form textarea {
+        resize: vertical;
+    }
+    .bs-example {
+    margin: 20px;
+    }
+}
+
+
+// 맞춤코칭 페이지
+#coaching {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .coachingImg {
+        background: url("/img/banner/CK_tica114m20010627.jpg") no-repeat center / cover;
+        background-color: rgba(0, 0, 0, .6);
+        background-blend-mode: overlay;
+        width: 100%;
+        }
+        .between {
+        
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+        }
+        .boxOp {
+            padding: 3.9rem 0;
+            overflow: hidden;
+        }
+    
+    .container {
+            width: 100%;
+            max-width: 122.5rem;
+            margin: 0 auto;
+            padding: 0 2.4rem;
+        }
+    
+    .global-headline {
+            text-align: center;
+            margin-top: 3.9rem;
+        }
+    .first-letter01 {
+        text-transform: uppercase;
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        opacity: 0;
+        animation: fadeUp .5s forwards;
+        animation-delay: .5s ;
+        color: #fff;
+    }
+    .headline01 {
+            color:#fff;
+            font-size: 3.7rem;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+            line-height: 2;
+            animation: scale .5s forwards;
+            }
+    h2 {
+        padding: 6rem 0 2rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+    form {
+        padding: 0 10rem;
+        max-width: 1440px;
+        width: 100%;
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px;
+            border: 0;
+            text-align: left;
+        }
+        th {
+            background-color: #275902; /* Main Color */
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline-color: #275902;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 0 5px;
+        }
+        
+        input[type="submit"] {
+            background-color: #488C03; /* Main Color */
+            color: #fff;
+            border: none;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            width: 20%;
+            margin: 1rem auto 2rem;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #275902; /* Darker shade for hover effect */
+        }
+        
+        // label {
+        //     font-weight: bold;
+        // }
+        
+        textarea {
+            resize: none;
+        }
+        .bgNone:hover{
+            background-color: transparent !important;
+        }
+    }
+}
+@media (max-width: 990px) {
+    #coaching{
+        .global-headline .sub-headline {
+            line-height: 1.2;
+        }
+        p{
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .restaurant-info-img{
+            img{
+                width: 80%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+        .between{
+            min-height: 50vh;
+        }
+        .sub-headline01{
+            font-size: 3rem;
+            line-height: 1.2;
+            .first-letter01{
+                font-size: 4rem;
+            }
+        }
+        .headline01{
+            font-size: 2rem;
+            line-height: 3;
+        }
+        form{
+            padding: 0 1rem;
+        }
+    }
+}
+@media (max-width: 660px) {
+    .coachingN{
+        display: block;
+    }
+    #coaching{
+        
+    }
+}

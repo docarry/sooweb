@@ -1,0 +1,1007 @@
+@charset "UTF-8";
+@import '_main.scss';
+
+
+// 공통클래스 시작 ------------------------------
+html, body{
+    background: linear-gradient(#f5af19, #fef7e8) fixed !important;
+    background: -webkit-linear-gradient(#f5af19, #fef7e8) fixed !important;
+    background: -moz-linear-gradient(#f5af19, #fef7e8) fixed !important;
+    background: -o-linear-gradient(#f5af19, #fef7e8) fixed !important;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: #333;
+}
+body{
+    overflow-x: hidden;
+}
+// Site 이동 버튼
+.more-wrap {
+    display: flex;
+    gap: .625rem;
+    .more-btn {
+        font-size: .7rem;
+        padding: .625rem 1.875rem .625rem 1.25rem;
+        border: 1px solid #c5bfb3;
+        background: #fff;
+        transition: all .4s linear;
+        color: #757575;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .25rem;
+    }
+    .more-wrap .more-btn:hover {
+        background: #c5bfb3;
+        color: #fff;
+        cursor: pointer;
+    }
+    .more-btn.more-o {
+        padding: .625rem 1.875rem;
+    }
+    .more-btn.more-w::before {
+        content: url("/img/icon/web-icon.svg");
+        display: inline-block;
+    }
+    .more-btn.more-w:hover::before {
+        content: url("/img/icon/web-icon-white.svg");
+    }
+    .more-btn.more-n::before {
+        content: url("/img/icon/notion-icon.svg");
+        display: inline-block;
+    }
+    .more-btn.more-n:hover::before {
+        content: url("/img/icon/notion-icon-white.svg");
+    }
+    .more-btn.more-g::before {
+        content: url("/img/icon/git-icon.svg");
+        display: inline-block;
+    }
+    .more-btn.more-g:hover::before {
+        content: url("/img/icon/git-icon-white.svg");
+    }
+    .more-btn.more-f::before {
+        content: url("/img/icon/figma-icon.svg");
+        display: inline-block;
+    }
+    .more-btn.more-f:hover::before {
+        content: url("/img/icon/figma-icon-white.svg");
+    }
+}
+// 공통클래스 종료 ------------------------------
+
+
+// 프로그레스바 진행도 시작 ------------------------------
+.progress-bar-main {
+    width: 0;
+    height: 5px;
+    background: linear-gradient(to left, #f12711, #f5af19, #fef7e8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+// 프로그레스바 진행도 종료 ------------------------------
+
+
+// GNB 시작 ------------------------------
+#mainNav{
+    &.navbar-shrink {
+        background-color: transparent;
+    }
+    .navbar-nav .nav-item .nav-link:hover,
+    .navbar-nav .nav-item .nav-link.active{
+        text-decoration: underline;
+    }
+}
+// GNB 종료 ------------------------------
+
+
+// 웨이브 시작 ------------------------------
+.box {
+    position: sticky;
+    top: 85%;
+    margin-left: 10vw;
+    z-index: 1;
+    .wave {
+        top: 0;
+        left: 0;
+        opacity: .4;
+        position: absolute;
+        background: #f12711;
+        width: 90rem;
+        height: 90rem;
+        border-radius: 43%;
+        -webkit-animation: wave 7000ms infinite linear;
+        -moz-animation: wave 7000ms infinite linear;
+        -o-animation: wave 7000ms infinite linear;
+        -ms-animation: wave 7000ms infinite linear;
+        animation: wave 7000ms infinite linear;
+    }
+    .wave.-three {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: #fd9048;
+        -webkit-animation: wave 7500ms infinite linear;
+        -moz-animation: wave 7500ms infinite linear;
+        -o-animation: wave 7500ms infinite linear;
+        -ms-animation: wave 7500ms infinite linear;
+        animation: wave 7500ms infinite linear;
+    }
+    .wave.-two {
+        top: 0;
+        left: 0;
+        opacity: .1;
+        position: absolute;
+        background-color: #fff;
+        -webkit-animation: wave 3000ms infinite linear;
+        -moz-animation: wave 3000ms infinite linear;
+        -o-animation: wave 3000ms infinite linear;
+        -ms-animation: wave 3000ms infinite linear;
+        animation: wave 3000ms infinite linear;
+    }
+}
+// 웨이브 종료 ------------------------------
+
+
+// 메인 배너 시작 ------------------------------
+#header{
+    background: linear-gradient(#f12711, #f5af19);
+    position: relative;
+    .center {
+        position: absolute;
+        left: 50%;
+        top: 47%;
+        transform: translate(-50%, -50%);
+        -webkit-animation: mainShowText 1s ease-in .4s forwards;
+        -moz-animation: mainShowText 1s ease-in .4s forwards;
+        -o-animation: mainShowText 1s ease-in .4s forwards;
+        -ms-animation: mainShowText 1s ease-in .4s forwards;
+        animation: mainShowText 1s ease-in .4s forwards;
+        &.hidden {
+            opacity: 0;
+        }
+        .nombre {
+            text-align: center;
+            text-shadow: 0px .625rem rgba(241,39,17);
+            color: #Fff;
+            .text01{
+                font-size: 8rem;
+                font-weight: 600;
+            }
+            .text02{
+                font-size: 5rem;
+                margin-top: -5rem;
+                font-weight: 600;
+                margin-bottom: 4rem;
+            }
+            .text03 {
+                color: #fff;
+                font-size: 2rem;
+                text-shadow: 0px .1875rem #f12711;
+                opacity: 0;
+                font-style: italic;
+                font-weight: 500;
+                line-height: 1;
+                -webkit-animation: text03 1s ease-out 2s forwards;
+                -moz-animation: text03 1s ease-out 2s forwards;
+                -o-animation: text03 1s ease-out 2s forwards;
+                -ms-animation: text03 1s ease-out 2s forwards;
+                animation: text03 1s ease-out 2s forwards;
+            }
+            .startUp{
+                overflow: hidden;
+            }
+            .letter {
+                display: inline-block;
+                transform: translateY(100%);
+                -webkit-animation: text01 1s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards;
+                -moz-animation: text01 1s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards;
+                -o-animation: text01 1s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards;
+                -ms-animation: text01 1s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards;
+                animation: text01 1s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards;
+            }
+        }
+    }
+    .line {
+        height: 1px;
+        width: 0%;
+        background-color: #f5af19;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        overflow: hidden;
+        -webkit-animation: mymove 2s linear forwards;
+        -moz-animation: mymove 2s linear forwards;
+        -o-animation: mymove 2s linear forwards;
+        -ms-animation: mymove 2s linear forwards;
+        animation: mymove 2s linear forwards;
+    }
+    .line2 {
+        height: 1px;
+        width: 0%;
+        background-color: #f5af19;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        overflow: hidden;
+        -webkit-animation: mymove2 2s linear forwards;
+        -moz-animation: mymove2 2s linear forwards;
+        -o-animation: mymove2 2s linear forwards;
+        -ms-animation: mymove2 2s linear forwards;
+        animation: mymove2 2s linear forwards;
+    }
+}
+// 메인 배너 종료 ------------------------------
+
+
+// 로딩 후 메인배너 텍스트 보이기 시작 ------------------------------
+@-webkit-keyframes mainShowText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes mainShowText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes mainShowText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-ms-keyframes mainShowText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes mainShowText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+// 로딩 후 메인배너 텍스트 보이기 종료 ------------------------------
+
+
+// 라인 효과 시작 ------------------------------
+@keyframes mymove {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        width: 35%;
+        opacity: 1;
+    }
+}
+@keyframes mymove2 {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        width: 35%;
+        opacity: 1;
+    }
+}
+// 라인 효과 종료 ------------------------------
+
+
+// 동그라미 웨이브 키프레임 시작 ------------------------------
+@keyframes wave {
+    from {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}
+// 동그라미 웨이브 키프레임 종료 ------------------------------
+
+
+// 메인 타이틀 텍스트 효과 시작 ------------------------------
+@keyframes text01 {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes text03 {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+// 메인 타이틀 텍스트 효과 종료 ------------------------------
+
+
+// 배너 그라디언트 시작 ------------------------------
+.borderline{
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(#f5af19, transparent);
+}
+// 배너 그라디언트 종료 ------------------------------
+
+
+// 팀플 & 카페24 시작 ------------------------------
+#project{
+    width: 100%;
+    padding: 0 2rem 8rem;
+    position: relative;
+    z-index: 1;
+    .project-box{
+        gap: 5rem;
+    }
+    h4 {
+        color: #Fff;
+        font-size: 3.6rem;
+        padding: 0 0 4rem;
+    }
+    h3 {
+        text-align: left;
+        color: #fff;
+        font-size: 1rem;
+    }
+    h2 {
+        text-align: left;
+        color: #f12711;
+        font-size: 5rem;
+    }
+    .project-wrap section p {
+        font-size: 1rem;
+        text-align: left;
+        color: #666;
+    }
+
+    .project-box .project01,
+    .project-box .project02{
+        max-width: 1600px;
+        width: 100%;
+        height: 60vh;
+        margin: 0 auto;
+        .projectImg01 {
+            background: url('/img/main/uni.jpg') no-repeat top 4% center / cover;
+            display: block;
+            width: 60%;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, .2);
+        }
+        .projectImg02 {
+            background: url('/img/main/port.jpg') no-repeat top center / cover;
+            display: block;
+            width: 60%;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, .2);
+        }
+        .projectText{
+            width: 38%;
+            .detail-text {
+                gap: 1.875rem;
+                .date {
+                    color: #fff
+                }
+                .accent-wrap {
+                    gap: 4px;
+                    .text-1 {
+                        gap: 1rem;
+                    }
+                    .sub {
+                        font-size: 1rem;
+                        border-radius: .5rem;
+                        padding: .375rem;
+                        text-align: center;
+                    }
+                    .sub-1 {
+                        background-color: #efebe7;
+                        color: #757575;
+                    }
+                    .sub-2 {
+                        background-color: #d2e3c8;
+                        color: #4f6f52;
+                    }
+                }
+                .text-2 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .project-box .projectImg01 {
+        background: url('/img/main/uni.jpg') no-repeat top 4% center / cover;
+        display: block;
+        width: 60%;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, .2);
+    }
+    
+    .project-wrap .project-box span {
+        background: url('https://i.pinimg.com/564x/d7/e1/6b/d7e16b245a400f3386eeccf55843185a.jpg') no-repeat;
+        background-size: cover;
+        background-position: top center;
+        display: block;
+        width: 800px;
+        height: 450px;
+    }
+}
+// 팀플 & 카페24 종료 ------------------------------
+
+
+// 코멘트 & 리디자인 이미지 시작 ------------------------------
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+#renewal .item {
+    background: url("/img/main/vs.jpg") rgba($color: #000000, $alpha: .8) no-repeat top center/cover !important;
+    background-blend-mode: overlay;
+    position: relative;
+}
+#renewal .container-fluid .project-details h2 {
+    color: #fff;
+}
+
+#renewal .container-fluid .project-details .detail-text {
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+#renewal .container-fluid .project-details .detail-text .date {
+    color: #fff;
+}
+
+#renewal .container-fluid .project-details .detail-text .accent-wrap {
+    gap: 8px;
+}
+
+#renewal .container-fluid .project-details .detail-text .accent-wrap .text-1 .sub:hover {
+    background-color: #fff;
+}
+// 코멘트 & 리디자인 이미지 종료 ------------------------------
+
+
+// 개인작업 시작 ------------------------------
+:root {
+    --red-0: hsl(3 76% 65%);
+    --red-1: hsl(3 42% 52%);
+    --orange-0: hsl(24 76% 61%);
+    --orange-1: hsl(23 51% 49%);
+    --yellow-0: hsl(37 62% 59%);
+    --yellow-1: hsl(37 51% 51%);
+    --green-0: hsl(70 36% 55%);
+    --green-1: hsl(69 31% 46%);
+    --aqua-0: hsl(112 25% 61%);
+    --aqua-1: hsl(111 17% 51%);
+    --blue-0: hsl(167 23% 59%);
+    --blue-1: hsl(166 17% 49%);
+    --purple-0: hsl(344 47% 68%);
+    --purple-1: hsl(344 27% 55%);
+
+    --taupe-0: hsl(180 2% 10%);
+    --taupe-1: hsl(0 0% 14%);
+    --taupe-2: hsl(20 3% 19%);
+    --taupe-3: hsl(20 5% 22%);
+    --taupe-4: hsl(20 5% 24%);
+    --taupe-5: hsl(22 6% 25%);
+    --taupe-6: hsl(22 7% 29%);
+    --taupe-7: hsl(26 8% 33%);
+    --taupe-8: hsl(27 10% 36%);
+    --taupe-9: hsl(28 11% 44%);
+    --taupe-10: hsl(30 12% 51%);
+
+    --cream-0: hsl(38 47% 75%);
+    --cream-1: hsl(39 33% 66%);
+}
+
+.partial {
+    block-size: 100%;
+    inline-size: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    position: relative;
+
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    display: grid;
+    place-items: center;
+
+    background:
+        linear-gradient(0deg, hsla(3 76% 65% / 80%), hsla(3 76% 65% / 0) 75%),
+        linear-gradient(60deg, hsla(24 76% 61% / 80%), hsla(24 76% 61% / 0) 75%),
+        linear-gradient(120deg, hsla(37 62% 59% / 80%), hsla(37 62% 59% / 0) 75%),
+        linear-gradient(180deg, hsla(70 36% 55% / 80%), hsla(70 36% 55% / 0) 75%),
+        linear-gradient(240deg, hsla(112 25% 61% / 80%), hsla(112 25% 61% / 0) 75%),
+        linear-gradient(300deg, hsla(167 23% 59% / 80%), hsla(167 23% 59% / 0) 75%);
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        box-shadow: 0 0 0 2px var(--blue-0);
+    }
+
+    .window {
+        /*absolute is important for draggable JS to work*/
+        position: absolute;
+
+        min-inline-size: 70rem;
+        min-block-size: 40rem;
+        max-inline-size: 80rem;
+        max-block-size: 50rem;
+        display: flex;
+        flex-direction: column;
+
+        color: var(--cream-1);
+        background: var(--taupe-0);
+        border-radius: .5rem;
+        box-shadow: 0 10px 20px -5px hsl(180 2% 10%);
+
+        overflow: hidden;
+        resize: both;
+    }
+
+    .windowheader,
+    .window-actions,
+    .tabs,
+    .tab,
+    .toolbar,
+    button,
+    h1 {
+        display: flex;
+        align-items: center;
+    }
+
+    button,
+    input[type="text"] {
+        padding: .5rem;
+
+        background: none;
+        border-radius: .25rem;
+        border: none;
+    }
+
+    button {
+        color: var(--taupe-10);
+    }
+
+    .tabs button:hover,
+    .tab button:hover,
+    .toolbar button:hover {
+        background-color: var(--taupe-2);
+        color: var(--cream-0);
+    }
+
+    .windowheader {
+        padding-inline: 1rem;
+        padding-block: .25rem;
+        gap: 2rem;
+    }
+
+    .window-actions {
+        gap: .5rem;
+    }
+
+    .window-actions button {
+        width: .75rem;
+        height: .75rem;
+        padding: 0;
+
+        background-color: var(--taupe-2);
+        border-radius: 100%;
+    }
+
+    .tabs,
+    .tab {
+        gap: .25rem;
+    }
+
+    .tab {
+        font-size: .625rem;
+        min-inline-size: 10rem;
+        padding: .25rem .25rem .25rem .5rem;
+
+        background-color: var(--taupe-1);
+        border-radius: .25rem;
+        color: var(--cream-1);
+    }
+
+    .tab button {
+        padding: .25rem;
+        margin-left: auto;
+    }
+
+    .toolbar {
+        gap: .25rem;
+        padding-inline: .5rem;
+        padding-block: .25rem;
+
+        border-bottom: 1px solid var(--taupe-0);
+        background-color: var(--taupe-1);
+    }
+
+    .search {
+        position: relative;
+    }
+
+    input[type="text"] {
+        font-family: inherit;
+        font-size: .75rem;
+        line-height: 1.5;
+        min-inline-size: 20rem;
+        padding-inline-start: 2rem;
+
+        background-color: var(--taupe-0);
+        color: var(--cream-0);
+    }
+
+    .search svg {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+    }
+
+    .toolbar button {
+        font-size: .625rem;
+        gap: .15rem;
+    }
+
+    [aria-label="downloads"] {
+        margin-left: auto;
+    }
+
+    main {
+        flex: 2;
+        display: grid;
+        place-content: center;
+        gap: 1rem;
+        background-color: var(--taupe-2);
+        img{
+            width: 100%;
+            object-fit: cover;
+            object-position: 0% 0%;
+        }
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        letter-spacing: -.05em;
+        gap: .75rem;
+    }
+
+    p {
+        font-size: .75rem;
+        text-align: center;
+    }
+
+    a {
+        color: var(--red-0);
+        text-decoration: none;
+    }
+}
+// 개인작업 종료 ------------------------------
+
+
+// 프로필 시작 ------------------------------
+.profile-wrap {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(270deg, #ffead1, #ffb6bd, #e0b5ff);
+    background-size: 150% 150%;
+    animation: backgroundAnimation 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+
+    .profile {
+        animation: loadProfile 0.6s ease-in-out;
+        animation-fill-mode: both;
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        max-height: 750px;
+        max-width: 900px;
+    }
+
+    .profile-bg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0 30px 50px -20px rgba(14, 0, 47, 0.21);
+        width: calc(100% - 75px);
+        height: calc(100% - 110px);
+        z-index: -1;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .profile-image {
+        animation: loadProfileImage 1s ease-in-out 0.5s;
+        animation-fill-mode: both;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0 25px 45px -20px rgba(255, 0, 47, 0.55),
+            inset 0 0px 120px rgba(255, 0, 47, 0.75);
+        width: 45%;
+        flex: none;
+        background-image: url("https://zephyo.github.io/22Days/code/3/graphics/profile.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .profile-image::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: #ff2256;
+        opacity: 0.8;
+        mix-blend-mode: screen;
+    }
+
+    .camera {
+        color: #FFFF;
+        position: absolute;
+        bottom: 28px;
+        left: 28px;
+        font-size: 1.3rem;
+    }
+
+    .profile-info {
+        margin-top: 120px;
+        padding: 8% 8% 2% 8%;
+        position: relative;
+    }
+
+    .profile-info h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin: 0.7rem;
+        position: absolute;
+        animation-fill-mode: both;
+    }
+
+    h1.first-name {
+        animation: titleEffect 1s cubic-bezier(0, 0.2, 0.4, 1);
+        top: -115px;
+        left: -85px;
+    }
+
+    h1.second-name {
+        animation: titleEffect 1s cubic-bezier(0, 0, 0.3, 1);
+        top: -50px;
+        left: -45px;
+    }
+
+    .profile-info h2 {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        margin-top: 0;
+        margin-bottom: 5%;
+    }
+
+    .social-media-icons a,
+    .profile-info h2 {
+        color: #f63d47;
+    }
+
+    .profile-info p {
+        line-height: 1.5rem;
+    }
+
+    .social-media-icons {
+        display: flex;
+    }
+
+    .social-media-icons a {
+        margin-top: 7%;
+        font-size: 1.2rem;
+        flex: auto;
+        text-align: center;
+    }
+
+    .camera,
+    .social-media-icons a {
+        transition: text-shadow 0.5s ease;
+    }
+
+    .camera:hover,
+    .social-media-icons a:hover {
+        text-shadow: 0px 5px 15px rgba(255, 0, 47, 0.45);
+    }
+
+    .statistics {
+        margin-right: 10px;
+        margin-left: 10px;
+        line-height: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .statistics p {
+        margin: 3%;
+        flex: auto;
+        color: #f63d47;
+    }
+
+    .statistics p strong {
+        font-size: 1.4rem;
+        color: #000;
+        font-weight: 200;
+        margin-right: 0.3rem;
+    }
+
+    .icon {
+        background: transparent no-repeat center;
+        background-size: contain;
+        background-origin: content-box;
+        width: 60px;
+        height: 60px;
+        padding: 15px;
+        border: none;
+        transition: transform 0.5s ease;
+    }
+
+    .icon:hover {
+        transform: scale(0.9);
+    }
+
+    .arrow {
+        flex: 0 1 75px;
+        background-image: url("https://zephyo.github.io/22Days/code/3/graphics/arrow.svg");
+    }
+
+    .right {
+        transform: rotate(180deg);
+    }
+
+    .right:hover {
+        transform: scale(0.9) rotate(180deg);
+    }
+
+    .close {
+        background-image: url("https://zephyo.github.io/22Days/code/3/graphics/close.svg");
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+
+    @media only screen and (max-aspect-ratio: 4/7) and (max-width: 600px) {
+        .profile {
+            margin: 3%;
+            height: 97%;
+        }
+
+        .container {
+            height: 86%;
+            flex-direction: column;
+        }
+
+        .profile-image {
+            height: 40%;
+            width: calc(100% - 90px);
+        }
+
+        .profile-bg {
+            width: 100%;
+        }
+
+        h1.first-name {
+            left: 10px;
+        }
+
+        h1.second-name {
+            left: 60px;
+        }
+    }
+
+    @media screen and (min-aspect-ratio: 4/7) {
+        .profile {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
+
+    @keyframes backgroundAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @keyframes loadProfile {
+        from {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadProfileImage {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes titleEffect {
+        from {
+            opacity: 0;
+            transform: translateX(-75px);
+        }
+
+        to {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+}
+// 프로필 종료 ------------------------------
