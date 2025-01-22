@@ -8,7 +8,7 @@ new fullpage('#fullpage', {
     // scrollingSpeed: 1000,
 });
 
-// 컬렉션
+// 02 컬렉션
 var collection = new Swiper("#collection-slide", {
     pagination: {
     el: "#collection-slide .swiper-pagination",
@@ -26,7 +26,7 @@ var collection = new Swiper("#collection-slide", {
 });
 
 
-// 디바이스
+// 03 디바이스
 var device = new Swiper("#device-slide", {
     pagination: {
     el: "#device-slide .swiper-pagination",
@@ -36,8 +36,8 @@ var device = new Swiper("#device-slide", {
     slidesPerView: 3,
     loop:true,
     initialSlide: 3,
-    autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 1500,
+    //     disableOnInteraction: false,
+    // },
 });
