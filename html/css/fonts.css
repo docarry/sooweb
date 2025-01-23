@@ -1,4 +1,4 @@
-/* noto-sans-kr */
+/* noto-sans-kr 노토산스 */
 .noto-sans-kr-100 {
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
@@ -62,9 +62,8 @@
     font-style: normal;
 }
 
-/*****************************************************************
-S-CoreDream
-*****************************************************************/
+
+/* S-CoreDream 에스코어드림 */
 .fontSC1 {
 	font-family: 'S-Core1';
 }
@@ -142,4 +141,15 @@ S-CoreDream
 	src: url('../fonts/s-core-dream/S-Core9.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+}
+
+/* 카페24클래식타입 */
+@font-face {
+    font-family: 'Cafe24ClassicType-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.cafe24-classic{
+    font-family: 'Cafe24ClassicType-Regular';
 }
