@@ -26,6 +26,14 @@ body{
                 width: 3.125rem;
             }
         }
+        .blind {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            clip: rect(0 0 0 0);
+            margin: -1px;
+            overflow: hidden;
+        }
     }
     nav{
         .depth01{
@@ -238,6 +246,7 @@ body{
             }
         }
     }
+    // 04 카테고리
     .category{
         background: url('/redesign/vidalsassoon/img/category-bg.jpg') no-repeat center / cover;
         position: relative;
