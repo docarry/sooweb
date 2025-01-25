@@ -278,6 +278,20 @@ body{
                         @include vs-dot;
                     }
                 }
+                .nav{
+                    display: block;
+                    --bs-nav-link-padding-x: 0;
+                }
+                .nav-pills{
+                    --bs-nav-pills-link-active-bg: transparent;
+                    font-size: 2rem;
+                    .nav-link{
+                        color: #fff;
+                    }
+                    .nav-link.active{
+                        font-weight: 600;
+                    }
+                }
                 #v-pills-tabContent{
                     .tab-pane{
                         display: flex;
