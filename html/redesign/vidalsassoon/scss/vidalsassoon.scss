@@ -290,6 +290,9 @@ body{
                     }
                     .nav-link.active{
                         font-weight: 600;
+                        &::after{
+                            @include vs-dot;
+                        }
                     }
                 }
                 #v-pills-tabContent{
