@@ -8,36 +8,19 @@ new fullpage('#fullpage', {
     // scrollingSpeed: 1000,
 });
 
-// 02 컬렉션
-var collection = new Swiper("#collection-slide", {
+// 03 베스트셀러
+var collection = new Swiper("#bestSeller-slide", {
     pagination: {
-    el: "#collection-slide .swiper-pagination",
+    el: "#bestSeller-slide .swiper-pagination",
     clickable: true,
     },
     freeMode:false,
     navigation: {
-        nextEl: "#collection-slide .swiper-button-next",
-        prevEl: "#collection-slide .swiper-button-prev",
+        nextEl: "#bestSeller-slide .swiper-button-next",
+        prevEl: "#bestSeller-slide .swiper-button-prev",
     },
     slidesPerView: 3,
     centeredSlides: true,
     loop:true,
     spaceBetween: 160,
-});
-
-
-// 03 디바이스
-var device = new Swiper("#device-slide", {
-    pagination: {
-    el: "#device-slide .swiper-pagination",
-    clickable: true,
-    },
-    freeMode:false,
-    slidesPerView: 3,
-    loop:true,
-    initialSlide: 3,
-    // autoplay: {
-    //     delay: 1500,
-    //     disableOnInteraction: false,
-    // },
 });
