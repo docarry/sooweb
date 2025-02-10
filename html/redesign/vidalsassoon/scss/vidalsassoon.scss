@@ -5,6 +5,7 @@
 html, body{
     background-color: #fff;
     font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 body{
@@ -54,13 +55,117 @@ body{
     .banner{
         background: url('/redesign/vidalsassoon/img/bannder.jpeg') no-repeat center / cover;
     }
-    // 02 컬렉션
-    .collection{
-        background: url('/redesign/vidalsassoon/img/collection-bg.gif') no-repeat center / cover;
+    // 02 브랜드스토리
+    .brandStory{
+        background: url('/redesign/vidalsassoon/img/category-bg.jpg') no-repeat center / cover;
         position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         &::before{
             content: '';
-            background-color: rgba(32, 32, 42, 0.90);
+            background: rgba(8, 11, 33, 0.50);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        .fp-overflow{
+            width: 100%;
+            z-index: 4;
+            .top{
+                max-width: 1400px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 6rem 0 6.25rem;
+                position: relative;
+                h2{
+                    color: #FFF;
+                    text-align: left;
+                    font-size: 2.5rem;
+                    &::after{
+                        @include vs-dot;
+                    }
+                }
+                h3{
+                    color: #FFF;
+                    font-size: 3.75rem;
+                    font-weight: 700;
+                    span{
+                        color: #B50836;
+                    }
+                }
+                img{
+                    position: absolute;
+                    width: max-content;
+                    right: -1rem;
+                    top: -3rem;
+                    z-index: -1;
+                }
+            }
+            .bottom{
+                position: relative;
+                .bg{
+                    display: block;
+                    opacity: 30%;
+                    width: 100%;
+                }
+                .text{
+                    position: absolute;
+                    width: 50%;
+                    height: 60%;
+                    top: 20%;
+                    left: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .sub-text{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        p{
+                            color: #FFF;
+                            font-size: 1.25rem;
+                            line-height: normal;
+                        }
+                    }
+                    .more-btn{
+                        color: #FFF;
+                        font-size: 1.25rem;
+                        vertical-align: middle;
+                        &::after{
+                            content: '';
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 1.875rem;
+                            height: 1.875rem;
+                            background: url('/redesign/vidalsassoon/img/icon/Arrow_right_light.svg') no-repeat center / cover;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+                .content{
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 60%;
+                    opacity: 50%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    // 03 베스트셀러
+    .bestSeller{
+        background: url('/redesign/vidalsassoon/img/device-bg.jpg') no-repeat center / cover;
+        position: relative;
+        overflow: hidden;
+        &::before{
+            content: '';
+            background-color: rgba(0, 0, 0, 0.70);
             position: absolute;
             width: 100%;
             height: 100%;
@@ -80,7 +185,7 @@ body{
                     @include vs-dot;
                 }
             }
-            #collection-slide{
+            #bestSeller-slide{
                 max-width: 1400px;
                 width: 100%;
                 margin: auto auto;
@@ -166,132 +271,66 @@ body{
             }
         }
     }
-    // 03 디바이스
-    .device{
-        background: url('/redesign/vidalsassoon/img/device-bg.jpg') no-repeat center / cover;
-        position: relative;
-        overflow: hidden;
-        &::before{
-            content: '';
-            background-color: rgba(0, 0, 0, 0.70);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 3;
-        }
-        h2{
-            position: absolute;
-            width: max-content;
-            height: max-content;
-            top: 0;
-            left: 50%;
-        }
-        .fp-overflow{
-            width: 100%;
-            z-index: 4;
-            overflow-y: visible;
-            h2{
-                color: #FFF;
-                text-align: center;
-                font-size: 2.5rem;
-                margin-top: 7rem;
-                top: 10%;
-                left: 54%;
-                padding: 0 0 0 260px;
-                &::after{
-                    @include vs-dot;
-                }
-            }
-            #device-slide{
-                width: 100%;
-                overflow: hidden;
-                margin-left: calc(50% - 700px);
-                box-sizing: border-box;
-                .swiper-wrapper{
-                    padding: 10rem 0 0;
-                    left: 10%;
-                    .swiper-slide {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        transition: 0.5s;
-                        opacity: .5;
-                        margin-top: 9%;
-                        margin-left: -4%;
-                        img {
-                            width: 400px;
-                            height: 400px;
-                            object-fit: cover;
-                            margin-top: 2rem;
-                            border-radius: 1.25rem;
-                        }
-                        &.swiper-slide-active{
-                            opacity: 1;
-                            margin-top: 1%;
-                            margin-left: 2%;
-                            img{
-                                width: 550px;
-                                height: 550px;
-                            }
-                        }
-                        // &.swiper-slide-prev,
-                        &.swiper-slide-next{
-                            opacity: .5;
-                            margin-left: 0%;
-                        }
-                    }
-                }
-            }
-        }
-    }
     // 04 카테고리
     .category{
-        background: url('/redesign/vidalsassoon/img/category-bg.jpg') no-repeat center / cover;
+        background: url('/redesign/vidalsassoon/img/collection-bg.gif') no-repeat center / cover;
         position: relative;
         overflow: hidden;
         &::before{
             content: '';
-            background: rgba(8, 11, 33, 0.50);
+            background-color: rgba(32, 32, 42, 0.90);
             position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
-            z-index: 3;
+            z-index: 1;
         }
         .fp-overflow{
             width: 100%;
             height: 100%;
             z-index: 6;
+            display: flex;
+            align-items: center;
             .category-tab{
                 max-width: 1400px;
                 width: 100%;
                 margin: 0 auto;
-                h2{
-                    color: #FFF;
-                    text-align: center;
-                    font-size: 2.5rem;
-                    margin-top: 7rem;
-                    &::after{
-                        @include vs-dot;
-                    }
-                }
-                .nav{
-                    display: block;
-                    --bs-nav-link-padding-x: 0;
-                }
-                .nav-pills{
-                    --bs-nav-pills-link-active-bg: transparent;
-                    font-size: 2rem;
-                    .nav-link{
-                        color: #fff;
-                    }
-                    .nav-link.active{
-                        font-weight: 600;
+                .category-tab-name{
+                    gap: 9.375rem;
+                    h2{
+                        color: #FFF;
+                        text-align: center;
+                        font-size: 2.5rem;
                         &::after{
                             @include vs-dot;
+                        }
+                    }
+                    .nav{
+                        --bs-nav-link-padding-x: 0;
+                        --bs-nav-pills-link-active-bg: transparent;
+                        font-size: 2rem;
+                        gap: 1.5rem;
+                        div{
+                            .nav-link{
+                                color: #fff;
+                                display: inline-block;
+                            }
+                            .nav-link.active{
+                                font-weight: 600;
+                                &::after{
+                                    @include vs-dot;
+                                }
+                                & + .line{
+                                    height: 3px;
+                                }
+                            }
+                            .line{
+                                display: inline-block;
+                                width: 160px;
+                                height: 1px;
+                                background-color: #fff;
+                            }
                         }
                     }
                 }
