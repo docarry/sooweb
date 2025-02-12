@@ -362,4 +362,33 @@ body{
             }
         }
     }
+    // 05 미디어
+    .media{
+        background: url('/redesign/vidalsassoon/img/mediabg.jpg') no-repeat center / cover;
+        position: relative;
+        overflow: hidden;
+        &::before{
+            content: '';
+            background-color: rgba(0, 0, 0, 0.90);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .fp-overflow{
+            width: 100%;
+            z-index: 2;
+            h2{
+                color: #FFF;
+                text-align: center;
+                font-size: 2.5rem;
+                margin-top: 7rem;
+                &::after{
+                    @include vs-dot;
+                }
+            }
+        }
+    }
 }
