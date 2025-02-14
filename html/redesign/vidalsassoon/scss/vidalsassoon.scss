@@ -12,6 +12,10 @@ body{
     overflow-x: hidden;
 }
 
+.fp-warning, .fp-watermark{
+    display: none;
+}
+
 #header{
     padding: 0 16.25rem;
     height: 5.125rem;
