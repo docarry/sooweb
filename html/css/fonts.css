@@ -1,3 +1,11 @@
+/* Alex Brush 구글폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+.alex-brush-regular {
+	font-family: "Alex Brush", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
 /* noto-sans-kr 노토산스 */
 .noto-sans-kr-100 {
     font-family: "Noto Sans KR", sans-serif;
