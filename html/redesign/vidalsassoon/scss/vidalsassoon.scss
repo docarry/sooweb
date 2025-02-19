@@ -383,14 +383,33 @@ body{
         }
         .fp-overflow{
             width: 100%;
+            max-width: 1400px;
+            height: 100%;
             z-index: 2;
+            margin: 0 auto;
             h2{
                 color: #ffffff80;
                 text-align: center;
                 font-size: 12.5rem;
                 margin-top: 7rem;
-                letter-spacing: 1.875rem;
+                letter-spacing: 1.8rem;
+            }
+            div{
+                position: relative;
+                img{
+                    display: block;
+                    position: absolute;
+                    top: -100px;
+                    left: 50%;
+                    max-width: 1400px;
+                    height: 600px;
+                    object-fit: contain;
+                    transform: translate(-50%, 0);
+                }
             }
         }
+    }
+    .news{
+        background-color: #0F111A;
     }
 }
