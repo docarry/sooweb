@@ -411,5 +411,10 @@ body{
     }
     .news{
         background-color: #0F111A;
+        .new-wrap{
+            background-color: #282934;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
     }
 }
