@@ -415,6 +415,16 @@ body{
             background-color: #282934;
             border-top: 1px solid #fff;
             border-bottom: 1px solid #fff;
+            display: flex;
+            h2{
+                width: 50%;
+                padding-left: 260px;
+                border-right: 1px solid #fff;
+            }
+            .news-content{
+                width: 50%;
+                padding: 0 260px 0 60px;
+            }
         }
     }
 }
