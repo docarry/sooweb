@@ -423,7 +423,15 @@ body{
             }
             .news-content{
                 width: 50%;
-                padding: 0 260px 0 60px;
+                div{
+                    a{
+                        display: block;
+                        padding: 0 260px 0 60px;
+                    }
+                }
+                div:nth-child(2){
+                    border-top: 1px solid #fff;
+                }
             }
         }
     }
