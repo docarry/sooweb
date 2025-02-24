@@ -420,16 +420,21 @@ body{
                 width: 50%;
                 padding-left: 260px;
                 border-right: 1px solid #fff;
+                color: #FFF;
+                font-size: 6.25rem;
+                &::after{
+                    @include vs-dot;
+                }
             }
             .news-content{
                 width: 50%;
-                div{
+                li{
                     a{
                         display: block;
                         padding: 0 260px 0 60px;
                     }
                 }
-                div:nth-child(2){
+                li:nth-child(2){
                     border-top: 1px solid #fff;
                 }
             }
