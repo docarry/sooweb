@@ -16,6 +16,16 @@ body{
     display: none;
 }
 
+.f-18{
+    font-size: 1.125rem;
+    line-height: normal;
+}
+.f-24{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
 #header{
     padding: 0 16.25rem;
     height: 5.125rem;
@@ -434,6 +444,10 @@ body{
                         display: flex;
                         flex-direction: column;
                         padding: 0 260px 0 60px;
+                        gap: .625rem;
+                        span{
+                            color: #fff;
+                        }
                     }
                 }
                 li:nth-child(2){
