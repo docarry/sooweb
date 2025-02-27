@@ -3,7 +3,7 @@ new fullpage('#fullpage', {
     scrollHorizontally: true,
     // 옵션 설정
     // sectionsColor: ['#7BAABE', '#4BBFC3', '#f2f2f2', 'whitesmoke'],
-    anchors: ['banner', 'brandStory', 'bestSeller', 'category'],
+    anchors: ['banner', 'brandStory', 'bestSeller', 'category', 'footer'],
     menu: '#menu',
     // scrollingSpeed: 1000,
 });
