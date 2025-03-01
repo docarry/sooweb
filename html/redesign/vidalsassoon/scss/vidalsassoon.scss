@@ -477,5 +477,20 @@ body{
         max-height: 500px;
         background-color: #242834;
         color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fp-overflow{
+            height: 100%;
+            ul{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: .625rem;
+            }
+        }
     }
 }
