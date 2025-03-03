@@ -1,3 +1,16 @@
+$(function(){
+
+    // GB 고정
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 0){
+            $('#header').addClass('fix');
+        }else{
+            $('#header').removeClass('fix');
+        }
+    });
+});
+
+
 new fullpage('#fullpage', {
     autoScrolling:true,
     scrollHorizontally: true,
