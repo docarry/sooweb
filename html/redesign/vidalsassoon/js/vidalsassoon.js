@@ -1,6 +1,7 @@
 new fullpage('#fullpage', {
-    autoScrolling:true,
+    autoScrolling: true,
     scrollHorizontally: true,
+    scrollOverflow: true,
     anchors: ['banner', 'brandStory', 'bestSeller', 'category', 'media', 'news', 'footer'],
     menu: '#menu',
     // afterLoad: function(origin, destination, direction) {

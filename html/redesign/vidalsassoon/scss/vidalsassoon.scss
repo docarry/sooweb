@@ -33,7 +33,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99999999999;
+    z-index: 50;
     transition: all .4s ease-in-out;
     &:hover{
         background-color: #B50836;
@@ -93,8 +93,10 @@ body{
                     height: 0;
                     overflow: hidden;
                     transition: all .4s ease-in-out;
+                    z-index: 2;
                     a{
                         line-height: 50px;
+                        font-weight: 300;
                     }
                 }
             }
@@ -108,7 +110,7 @@ body{
         height: 0;
         opacity: 0;
         overflow: hidden;
-        z-index: -1;
+        z-index: 1;
         transition: all .4s ease-in-out;
         background-color: #B50836;
     }
@@ -524,6 +526,7 @@ body{
     }
     // 푸터
     #footer{
+        width: 100%;
         max-height: 500px;
         background-color: #242834;
         color: #fff;
