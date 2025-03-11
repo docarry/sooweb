@@ -125,7 +125,6 @@ body{
     .brandStory{
         background: url('/redesign/vidalsassoon/img/category-bg.jpg') no-repeat center / cover;
         position: relative;
-        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -139,88 +138,84 @@ body{
             left: 0;
             z-index: 3;
         }
-        .fp-overflow{
+        .top{
+            max-width: 1400px;
             width: 100%;
-            z-index: 4;
-            .top{
-                max-width: 1400px;
-                width: 100%;
-                margin: 0 auto;
-                padding: 6rem 0 6.25rem;
-                position: relative;
-                h2{
-                    color: #FFF;
-                    text-align: left;
-                    font-size: 2.5rem;
-                    &::after{
-                        @include vs-dot;
-                    }
-                }
-                h3{
-                    color: #FFF;
-                    font-size: 3.75rem;
-                    font-weight: 700;
-                    span{
-                        color: #B50836;
-                    }
-                }
-                img{
-                    position: absolute;
-                    width: max-content;
-                    right: -1rem;
-                    top: -3rem;
-                    z-index: -1;
+            margin: 0 auto;
+            padding: 6rem 0 6.25rem;
+            position: relative;
+            h2{
+                color: #FFF;
+                text-align: left;
+                font-size: 2.5rem;
+                &::after{
+                    @include vs-dot;
                 }
             }
-            .bottom{
-                position: relative;
-                .bg{
-                    display: block;
-                    opacity: 30%;
-                    width: 100%;
+            h3{
+                color: #FFF;
+                font-size: 3.75rem;
+                font-weight: 700;
+                span{
+                    color: #B50836;
                 }
-                .text{
-                    position: absolute;
-                    width: 50%;
-                    height: 60%;
-                    top: 20%;
-                    left: 50%;
+            }
+            img{
+                position: absolute;
+                width: max-content;
+                right: -1rem;
+                top: -3rem;
+                z-index: -1;
+            }
+        }
+        .bottom{
+            position: relative;
+            .bg{
+                display: block;
+                opacity: 30%;
+                width: 100%;
+            }
+            .text{
+                position: absolute;
+                width: 50%;
+                height: 60%;
+                top: 20%;
+                left: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .sub-text{
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
-                    .sub-text{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 1.5rem;
-                        p{
-                            color: #FFF;
-                            font-size: 1.25rem;
-                            line-height: normal;
-                        }
-                    }
-                    .more-btn{
+                    gap: 1.5rem;
+                    p{
                         color: #FFF;
                         font-size: 1.25rem;
-                        vertical-align: middle;
-                        &::after{
-                            content: '';
-                            display: inline-block;
-                            vertical-align: middle;
-                            width: 1.875rem;
-                            height: 1.875rem;
-                            background: url('/redesign/vidalsassoon/img/icon/Arrow_right_light.svg') no-repeat center / cover;
-                            margin-left: 8px;
-                        }
+                        line-height: normal;
                     }
                 }
-                .content{
-                    display: block;
-                    position: absolute;
-                    bottom: 0;
-                    left: 60%;
-                    opacity: 50%;
-                    z-index: -1;
+                .more-btn{
+                    color: #FFF;
+                    font-size: 1.25rem;
+                    vertical-align: middle;
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 1.875rem;
+                        height: 1.875rem;
+                        background: url('/redesign/vidalsassoon/img/icon/Arrow_right_light.svg') no-repeat center / cover;
+                        margin-left: 8px;
+                    }
                 }
+            }
+            .content{
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 60%;
+                opacity: 50%;
+                z-index: -1;
             }
         }
     }
@@ -239,100 +234,96 @@ body{
             left: 0;
             z-index: 1;
         }
-        .fp-overflow{
+        h2{
+            color: #FFF;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 7rem;
+            &::after{
+                @include vs-dot;
+            }
+        }
+        #bestSeller-slide{
+            max-width: 1400px;
             width: 100%;
-            z-index: 2;
-            h2{
-                color: #FFF;
-                text-align: center;
-                font-size: 2.5rem;
-                margin-top: 7rem;
-                &::after{
-                    @include vs-dot;
+            margin: auto auto;
+            .swiper-wrapper{
+                padding: 0 0 5rem;
+                .swiper-slide {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: 0.5s;
+                    img {
+                        width: 500px;
+                        height: 500px;
+                        object-fit: cover;
+                        margin-top: 2rem;
+                    }
+                    .red{
+                        color: #B50836;
+                        font-size: 1.5rem;
+                        margin: 3.125rem 0 .625rem;
+                        transition: 0.5s;
+                        opacity: 1;
+                    }
+                    .name{
+                        color: #fff;
+                        font-size: 1.5rem;
+                        transition: 0.5s;
+                        opacity: 1;
+                    }
+                    &.swiper-slide-active{
+                        opacity: 1;
+                    }
+                    &.swiper-slide-prev,
+                    &.swiper-slide-next{
+                        opacity: .3;
+                        transform: scale(0.8);
+                        .red,
+                        .name{
+                            opacity: 0;
+                        }
+                    }
                 }
             }
-            #bestSeller-slide{
-                max-width: 1400px;
-                width: 100%;
-                margin: auto auto;
-                .swiper-wrapper{
-                    padding: 0 0 5rem;
-                    .swiper-slide {
-                        text-align: center;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        opacity: 0;
-                        transition: 0.5s;
-                        img {
-                            width: 500px;
-                            height: 500px;
-                            object-fit: cover;
-                            margin-top: 2rem;
-                        }
-                        .red{
-                            color: #B50836;
-                            font-size: 1.5rem;
-                            margin: 3.125rem 0 .625rem;
-                            transition: 0.5s;
-                            opacity: 1;
-                        }
-                        .name{
-                            color: #fff;
-                            font-size: 1.5rem;
-                            transition: 0.5s;
-                            opacity: 1;
-                        }
-                        &.swiper-slide-active{
-                            opacity: 1;
-                        }
-                        &.swiper-slide-prev,
-                        &.swiper-slide-next{
-                            opacity: .3;
-                            transform: scale(0.8);
-                            .red,
-                            .name{
-                                opacity: 0;
-                            }
-                        }
-                    }
+            .swiper-pagination-bullets.swiper-pagination-horizontal{
+                margin-bottom: 1rem;
+            }
+            .swiper-pagination-bullet {
+                width: 30px;
+                height: 1px;
+                background-color: #ccc;
+                margin: 0;
+                border-radius: 0;
+            }
+            .swiper-pagination-bullet-active {
+                width: 30px;
+                height: 3px;
+                background-color: #B50836;
+            }
+            .swiper-button-prev{
+                width: 40px;
+                height: 40px;
+                border-top: solid 1px #ccc;
+                border-right: solid 1px #ccc;
+                transform: rotate(-135deg);
+                left: 30%;
+                &::after{
+                    content: '';
                 }
-                .swiper-pagination-bullets.swiper-pagination-horizontal{
-                    margin-bottom: 1rem;
-                }
-                .swiper-pagination-bullet {
-                    width: 30px;
-                    height: 1px;
-                    background-color: #ccc;
-                    margin: 0;
-                    border-radius: 0;
-                }
-                .swiper-pagination-bullet-active {
-                    width: 30px;
-                    height: 3px;
-                    background-color: #B50836;
-                }
-                .swiper-button-prev{
-                    width: 40px;
-                    height: 40px;
-                    border-top: solid 1px #ccc;
-                    border-right: solid 1px #ccc;
-                    transform: rotate(-135deg);
-                    left: 30%;
-                    &::after{
-                        content: '';
-                    }
-                }
-                .swiper-button-next{
-                    width: 40px;
-                    height: 40px;
-                    border-top: solid 1px #ccc;
-                    border-right: solid 1px #ccc;
-                    transform: rotate(45deg);
-                    right: 30%;
-                    &::after{
-                        content: '';
-                    }
+            }
+            .swiper-button-next{
+                width: 40px;
+                height: 40px;
+                border-top: solid 1px #ccc;
+                border-right: solid 1px #ccc;
+                transform: rotate(45deg);
+                right: 30%;
+                &::after{
+                    content: '';
                 }
             }
         }
@@ -530,8 +521,9 @@ body{
         max-height: 500px;
         background-color: #242834;
         color: #fff;
+        overflow: hidden;
         .fp-overflow{
-            height: 100%;
+            // height: 100%;
             ul{
                 width: 100%;
                 height: 100%;

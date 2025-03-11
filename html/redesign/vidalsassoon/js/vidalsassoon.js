@@ -1,20 +1,30 @@
-new fullpage('#fullpage', {
-    autoScrolling: true,
-    scrollHorizontally: true,
-    scrollOverflow: true,
-    anchors: ['banner', 'brandStory', 'bestSeller', 'category', 'media', 'news', 'footer'],
-    menu: '#menu',
-    // afterLoad: function(origin, destination, direction) {
-    //     const anchorLink = destination.anchor; // 현재 섹션의 anchor
-    
-    //     // 'banner' 섹션을 제외한 다른 섹션들에서만 scrolled 클래스 추가
-    //     if (anchorLink !== 'banner') {
-    //         $('#header').addClass('scrolled');
-    //     } else {
-    //         $('#header').removeClass('scrolled');
-    //     }
-    // }
+$(function() {
+    $('#fullpage').fullpage({
+        anchors: ['banner', 'brandStory', 'bestSeller', 'category', 'media', 'news', 'footer'],
+        menu: '#menu',
+        scrollingSpeed: 1000,
+        scrollOverflow: false,
+    });
 });
+
+// new fullpage('#fullpage', {
+//     autoScrolling: true,
+//     scrollHorizontally: true,
+//     scrollOverflow: true,
+//     anchors: ['banner', 'brandStory', 'bestSeller', 'category', 'media', 'news', 'footer'],
+//     menu: '#menu',
+//     overflow: false,
+//     afterLoad: function(origin, destination, direction) {
+//         const anchorLink = destination.anchor; // 현재 섹션의 anchor
+    
+//         // 'banner' 섹션을 제외한 다른 섹션들에서만 scrolled 클래스 추가
+//         if (anchorLink !== 'banner') {
+//             $('#header').addClass('scrolled');
+//         } else {
+//             $('#header').removeClass('scrolled');
+//         }
+//     }
+// });
 
 // 03 베스트셀러
 var collection = new Swiper("#bestSeller-slide", {
