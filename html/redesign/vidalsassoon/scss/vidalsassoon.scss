@@ -143,6 +143,7 @@ body{
             margin: 0 auto;
             padding: 6rem 0 6.25rem;
             position: relative;
+            z-index: 1;
             h2{
                 color: #FFF;
                 text-align: left;
@@ -222,7 +223,6 @@ body{
     .bestSeller{
         background: url('/redesign/vidalsassoon/img/device-bg.jpg') no-repeat center / cover;
         position: relative;
-        overflow: hidden;
         &::before{
             content: '';
             background-color: rgba(0, 0, 0, 0.70);
@@ -231,13 +231,13 @@ body{
             height: 100%;
             top: 0;
             left: 0;
-            z-index: 1;
         }
         h2{
             color: #FFF;
             text-align: center;
             font-size: 2.5rem;
             margin-top: 7rem;
+            z-index: 1;
             &::after{
                 @include vs-dot;
             }
