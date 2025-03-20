@@ -414,7 +414,6 @@ body{
     .media{
         background: url('/redesign/vidalsassoon/img/mediabg.jpg') no-repeat center / cover;
         position: relative;
-        overflow: hidden;
         &::before{
             content: '';
             background-color: rgba(0, 0, 0, 0.90);
@@ -423,7 +422,6 @@ body{
             height: 100%;
             top: 0;
             left: 0;
-            z-index: 1;
         }
         h2{
             color: #ffffff80;
@@ -431,6 +429,7 @@ body{
             font-size: 12.5rem;
             letter-spacing: 1.8rem;
             height: 80%;
+            z-index: 1;
         }
         span{
             position: relative;
