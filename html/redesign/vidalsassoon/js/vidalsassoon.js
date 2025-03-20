@@ -27,7 +27,7 @@ $(function() {
 // });
 
 // 03 베스트셀러
-var collection = new Swiper("#bestSeller-slide", {
+var bestSeller = new Swiper("#bestSeller-slide", {
     pagination: {
     el: "#bestSeller-slide .swiper-pagination",
     clickable: true,
@@ -38,6 +38,23 @@ var collection = new Swiper("#bestSeller-slide", {
         prevEl: "#bestSeller-slide .swiper-button-prev",
     },
     slidesPerView: 3,
+    centeredSlides: true,
+    loop:true,
+    spaceBetween: 160,
+});
+
+// 03 베스트셀러
+var category = new Swiper("#category02", {
+    pagination: {
+    el: "#category02 .swiper-pagination",
+    clickable: true,
+    },
+    freeMode:false,
+    navigation: {
+        nextEl: "#category02 .swiper-button-next",
+        prevEl: "#category02 .swiper-button-prev",
+    },
+    slidesPerView: 2,
     centeredSlides: true,
     loop:true,
     spaceBetween: 160,
