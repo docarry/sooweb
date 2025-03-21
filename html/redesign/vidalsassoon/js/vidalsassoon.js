@@ -43,8 +43,8 @@ var bestSeller = new Swiper("#bestSeller-slide", {
     spaceBetween: 160,
 });
 
-// 03 베스트셀러
-var category = new Swiper("#category02", {
+// 04 카테고리
+var category02 = new Swiper("#category02", {
     pagination: {
     el: "#category02 .swiper-pagination",
     clickable: true,
