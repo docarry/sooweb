@@ -344,29 +344,29 @@ body{
             position: relative;
             max-width: 1400px;
             margin: 0 auto;
+            .category-tab-name{
+                gap: 9.375rem;
+                h2{
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 2.5rem;
+                    &::after{
+                        @include vs-dot;
+                    }
+                }
+                #v-pills-tab{
+                    --bs-nav-link-padding-x: 0;
+                    --bs-nav-pills-link-active-bg: transparent;
+                    font-size: 2rem;
+                    gap: 1.5rem;
+                    .nav-link{
+                        color: #fff;
+                        display: inline-block;
+                    }
+                }
+            }
         }
-        // .category-tab{
-        //     max-width: 1400px;
-        //     width: 100%;
-        //     margin: 0 auto;
-        //     z-index: 1;
-        //     position: relative;
-        //     .category-tab-name{
-        //         gap: 9.375rem;
-        //         width: 32%;
-        //         h2{
-        //             color: #FFF;
-        //             text-align: center;
-        //             font-size: 2.5rem;
-        //             &::after{
-        //                 @include vs-dot;
-        //             }
-        //         }
         //         .nav{
-        //             --bs-nav-link-padding-x: 0;
-        //             --bs-nav-pills-link-active-bg: transparent;
-        //             font-size: 2rem;
-        //             gap: 1.5rem;
         //             div{
         //                 .nav-link{
         //                     color: #fff;
