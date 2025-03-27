@@ -49,29 +49,26 @@ var category01 = new Swiper("#category01", {
     el: "#category01 .swiper-pagination",
     clickable: true,
     },
-    freeMode:false,
     navigation: {
         nextEl: "#category01 .swiper-button-next",
         prevEl: "#category01 .swiper-button-prev",
     },
     slidesPerView: 2,
-    centeredSlides: true,
     loop:true,
-    spaceBetween: 160,
+    spaceBetween: 60,
 });
+
 
 var category02 = new Swiper("#category02", {
     pagination: {
     el: "#category02 .swiper-pagination",
     clickable: true,
     },
-    freeMode:false,
     navigation: {
         nextEl: "#category02 .swiper-button-next",
         prevEl: "#category02 .swiper-button-prev",
     },
     slidesPerView: 2,
-    centeredSlides: true,
     loop:true,
-    spaceBetween: 160,
+    spaceBetween: 60,
 });
