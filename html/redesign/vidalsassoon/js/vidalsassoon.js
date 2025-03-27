@@ -44,31 +44,16 @@ var bestSeller = new Swiper("#bestSeller-slide", {
 });
 
 // 04 카테고리
-var category01 = new Swiper("#category01", {
+var category01 = new Swiper(".category-slide", {
     pagination: {
-    el: "#category01 .swiper-pagination",
+    el: ".category-slide .swiper-pagination",
     clickable: true,
     },
     navigation: {
-        nextEl: "#category01 .swiper-button-next",
-        prevEl: "#category01 .swiper-button-prev",
+        nextEl: ".category-slide .swiper-button-next",
+        prevEl: ".category-slide .swiper-button-prev",
     },
     slidesPerView: 2,
     loop:true,
-    spaceBetween: 60,
-});
-
-
-var category02 = new Swiper("#category02", {
-    pagination: {
-    el: "#category02 .swiper-pagination",
-    clickable: true,
-    },
-    navigation: {
-        nextEl: "#category02 .swiper-button-next",
-        prevEl: "#category02 .swiper-button-prev",
-    },
-    slidesPerView: 2,
-    loop:true,
-    spaceBetween: 60,
+    spaceBetween: 100,
 });
