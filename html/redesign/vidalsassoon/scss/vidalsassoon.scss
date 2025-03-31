@@ -396,12 +396,15 @@ body{
                                     width: 100%;
                                     display: block;
                                 }
-                                .img004{
-                                    transform: rotate(30deg);
+                                .rotate20{
+                                    transform: rotate(20deg);
                                 }
-                                .img005{
+                                .rotate60{
+                                    transform: rotate(60deg);
+                                }
+                                .rotate-size01{
                                     width: 92%;
-                                    transform: rotate(30deg);
+                                    transform: rotate(20deg);
                                 }
                             }
                         }
