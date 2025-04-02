@@ -399,8 +399,11 @@ body{
                                 .rotate20{
                                     transform: rotate(20deg);
                                 }
-                                .rotate60{
-                                    transform: rotate(60deg);
+                                .rotate-20{
+                                    transform: rotate(-20deg);
+                                }
+                                .rotate30{
+                                    transform: rotate(30deg);
                                 }
                                 .rotate33{
                                     transform: rotate(-33deg);
@@ -408,6 +411,12 @@ body{
                                 .rotate-size01{
                                     width: 92%;
                                     transform: rotate(20deg);
+                                    margin: 0 auto;
+                                }
+                                .rotate-size02{
+                                    width: 82%;
+                                    transform: rotate(20deg);
+                                    margin: 0 auto;
                                 }
                                 .size{
                                     width: 86%;
