@@ -384,6 +384,7 @@ body{
                 width: 60%;
                 .tab-pane{
                     .category-slide{
+                        padding: 0 0 3rem 0;
                         .swiper-wrapper{
                             .swiper-slide{
                                 display: flex;
@@ -423,6 +424,18 @@ body{
                                     margin: 0 auto;
                                 }
                             }
+                        }
+                        .swiper-pagination-bullet {
+                            width: calc(100% / 4);
+                            height: 1px;
+                            background-color: #ccc;
+                            margin: 0;
+                            border-radius: 0;
+                        }
+                        .swiper-pagination-bullet-active {
+                            width: calc(100% / 4);
+                            height: 3px;
+                            background-color: #B50836;
                         }
                     }
                 }
