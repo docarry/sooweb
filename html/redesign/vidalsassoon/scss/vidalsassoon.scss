@@ -97,6 +97,22 @@ body{
                     a{
                         line-height: 50px;
                         font-weight: 300;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: 10%;
+                            left: 50%;
+                            width: 0;
+                            height: 1px;
+                            display: block;
+                            background-color: #fff;
+                            transform: translate(-50%);
+                        }
+                        &:hover::after{
+                            width: 120px;
+                            transition: all .4s ease-in-out;
+                        }
                     }
                 }
             }
