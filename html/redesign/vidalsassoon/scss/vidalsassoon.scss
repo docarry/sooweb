@@ -223,6 +223,12 @@ body{
                         background: url('/redesign/vidalsassoon/img/icon/Arrow_right_light.svg') no-repeat center / cover;
                         margin-left: 8px;
                     }
+                    &:hover{
+                        color: #B50836;
+                        &::after {
+                            filter: brightness(0) saturate(100%) invert(13%) sepia(78%) saturate(6112%) hue-rotate(338deg) brightness(72%) contrast(98%);
+                        }
+                    }
                 }
             }
             .content{
