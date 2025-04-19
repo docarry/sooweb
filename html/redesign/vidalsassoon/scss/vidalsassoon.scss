@@ -445,6 +445,30 @@ body{
                                     width: 86%;
                                     margin: 0 auto;
                                 }
+                                .img{
+                                    display: none;
+                                }
+                                .info{
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    color: #fff;
+                                    align-items: center;
+                                    gap: 1.5rem;
+                                    font-size: .875rem;
+                                    a{
+                                        display: block;
+                                        color: #fff;
+                                    }
+                                    .more{
+                                        background: #B50836;
+                                        color: #fff;
+                                        font-size: .875rem;
+                                        font-weight: 500;
+                                        padding: .5rem 1.5rem;
+                                        border-radius: 50px;
+                                    }
+                                }
                             }
                         }
                         .swiper-pagination-bullet {
