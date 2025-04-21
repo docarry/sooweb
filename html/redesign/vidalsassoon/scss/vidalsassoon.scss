@@ -446,16 +446,25 @@ body{
                                     margin: 0 auto;
                                 }
                                 .img{
-                                    display: none;
+                                    display: block;
                                 }
                                 .info{
+                                    position: absolute;
                                     width: 100%;
-                                    display: flex;
-                                    flex-direction: column;
+                                    height: 100%;
                                     color: #fff;
                                     align-items: center;
                                     gap: 1.5rem;
                                     font-size: .875rem;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    left: 0;
+                                    top: 0;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    pointer-events: none;
+                                    transition: opacity .4s ease, visibility .4s ease;
                                     a{
                                         display: block;
                                         color: #fff;
@@ -468,6 +477,15 @@ body{
                                         padding: .5rem 1.5rem;
                                         border-radius: 50px;
                                     }
+                                }
+                                &:hover .img{
+                                    filter: blur(10px);
+                                    transition: all .4s ease-in-out;
+                                }
+                                &:hover .info{
+                                    opacity: 1;
+                                    visibility: visible;
+                                    pointer-events: auto;
                                 }
                             }
                         }
