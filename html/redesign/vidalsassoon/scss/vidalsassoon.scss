@@ -505,25 +505,6 @@ body{
                 }
             }
         }
-        //     #v-pills-tabContent{
-        //         width: 68%;
-        //             .category-slide{
-        //                 width: 100%;
-        //                 height: 100%;
-        //                 .swiper-slide {
-        //                     display: flex;
-        //                     justify-content: center;
-        //                     align-items: center;
-        //                     img {
-        //                         display: block;
-        //                         width: 100%;
-        //                         object-fit: cover;
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
     }
     // 05 미디어
     .media{
@@ -599,6 +580,7 @@ body{
                         }
                         span{
                             color: #fff;
+                            transition: all .4s ease-in-out;
                         }
                         &::after{
                             content: '';
@@ -606,6 +588,15 @@ body{
                             width: 6.25rem;
                             height: 6.25rem;
                             background: url('/redesign/vidalsassoon/img/icon/Arrow_right_light.svg') center / cover;
+                            transition: all .4s ease-in-out;
+                            transform: translateX(0px);
+                        }
+                        &:hover span{
+                            color: #B50836;
+                        }
+                        &:hover::after {
+                            filter: brightness(0) saturate(100%) invert(13%) sepia(78%) saturate(6112%) hue-rotate(338deg) brightness(72%) contrast(98%);
+                            transform: translateX(20px);
                         }
                     }
                 }
