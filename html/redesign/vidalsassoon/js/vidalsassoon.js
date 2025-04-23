@@ -5,16 +5,13 @@ $(function() {
         scrollingSpeed: 1000,
         scrollOverflow: false,
         afterLoad: function(anchorLink, index) {
-            // index가 객체일 경우 숫자로 변환
             if (typeof index === 'object') {
                 index = index.index;
             }
-
-            // 첫 번째 섹션에서는 #vs-quick 숨기고, 나머지 섹션에서는 보이기
             if (index === 0) {
-                $('#vs-quick').removeClass('show'); // 첫 번째 섹션에서는 숨김
+                $('#vs-quick').removeClass('show');
             } else {
-                $('#vs-quick').addClass('show');    // 나머지 섹션에서는 보이게
+                $('#vs-quick').addClass('show');
             }
         }
     });
