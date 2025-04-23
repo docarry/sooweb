@@ -619,3 +619,38 @@ body{
         }
     }
 }
+
+#vs-quick{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    z-index: 1000;
+    width: 3.125rem;
+    height: 3.125rem;
+    display: none;
+    .top{
+        border: none;
+        display: block;
+        transition: all .4s ease;
+        background: #B50836;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        &:hover{
+            background: #fff;
+            img{
+                filter: brightness(0) saturate(100%) invert(13%) sepia(78%) saturate(6112%) hue-rotate(338deg) brightness(72%) contrast(98%);
+            }
+        }
+        img{
+            display: block;
+            transform: rotate(-90deg);
+        }
+    }
+    &.show{
+        display: block;
+    }
+}
