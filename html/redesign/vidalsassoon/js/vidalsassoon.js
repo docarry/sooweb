@@ -33,20 +33,21 @@ var bestSeller = new Swiper("#bestSeller-slide", {
     centeredSlides: true,
     loop: true,
     spaceBetween: 160,
-    // autoplay: {
-    // delay: 3000,
-    // disableOnInteraction: false,
-    // },
+    autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+    },
 });
 
-// $("#bestSeller-slide").each(function() {
-//     var swp = this.swiper;
-//     $(this).hover(function() {
-//         swp.autoplay.stop();
-//     }, function() {
-//         swp.autoplay.start();
-//     });
-// });
+$("#bestSeller-slide").each(function() {
+    var swp = this.swiper;
+    $(this).hover(function() {
+        swp.autoplay.stop();
+    }, function() {
+        swp.autoplay.start();
+    });
+});
+
 
 // 04 카테고리
 var category = new Swiper(".category-slide", {
@@ -59,17 +60,17 @@ var category = new Swiper(".category-slide", {
     slidesPerView: 2,
     loop: true,
     spaceBetween: 80,
-    // autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
 });
 
-// $(".category-slide").each(function() {
-//     var swp = this.swiper;
-//     $(this).hover(function() {
-//         swp.autoplay.stop();
-//     }, function() {
-//         swp.autoplay.start();
-//     });
-// });
+$(".category-slide").each(function() {
+    var swp = this.swiper;
+    $(this).hover(function() {
+        swp.autoplay.stop();
+    }, function() {
+        swp.autoplay.start();
+    });
+});
