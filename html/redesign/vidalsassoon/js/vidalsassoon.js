@@ -74,3 +74,8 @@ $(".category-slide").each(function() {
         swp.autoplay.start();
     });
 });
+
+
+// 애니메이션
+// AOS.init();
+// gsap.registerPlugin(ScrollTrigger);

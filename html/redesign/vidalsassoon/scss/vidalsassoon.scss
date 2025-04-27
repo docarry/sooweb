@@ -26,6 +26,31 @@ body{
     line-height: normal;
 }
 
+section.active .masked-text-ani-38{
+	position: relative;
+	&::after {
+		content: attr(data-text);
+        animation: fillText 3s forwards;
+		background: linear-gradient(90deg, #B50836 0%, #B50836 50%, transparent 50%, transparent 100%);
+		background-size: 200%;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: rgb(181, 8, 54);
+		position: absolute;
+		z-index: 3;
+		left: 0;
+		top: 0;
+	}
+	&::before {
+		content: attr(data-text);
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+        color: rgb(181, 8, 54);
+	}
+}
+
 #header{
     padding: 0 16.25rem;
     height: 5.125rem;
@@ -648,4 +673,14 @@ body{
     &.show{
         display: block;
     }
+}
+
+
+@keyframes fillText{
+	0% {
+		background-position: 100%;
+	}
+	100% {
+		background-position: 0%;
+	}
 }
