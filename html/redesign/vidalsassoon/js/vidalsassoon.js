@@ -1,7 +1,6 @@
 $(function() {
     $('#fullpage').fullpage({
         anchors: ['banner', 'brandStory', 'bestSeller', 'category', 'media', 'news', 'footer'],
-        menu: '#menu',
         scrollingSpeed: 1000,
         scrollOverflow: false,
         afterLoad: function(anchorLink, index) {
@@ -33,6 +32,7 @@ var bestSeller = new Swiper("#bestSeller-slide", {
     centeredSlides: true,
     loop: true,
     spaceBetween: 160,
+    initialSlide: 2,
     autoplay: {
     delay: 4000,
     disableOnInteraction: false,
