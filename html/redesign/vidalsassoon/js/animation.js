@@ -18,5 +18,11 @@ function triggerGSAPAnimation(index) {
             ease: "power2.out",
             delay: 0   
         }, "-=0.1")
+        .to(".brandStory .top img", {  
+            duration: 2.4,
+            opacity: 1,
+            ease: "power2.out",
+            delay: 0   
+        }, "-=0.2")
     }
 }

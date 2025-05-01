@@ -30,7 +30,7 @@ section.active .masked-text-ani-38{
 	position: relative;
 	&::after {
 		content: attr(data-text);
-        animation: fillText 3s 2.1s forwards;
+        animation: fillText 3s 2s forwards;
 		background: linear-gradient(90deg, #B50836 0%, #B50836 50%, transparent 50%, transparent 100%);
 		background-size: 200%;
 		background-clip: text;
@@ -210,6 +210,7 @@ section.active .masked-text-ani-38{
                 right: -1rem;
                 top: -3rem;
                 z-index: -1;
+                opacity: 0;
             }
         }
         .bottom{
