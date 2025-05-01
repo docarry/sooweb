@@ -12,6 +12,7 @@ $(function() {
             } else {
                 $('#vs-quick').addClass('show');
             }
+            triggerGSAPAnimation(index);
         }
     });
 });
