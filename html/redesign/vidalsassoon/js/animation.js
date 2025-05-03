@@ -25,18 +25,25 @@ function triggerGSAPAnimation(index) {
             delay: 0   
         }, "-=0.2")
         .to(".brandStory .bottom .text .sub-text div p", {
-            duration: 0.8,
+            duration: 0.6,
             y: 0,              
             opacity: 1,        
             ease: "power2.out",
-            delay: 0       
+            stagger: 0.2       
         }, "-=0.6")
         .to(".brandStory .bottom .text .sub-text > p", {  
             duration: 0.6,
             y: 0,
             opacity: 1,
             ease: "power2.out",
+            delay: 0.2        
+        }, ">")
+        .to(".brandStory .bottom .text > a", {  
+            duration: 0.6,
+            y: 0,
+            opacity: 1,
+            ease: "power2.out",
             delay: 0        
-        }, "-=0.8")
+        }, ">")
     }
 }
