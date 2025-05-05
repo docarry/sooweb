@@ -2,9 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 function triggerGSAPAnimation(index) {
     if (index === 1){ 
-        const tlSec2 = gsap.timeline();
+        const tlSec1 = gsap.timeline();
     
-        tlSec2.to(".brandStory .top h2", {
+        tlSec1.to(".brandStory .top h2", {
             duration: 1,
             x: 0,
             opacity: 1,
@@ -44,6 +44,23 @@ function triggerGSAPAnimation(index) {
             opacity: 1,
             ease: "power2.out",
             delay: 0        
-        }, ">")
+        }, ">");
+    }
+
+    if (index === 2){ 
+        const tlSec2 = gsap.timeline();
+    
+        tlSec2.to(".bestSeller h2", {
+            duration: 1,
+            opacity: 1,
+            ease: "power1.inOut",
+            delay: 0   
+        })
+        .to(".bestSeller #bestSeller-slide", {  
+            duration: 1,
+            opacity: 1,
+            ease: "power1.inOut",
+            delay: 0   
+        }, "-=0.6");
     }
 }
