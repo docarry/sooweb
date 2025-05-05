@@ -35,7 +35,7 @@ var bestSeller = new Swiper("#bestSeller-slide", {
     spaceBetween: 160,
     initialSlide: 2,
     autoplay: {
-    delay: 4000,
+    delay: 3000,
     disableOnInteraction: false,
     },
 });
