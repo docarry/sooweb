@@ -24,6 +24,12 @@ function triggerGSAPAnimation(index) {
             ease: "power2.out",
             delay: 0   
         }, "-=0.2")
+        .to(".brandStory .bottom", {
+            duration: 1.6,
+            opacity: 1,
+            ease: "power1.inOut",
+            delay: 0   
+        }, "-=2.4")
         .to(".brandStory .bottom .text .sub-text div p", {
             duration: 0.6,
             y: 0,              
