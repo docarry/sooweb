@@ -29,7 +29,7 @@ function triggerGSAPAnimation(index) {
             opacity: 1,
             ease: "power1.inOut",
             delay: 0   
-        }, "-=2.4")
+        }, "-=2")
         .to(".brandStory .bottom .text .sub-text div p", {
             duration: 0.6,
             y: 0,              
@@ -43,6 +43,13 @@ function triggerGSAPAnimation(index) {
             opacity: 1,
             ease: "power2.out",
             delay: 0.2        
+        }, ">")
+        .to(".brandStory .bottom .content", {  
+            duration: 1,
+            y: 0,
+            opacity: 0.5,
+            ease: "power1.inOut",
+            delay: 0        
         }, ">")
         .to(".brandStory .bottom .text > a", {  
             duration: 0.6,
