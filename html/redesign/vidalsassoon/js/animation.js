@@ -76,4 +76,15 @@ function triggerGSAPAnimation(index) {
             delay: 0   
         }, "-=0.6");
     }
+
+    if (index === 3){ 
+        const tlSec3 = gsap.timeline();
+    
+        tlSec3.to(".category .category-tab-name h2", {
+            duration: 1,
+            opacity: 1,
+            ease: "power1.inOut",
+            delay: 0   
+        })
+    }
 }
