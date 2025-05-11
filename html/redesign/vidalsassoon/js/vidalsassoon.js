@@ -35,7 +35,7 @@ var bestSeller = new Swiper("#bestSeller-slide", {
     spaceBetween: 160,
     initialSlide: 2,
     autoplay: {
-    delay: 3000,
+    delay: 2000,
     disableOnInteraction: false,
     },
 });
@@ -62,7 +62,7 @@ var category = new Swiper(".category-slide", {
     loop: true,
     spaceBetween: 80,
     autoplay: {
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false,
     },
 });
