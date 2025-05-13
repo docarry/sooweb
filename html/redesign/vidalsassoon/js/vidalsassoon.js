@@ -69,9 +69,10 @@ var category = new Swiper(".category-slide", {
         delay: 2000,
         disableOnInteraction: false,
     },
+    initialSlide: 0,
 });
 
-$(".category-slide .swiper-slide").each(function() {
+$(".category-slide").each(function() {
     var swp = this.swiper;
     $(this).hover(function() {
         swp.autoplay.stop();

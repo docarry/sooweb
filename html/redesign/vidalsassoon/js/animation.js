@@ -98,6 +98,9 @@ function triggerGSAPAnimation(index) {
             opacity: 1,
             ease: "power1.inOut",
             delay: 0   
-        }, "-=0.6");
+        }, "-=0.6")
+        .call(() => {
+        category.slideTo(0);
+        });
     }
 }
