@@ -40,14 +40,18 @@ var bestSeller = new Swiper("#bestSeller-slide", {
     },
 });
 
-$("#bestSeller-slide").each(function() {
-    var swp = this.swiper;
-    $(this).hover(function() {
-        swp.autoplay.stop();
-    }, function() {
-        swp.autoplay.start();
-    });
-});
+$("#bestSeller-slide .swiper-slide").hover(
+    function () {
+        if ($(this).hasClass("swiper-slide-active")) {
+            bestSeller.autoplay.stop();
+        }
+    },
+    function () {
+        if ($(this).hasClass("swiper-slide-active")) {
+            bestSeller.autoplay.start();
+        }
+    }
+);
 
 
 // 04 카테고리
@@ -67,7 +71,7 @@ var category = new Swiper(".category-slide", {
     },
 });
 
-$(".category-slide").each(function() {
+$(".category-slide .swiper-slide").each(function() {
     var swp = this.swiper;
     $(this).hover(function() {
         swp.autoplay.stop();
