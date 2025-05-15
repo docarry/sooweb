@@ -103,4 +103,15 @@ function triggerGSAPAnimation(index) {
         category.slideTo(0);
         });
     }
+
+        if (index === 4){ 
+        const tlSec4 = gsap.timeline();
+    
+        tlSec4.to(".media .media-wrap h2", {
+            duration: 1,
+            opacity: 1,
+            ease: "power1.inOut",
+            delay: 0   
+        });
+    }
 }
