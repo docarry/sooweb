@@ -574,13 +574,14 @@ section.active .masked-text-ani-38{
             iframe{
                 display: block;
                 position: absolute;
-                top: 25%;
+                top: 100%;
                 left: 50%;
                 max-width: 1400px;
                 width: 81%;
                 height: 70%;
                 object-fit: contain;
                 transform: translate(-50%, 0);
+                opacity: 0;
             }
         }
     // 06 공지이벤트

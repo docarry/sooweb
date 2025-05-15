@@ -112,6 +112,12 @@ function triggerGSAPAnimation(index) {
             opacity: 1,
             ease: "power1.inOut",
             delay: 0   
-        });
+        })
+        .to(".media .media-wrap iframe", {
+            duration: 1,
+            top: "25%",            
+            opacity: 1,        
+            ease: "power1.inOut",
+        }, "-=1");
     }
 }
