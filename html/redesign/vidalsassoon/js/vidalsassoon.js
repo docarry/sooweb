@@ -33,10 +33,11 @@ var bestSeller = new Swiper("#bestSeller-slide", {
     centeredSlides: true,
     loop: true,
     spaceBetween: 160,
-    initialSlide: 2,
+    initialSlide: 0,
     autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
+        enabled: false,
+        delay: 2000,
+        disableOnInteraction: false,
     },
 });
 
