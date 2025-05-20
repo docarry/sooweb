@@ -1,5 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
+let player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video');
+}
+
 function triggerGSAPAnimation(index) {
     if (index === 1){ 
         const tlSec1 = gsap.timeline();
@@ -104,8 +110,8 @@ function triggerGSAPAnimation(index) {
         }, "-=0.6");
     }
 
-        if (index === 4){ 
-        const tlSec4 = gsap.timeline();
+    if (index === 4){ 
+    const tlSec4 = gsap.timeline();
     
         tlSec4.to(".media .media-wrap h2", {
             duration: 1,
@@ -118,6 +124,11 @@ function triggerGSAPAnimation(index) {
             top: "25%",            
             opacity: 1,        
             ease: "power1.inOut",
+            onComplete: () => {
+                if (player && typeof player.playVideo === "function") {
+                    player.playVideo();
+                }
+            }
         }, "-=1");
     }
 }
