@@ -484,6 +484,7 @@ section.active .masked-text-ani-38{
                                 }
                                 .img{
                                     display: block;
+                                    border-radius: 20px;
                                 }
                                 .info{
                                     position: absolute;
@@ -502,6 +503,7 @@ section.active .masked-text-ani-38{
                                     visibility: hidden;
                                     pointer-events: none;
                                     transition: opacity .4s ease, visibility .4s ease;
+                                    border-radius: 20px;
                                     a{
                                         display: block;
                                         color: #fff;

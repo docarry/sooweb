@@ -57,8 +57,8 @@ $("#bestSeller-slide .swiper-slide").hover(
 
 // 04 카테고리
 var category = new Swiper(".category-slide", {
-    observer: true, // DOM 변경 감지 활성화
-    observeParents: true, // 부모 요소의 변경 감지 활성화
+    observer: true, 
+    observeParents: true, 
     pagination: {
     el: ".category-slide .swiper-pagination",
     clickable: true,
@@ -70,7 +70,7 @@ var category = new Swiper(".category-slide", {
         delay: 2000,
         disableOnInteraction: false,
     },
-    initialSlide: 0,
+    initialSlide: 3,
 });
 
 $(".category-slide").each(function() {
