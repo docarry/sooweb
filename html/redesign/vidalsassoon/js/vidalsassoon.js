@@ -70,7 +70,6 @@ var category = new Swiper(".category-slide", {
         delay: 2000,
         disableOnInteraction: false,
     },
-    initialSlide: 3,
 });
 
 $(".category-slide").each(function() {

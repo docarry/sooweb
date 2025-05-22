@@ -102,7 +102,7 @@ function triggerGSAPAnimation(index) {
             ease: "power2.out",
             stagger: 0.2       
         }, "-=0.6")
-        .to(".category .category-slide", {  
+        .to(".category .tab-content", {  
             duration: 1,
             opacity: 1,
             ease: "power1.inOut",
