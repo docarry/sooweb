@@ -131,4 +131,31 @@ function triggerGSAPAnimation(index) {
             }
         }, "-=1");
     }
+
+    if (index === 5) {
+    const tlSec5 = gsap.timeline();
+
+    tlSec5
+    .to(".news-item", {
+        duration: 1,
+        onStart: () => $(".news-item").addClass("animate-border"),
+        ease: "power1.inOut",
+    })
+    .to(".new-wrap", {
+        duration: 1,
+        onStart: () => $(".new-wrap").addClass("animate-border"),
+        ease: "power1.inOut",
+    }, "+=0.2") // 0.2초 딜레이 후 실행
+    .to(".new-wrap h2", {
+        duration: 1,
+        onStart: () => $(".new-wrap h2").addClass("animate-border"),
+        ease: "power1.inOut",
+    }, "+=0.2");
+
+    } else {
+    $(".news-item").removeClass("animate-border");
+    $(".new-wrap").removeClass("animate-border");
+    $(".new-wrap h2").removeClass("animate-border");
+    }
+
 }
