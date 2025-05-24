@@ -10,7 +10,8 @@ function triggerGSAPAnimation(index) {
     if (index === 1){ 
         const tlSec1 = gsap.timeline();
     
-        tlSec1.to(".brandStory .top h2", {
+        tlSec1
+        .to(".brandStory .top h2", {
             duration: 1,
             x: 0,
             opacity: 1,
@@ -69,7 +70,8 @@ function triggerGSAPAnimation(index) {
     if (index === 2){ 
         const tlSec2 = gsap.timeline();
     
-        tlSec2.to(".bestSeller h2", {
+        tlSec2
+        .to(".bestSeller h2", {
             duration: 1,
             opacity: 1,
             ease: "power1.inOut",
@@ -89,7 +91,8 @@ function triggerGSAPAnimation(index) {
     if (index === 3){ 
         const tlSec3 = gsap.timeline();
     
-        tlSec3.to(".category .category-tab-name h2", {
+        tlSec3
+        .to(".category .category-tab-name h2", {
             duration: 1,
             opacity: 1,
             ease: "power1.inOut",
@@ -113,7 +116,8 @@ function triggerGSAPAnimation(index) {
     if (index === 4){ 
     const tlSec4 = gsap.timeline();
     
-        tlSec4.to(".media .media-wrap h2", {
+        tlSec4
+        .to(".media .media-wrap h2", {
             duration: 1,
             opacity: 1,
             ease: "power1.inOut",
@@ -134,28 +138,28 @@ function triggerGSAPAnimation(index) {
 
     if (index === 5) {
     const tlSec5 = gsap.timeline();
-
-    tlSec5
-    .to(".news-item", {
+        
+        tlSec5
+        .to(".new-wrap", {
+            duration: .6,
+            onStart: () => $(".new-wrap").addClass("animate-border"),
+            ease: "power1.inOut",
+        })
+        .to(".new-wrap h2", {
+            duration: .6,
+            onStart: () => $(".new-wrap h2").addClass("animate-border"),
+            ease: "power1.inOut",
+        }, "+=0.2")
+        .to(".news-item", {
+            duration: .6,
+            onStart: () => $(".news-item").addClass("animate-border"),
+            ease: "power1.inOut",
+        }, "+=0.2")
+        .to(".new-wrap", {
         duration: 1,
-        onStart: () => $(".news-item").addClass("animate-border"),
+        backgroundColor: "#282934",
         ease: "power1.inOut",
-    })
-    .to(".new-wrap", {
-        duration: 1,
-        onStart: () => $(".new-wrap").addClass("animate-border"),
-        ease: "power1.inOut",
-    }, "+=0.2") // 0.2초 딜레이 후 실행
-    .to(".new-wrap h2", {
-        duration: 1,
-        onStart: () => $(".new-wrap h2").addClass("animate-border"),
-        ease: "power1.inOut",
-    }, "+=0.2");
-
-    } else {
-    $(".news-item").removeClass("animate-border");
-    $(".new-wrap").removeClass("animate-border");
-    $(".new-wrap h2").removeClass("animate-border");
+        delay: 0   
+        });
     }
-
 }
