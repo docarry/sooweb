@@ -160,6 +160,12 @@ function triggerGSAPAnimation(index) {
         backgroundColor: "#282934",
         ease: "power1.inOut",
         delay: 0   
+        })
+        .to(".news .new-wrap h2", {
+            duration: 1,
+            opacity: 1,
+            ease: "power1.inOut",
+            delay: 0   
         });
     }
 }
