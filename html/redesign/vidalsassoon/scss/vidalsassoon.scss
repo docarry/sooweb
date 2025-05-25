@@ -549,6 +549,7 @@ section.active .masked-text-ani-38{
     .media{
         background: url('/redesign/vidalsassoon/img/mediabg.jpg') no-repeat center / cover;
         position: relative;
+        overflow: hidden;
         &::before{
             content: '';
             background-color: rgba(0, 0, 0, 0.90);
@@ -623,8 +624,11 @@ section.active .masked-text-ani-38{
                 font-size: 6.25rem;
                 position: relative;
                 overflow: hidden;
-                &::after{
+                span{
+                    display: block;
+                    &::after{
                     @include vs-dot;
+                    }
                 }
                 &::before {
                 content: '';

@@ -161,7 +161,7 @@ function triggerGSAPAnimation(index) {
         ease: "power1.inOut",
         delay: 0   
         })
-        .to(".news .new-wrap h2", {
+        .to(".news .new-wrap h2 span", {
             duration: 1,
             opacity: 1,
             ease: "power1.inOut",
