@@ -166,6 +166,13 @@ function triggerGSAPAnimation(index) {
             opacity: 1,
             ease: "power1.inOut",
             delay: 0   
-        });
+        })
+        .to(".news .new-wrap .news-content li a", {
+            duration: 1,
+            y: 0,              
+            opacity: 1,        
+            ease: "power2.out",
+            stagger: .6       
+        }, "-=0.6");
     }
 }
