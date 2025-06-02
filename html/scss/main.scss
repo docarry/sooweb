@@ -71,6 +71,29 @@ body{
         content: url("/img/icon/figma-icon-white.svg");
     }
 }
+.accent-wrap {
+    gap: 4px;
+    .text-1 {
+        gap: 1rem;
+    }
+    .sub {
+        font-size: 1rem;
+        border-radius: .5rem;
+        padding: .375rem;
+        text-align: center;
+    }
+    .sub-1 {
+        background-color: #efebe7;
+        color: #757575;
+    }
+    .sub-2 {
+        background-color: #d2e3c8;
+        color: #4f6f52;
+    }
+}
+.text-2 {
+    font-size: 1rem;
+}
 // 공통클래스 종료 ------------------------------
 
 
@@ -410,29 +433,6 @@ body{
                 gap: 1.875rem;
                 .date {
                     color: #fff
-                }
-                .accent-wrap {
-                    gap: 4px;
-                    .text-1 {
-                        gap: 1rem;
-                    }
-                    .sub {
-                        font-size: 1rem;
-                        border-radius: .5rem;
-                        padding: .375rem;
-                        text-align: center;
-                    }
-                    .sub-1 {
-                        background-color: #efebe7;
-                        color: #757575;
-                    }
-                    .sub-2 {
-                        background-color: #d2e3c8;
-                        color: #4f6f52;
-                    }
-                }
-                .text-2 {
-                    font-size: 1rem;
                 }
             }
         }
