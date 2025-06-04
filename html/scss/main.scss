@@ -114,6 +114,9 @@ body{
 #mainNav{
     &.navbar-shrink {
         background-color: transparent;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
     .navbar-nav .nav-item .nav-link:hover{
         text-decoration: underline;
@@ -468,29 +471,32 @@ body{
     border-radius: 50%;
 }
 
-#renewal .item {
+#redesign .item {
     background: url("/img/main/vs.jpg") rgba($color: #000000, $alpha: .8) no-repeat top center/cover !important;
     background-blend-mode: overlay;
     position: relative;
 }
-#renewal .container-fluid .project-details h2 {
+#redesign .portfolio-carousel .item .project-details{
+    gap: 1rem;
+}
+#redesign .container-fluid .project-details h2 {
     color: #fff;
 }
 
-#renewal .container-fluid .project-details .detail-text {
+#redesign .container-fluid .project-details .detail-text {
     gap: 16px;
     margin-bottom: 16px;
 }
 
-#renewal .container-fluid .project-details .detail-text .date {
+#redesign .container-fluid .project-details .detail-text .date {
     color: #fff;
 }
 
-#renewal .container-fluid .project-details .detail-text .accent-wrap {
+#redesign .container-fluid .project-details .detail-text .accent-wrap {
     gap: 8px;
 }
 
-#renewal .container-fluid .project-details .detail-text .accent-wrap .text-1 .sub:hover {
+#redesign .container-fluid .project-details .detail-text .accent-wrap .text-1 .sub:hover {
     background-color: #fff;
 }
 // 코멘트 & 리디자인 이미지 종료 ------------------------------
