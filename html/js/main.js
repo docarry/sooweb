@@ -1,3 +1,14 @@
+$(function () {
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 0){
+            $('#top-wrap').addClass('show');
+        }else{
+            $('#top-wrap').removeClass('show');
+        }
+    });
+});
+
+
 // 프로그레스바 진행도 시작 ------------------------------
 document.querySelector(".progress-bar-main").style.width = "0%";
 
