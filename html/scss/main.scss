@@ -1015,6 +1015,28 @@ body{
 // 프로필 종료 ------------------------------
 
 
+// 연락처 시작 ------------------------------
+#contact-me {
+    .container.inner {
+        position: relative;
+        height: 80%;
+        .mail_address {
+            color: #202020;
+            font-size: 5rem;
+            transition: all .2s ease-in-out;
+            &:hover {
+                color: #f12711;
+            }
+        }
+        .btn {
+            position: relative;
+            margin-top: 40px;
+        }
+    }
+}
+// 연락처 종료 ------------------------------
+
+
 // 푸터 시작 ------------------------------
 .footer{
     .copy{
