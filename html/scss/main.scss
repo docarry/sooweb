@@ -118,12 +118,18 @@ body{
         -webkit-backdrop-filter: blur(6px);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
-    .navbar-nav .nav-item .nav-link:hover{
-        text-decoration: underline;
+    .navbar-nav .nav-item .nav-link{
+        color: #ffc800;
+        &:hover{
+            text-decoration: underline;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(241, 39, 17, 1);
+            filter: drop-shadow(0 0 2px rgb(255, 200, 0));
+        }
     }
-    .navbar-nav .nav-item .nav-link.active{
-    color: #ffc800;
-    }
+    // .navbar-nav .nav-item .nav-link.active{
+    //     color: #f12711;
+    // }
 }
 // GNB 종료 ------------------------------
 
