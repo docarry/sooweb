@@ -815,26 +815,23 @@ body{
         margin-top: 120px;
         padding: 8% 8% 2% 8%;
         position: relative;
-    }
-
-    .profile-info h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        margin: 0.7rem;
-        position: absolute;
-        animation-fill-mode: both;
-    }
-
-    h1.first-name {
-        animation: titleEffect 1s cubic-bezier(0, 0.2, 0.4, 1);
-        top: -115px;
-        left: -85px;
-    }
-
-    h1.second-name {
-        animation: titleEffect 1s cubic-bezier(0, 0, 0.3, 1);
-        top: -50px;
-        left: -45px;
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0.7rem;
+            position: absolute;
+            animation-fill-mode: both;
+            &.first-name {
+                animation: titleEffect 1s cubic-bezier(0, 0.2, 0.4, 1);
+                top: -115px;
+                left: -85px;
+            }
+            &.second-name {
+                animation: titleEffect 1s cubic-bezier(0, 0, 0.3, 1);
+                top: -50px;
+                left: -45px;
+            }
+        }
     }
 
     .profile-info h2 {
