@@ -843,28 +843,21 @@ body{
         .social-media-icons a{
             color: #f63d47;
         }
+        p {
+            line-height: 1.5rem;
+        }
+        .social-media-icons {
+            display: flex;
+            a {
+                margin-top: 7%;
+                font-size: 1.2rem;
+                flex: auto;
+                text-align: center;
+                transition: text-shadow 0.5s ease;
+            }
+        }
     }
-
-    .profile-info p {
-        line-height: 1.5rem;
-    }
-
-    .social-media-icons {
-        display: flex;
-    }
-
-    .social-media-icons a {
-        margin-top: 7%;
-        font-size: 1.2rem;
-        flex: auto;
-        text-align: center;
-    }
-
-    .camera,
-    .social-media-icons a {
-        transition: text-shadow 0.5s ease;
-    }
-
+    
     .camera:hover,
     .social-media-icons a:hover {
         text-shadow: 0px 5px 15px rgba(255, 0, 47, 0.45);
