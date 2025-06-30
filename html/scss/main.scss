@@ -846,6 +846,25 @@ body{
             }
         }
     }
+    .statistics {
+        margin-right: 10px;
+        margin-left: 10px;
+        line-height: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        p {
+            margin: 2%;
+            flex: auto;
+            color: #f63d47;
+            strong {
+                font-size: 1.4rem;
+                color: #000;
+                font-weight: 200;
+                margin-right: 0.3rem;
+            }
+        }
+    }
 
     // .camera {
     //     color: #FFFF;
@@ -860,27 +879,11 @@ body{
         text-shadow: 0px 5px 15px rgba(255, 0, 47, 0.45);
     }
 
-    .statistics {
-        margin-right: 10px;
-        margin-left: 10px;
-        line-height: 2rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+    
 
-    .statistics p {
-        margin: 2%;
-        flex: auto;
-        color: #f63d47;
-    }
+    .statistics 
 
-    .statistics p strong {
-        font-size: 1.4rem;
-        color: #000;
-        font-weight: 200;
-        margin-right: 0.3rem;
-    }
+    .statistics p 
 
     .icon {
         background: transparent no-repeat center;
