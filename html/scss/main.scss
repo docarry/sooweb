@@ -747,7 +747,6 @@ body{
     align-items: center;
     width: 100%;
     margin: 0;
-
     .profile {
         animation: loadProfile 0.6s ease-in-out;
         animation-fill-mode: both;
@@ -758,7 +757,6 @@ body{
         max-height: 750px;
         max-width: 900px;
     }
-
     .profile-bg {
         position: absolute;
         bottom: 0;
@@ -770,7 +768,6 @@ body{
         height: calc(100% - 110px);
         z-index: -1;
     }
-
     .container {
         display: flex;
         flex-direction: row;
@@ -888,19 +885,6 @@ body{
             }
         }
     }
-
-    // .camera {
-    //     color: #FFFF;
-    //     position: absolute;
-    //     bottom: 28px;
-    //     left: 28px;
-    //     font-size: 1.3rem;
-    // }
-    
-    // .camera:hover,
-    // .social-media-icons a:hover {
-    //     text-shadow: 0px 5px 15px rgba(255, 0, 47, 0.45);
-    // }
 
     @media only screen and (max-aspect-ratio: 4/7) and (max-width: 600px) {
         .profile {
