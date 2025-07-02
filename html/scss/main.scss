@@ -897,17 +897,10 @@ body{
     //     font-size: 1.3rem;
     // }
     
-    .camera:hover,
-    .social-media-icons a:hover {
-        text-shadow: 0px 5px 15px rgba(255, 0, 47, 0.45);
-    }
-
-    .close {
-        background-image: url("https://zephyo.github.io/22Days/code/3/graphics/close.svg");
-        position: absolute;
-        top: 5px;
-        right: 10px;
-    }
+    // .camera:hover,
+    // .social-media-icons a:hover {
+    //     text-shadow: 0px 5px 15px rgba(255, 0, 47, 0.45);
+    // }
 
     @media only screen and (max-aspect-ratio: 4/7) and (max-width: 600px) {
         .profile {
