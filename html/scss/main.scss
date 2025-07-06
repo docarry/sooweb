@@ -472,15 +472,16 @@ body{
     max-width: 100%;
     height: auto;
 }
-
 .img-circle {
     border-radius: 50%;
 }
 
-#redesign .item {
-    background: url("/img/main/vs.jpg") rgba($color: #000000, $alpha: .8) no-repeat top center/cover !important;
-    background-blend-mode: overlay;
-    position: relative;
+#redesign{
+    .item {
+        background: url("/img/main/vs.jpg") rgba($color: #000000, $alpha: .8) no-repeat top center/cover !important;
+        background-blend-mode: overlay;
+        position: relative;
+    }
 }
 #redesign .portfolio-carousel .item .project-details{
     gap: 1rem;
