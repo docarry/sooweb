@@ -488,11 +488,14 @@ body{
         background: url("/img/main/vs.jpg") rgba($color: #000000, $alpha: .8) no-repeat top center/cover !important;
         background-blend-mode: overlay;
         position: relative;
+        .container-fluid{
+            .project-details{
+                h2 {
+                    color: #fff;
+                }
+            }
+        }
     }
-}
-
-#redesign .container-fluid .project-details h2 {
-    color: #fff;
 }
 
 #redesign .container-fluid .project-details .detail-text {
