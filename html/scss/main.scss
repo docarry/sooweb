@@ -493,14 +493,13 @@ body{
                 h2 {
                     color: #fff;
                 }
+                .detail-text {
+                    gap: 16px;
+                    margin-bottom: 16px;
+                }
             }
         }
     }
-}
-
-#redesign .container-fluid .project-details .detail-text {
-    gap: 16px;
-    margin-bottom: 16px;
 }
 
 #redesign .container-fluid .project-details .detail-text .date {
