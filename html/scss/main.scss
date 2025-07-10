@@ -496,15 +496,16 @@ body{
                 .detail-text {
                     gap: 16px;
                     margin-bottom: 16px;
+                    .date {
+                        color: #fff;
+                    }
                 }
             }
         }
     }
 }
 
-#redesign .container-fluid .project-details .detail-text .date {
-    color: #fff;
-}
+#redesign .container-fluid .project-details .detail-text 
 
 #redesign .container-fluid .project-details .detail-text .accent-wrap {
     gap: 8px;
