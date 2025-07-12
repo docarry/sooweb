@@ -501,6 +501,11 @@ body{
                     }
                     .accent-wrap {
                         gap: 8px;
+                        .text-1{
+                            .sub:hover {
+                                background-color: #fff;
+                            }
+                        }
                     }
                 }
             }
@@ -508,9 +513,7 @@ body{
     }
 }
 
-#redesign .container-fluid .project-details .detail-text .accent-wrap .text-1 .sub:hover {
-    background-color: #fff;
-}
+#redesign .container-fluid .project-details .detail-text .accent-wrap .text-1 
 // 코멘트 & 리디자인 이미지 종료 ------------------------------
 
 
