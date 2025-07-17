@@ -576,33 +576,32 @@ body{
         linear-gradient(180deg, hsla(70 36% 55% / 80%), hsla(70 36% 55% / 0) 75%),
         linear-gradient(240deg, hsla(112 25% 61% / 80%), hsla(112 25% 61% / 0) 75%),
         linear-gradient(300deg, hsla(167 23% 59% / 80%), hsla(167 23% 59% / 0) 75%);
-
     &:focus {
         outline: none;
     }
-
     &:focus-visible {
         box-shadow: 0 0 0 2px var(--blue-0);
     }
-
     .window {
         /*absolute is important for draggable JS to work*/
         position: absolute;
-
         min-inline-size: 70rem;
         min-block-size: 40rem;
         max-inline-size: 80rem;
         max-block-size: 50rem;
         display: flex;
         flex-direction: column;
-
         color: var(--cream-1);
         background: var(--taupe-0);
         border-radius: .5rem;
         box-shadow: 0 10px 20px -5px hsl(180 2% 10%);
-
         overflow: hidden;
         resize: both;
+        .windowheader {
+            padding-inline: 1rem;
+            padding-block: .25rem;
+            gap: 2rem;
+        }
     }
 
     .windowheader,
@@ -634,12 +633,6 @@ body{
     .toolbar button:hover {
         background-color: var(--taupe-2);
         color: var(--cream-0);
-    }
-
-    .windowheader {
-        padding-inline: 1rem;
-        padding-block: .25rem;
-        gap: 2rem;
     }
 
     .window-actions {
