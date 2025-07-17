@@ -601,6 +601,9 @@ body{
             padding-inline: 1rem;
             padding-block: .25rem;
             gap: 2rem;
+            .window-actions {
+                gap: .5rem;
+            }
         }
     }
 
@@ -635,9 +638,7 @@ body{
         color: var(--cream-0);
     }
 
-    .window-actions {
-        gap: .5rem;
-    }
+
 
     .window-actions button {
         width: .75rem;
