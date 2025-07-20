@@ -603,6 +603,13 @@ body{
             gap: 2rem;
             .window-actions {
                 gap: .5rem;
+                button {
+                    width: .75rem;
+                    height: .75rem;
+                    padding: 0;
+                    background-color: var(--taupe-2);
+                    border-radius: 100%;
+                }
             }
         }
     }
@@ -632,15 +639,6 @@ body{
     .toolbar button:hover {
         background-color: var(--taupe-2);
         color: var(--cream-0);
-    }
-
-    .window-actions button {
-        width: .75rem;
-        height: .75rem;
-        padding: 0;
-
-        background-color: var(--taupe-2);
-        border-radius: 100%;
     }
 
     .tabs,
