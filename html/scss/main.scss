@@ -617,28 +617,22 @@ body{
         display: flex;
         align-items: center;
     }
-
     button,
     input[type="text"] {
         padding: .5rem;
-
         background: none;
         border-radius: .25rem;
         border: none;
     }
-
     button {
         color: var(--taupe-10);
     }
-
     .tabs button:hover,
     .tab button:hover,
     .toolbar button:hover {
         background-color: var(--taupe-2);
         color: var(--cream-0);
     }
-
-
 
     .window-actions button {
         width: .75rem;
