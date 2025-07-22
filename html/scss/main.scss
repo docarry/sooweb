@@ -611,6 +611,14 @@ body{
                     border-radius: 100%;
                 }
             }
+            .tab {
+                font-size: .625rem;
+                min-inline-size: 10rem;
+                padding: .25rem .25rem .25rem .5rem;
+                background-color: var(--taupe-1);
+                border-radius: .25rem;
+                color: var(--cream-1);
+            }
         }
     }
 
@@ -644,16 +652,6 @@ body{
     .tabs,
     .tab {
         gap: .25rem;
-    }
-
-    .tab {
-        font-size: .625rem;
-        min-inline-size: 10rem;
-        padding: .25rem .25rem .25rem .5rem;
-
-        background-color: var(--taupe-1);
-        border-radius: .25rem;
-        color: var(--cream-1);
     }
 
     .tab button {
