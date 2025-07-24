@@ -619,6 +619,10 @@ body{
                     background-color: var(--taupe-1);
                     border-radius: .25rem;
                     color: var(--cream-1);
+                    button {
+                        padding: .25rem;
+                        margin-left: auto;
+                    }
                 }
             }
         }
@@ -654,11 +658,6 @@ body{
     .tabs,
     .tab {
         gap: .25rem;
-    }
-
-    .tab button {
-        padding: .25rem;
-        margin-left: auto;
     }
 
     .toolbar {
