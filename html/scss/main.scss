@@ -626,6 +626,13 @@ body{
                 }
             }
         }
+        .toolbar {
+            gap: .25rem;
+            padding-inline: .5rem;
+            padding-block: .25rem;
+            border-bottom: 1px solid var(--taupe-0);
+            background-color: var(--taupe-1);
+        }
     }
 
     .windowheader,
@@ -658,15 +665,6 @@ body{
     .tabs,
     .tab {
         gap: .25rem;
-    }
-
-    .toolbar {
-        gap: .25rem;
-        padding-inline: .5rem;
-        padding-block: .25rem;
-
-        border-bottom: 1px solid var(--taupe-0);
-        background-color: var(--taupe-1);
     }
 
     .search {
