@@ -634,6 +634,11 @@ body{
             background-color: var(--taupe-1);
             .search {
                 position: relative;
+                svg {
+                    position: absolute;
+                    top: .5rem;
+                    left: .5rem;
+                }
             }
         }
     }
@@ -670,8 +675,6 @@ body{
         gap: .25rem;
     }
 
-
-
     input[type="text"] {
         font-family: inherit;
         font-size: .75rem;
@@ -681,12 +684,6 @@ body{
 
         background-color: var(--taupe-0);
         color: var(--cream-0);
-    }
-
-    .search svg {
-        position: absolute;
-        top: .5rem;
-        left: .5rem;
     }
 
     .toolbar button {
