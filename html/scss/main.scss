@@ -632,6 +632,9 @@ body{
             padding-block: .25rem;
             border-bottom: 1px solid var(--taupe-0);
             background-color: var(--taupe-1);
+            .search {
+                position: relative;
+            }
         }
     }
 
@@ -667,9 +670,7 @@ body{
         gap: .25rem;
     }
 
-    .search {
-        position: relative;
-    }
+
 
     input[type="text"] {
         font-family: inherit;
