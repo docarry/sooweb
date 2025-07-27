@@ -640,6 +640,10 @@ body{
                     left: .5rem;
                 }
             }
+            button {
+                font-size: .625rem;
+                gap: .15rem;
+            }
         }
     }
 
@@ -684,11 +688,6 @@ body{
 
         background-color: var(--taupe-0);
         color: var(--cream-0);
-    }
-
-    .toolbar button {
-        font-size: .625rem;
-        gap: .15rem;
     }
 
     [aria-label="downloads"] {
