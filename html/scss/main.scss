@@ -33,11 +33,11 @@ body{
         align-items: center;
         justify-content: center;
         gap: .25rem;
-    }
-    .more-wrap .more-btn:hover {
-        background: #c5bfb3;
-        color: #fff;
-        cursor: pointer;
+        &:hover {
+            background: #f12711;
+            color: #fff;
+            cursor: pointer;
+        }
     }
     .more-btn.more-o {
         padding: .625rem 1.875rem;
