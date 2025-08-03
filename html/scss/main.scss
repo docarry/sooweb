@@ -728,6 +728,19 @@ body{
     .section-heading{
         color: #fff;
     }
+    .portfolio-filter{
+        #filters{
+            li{
+                .filter{
+                    &.active{
+                        background-color: #f12711;
+                        color: #fff;
+                        border-color: #f12711;
+                    }
+                }
+            }
+        }
+    }
 }
 // 그래픽 디자인 종료 ------------------------------
 
