@@ -1000,6 +1000,9 @@ body{
 // 코멘트 시작 ------------------------------
 .testimonials{
     padding: 6rem 0;
+    .owl-theme .owl-controls .owl-page span {
+        background: rgba(241, 39, 17, 0.5);
+    }
 }
 // 코멘트 종료 ------------------------------
 
