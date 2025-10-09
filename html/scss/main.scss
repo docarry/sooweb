@@ -1112,11 +1112,19 @@ body{
         width: 16px;
         height: 16px;
         display: block;
+        transition: all .3s ease-in-out;
         }
     }
     &.show {
         opacity: 1;
         visibility: visible;
+    }
+    &:hover {
+        background: #f12711;
+        a span {
+            border-top: solid 1px #fff;
+            border-right: solid 1px #fff;
+        }
     }
 }
 // TOP 버튼 종료 ------------------------------
