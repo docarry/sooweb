@@ -1103,6 +1103,7 @@ body{
     padding: 16px 12px 8px;
     box-shadow: 0 0 4px rgba(134, 167, 137, .4);
     border-radius: 40px;
+    z-index: 9999999;
     a{
         display: block;
         span {
