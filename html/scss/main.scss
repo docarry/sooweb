@@ -693,13 +693,13 @@ body{
     main {
         flex: 2;
         display: grid;
-        place-content: center;
+        place-content: start;
         gap: 1rem;
         background-color: var(--taupe-2);
+        overflow-y: scroll;
         img{
+            display: block;
             width: 100%;
-            object-fit: cover;
-            object-position: 0% 0%;
         }
     }
 
