@@ -578,6 +578,9 @@ body{
     &:focus-visible {
         box-shadow: 0 0 0 2px var(--blue-0);
     }
+    a{
+        transition: 0s;
+    }
     .window {
         /*absolute is important for draggable JS to work*/
         position: absolute;
@@ -639,6 +642,10 @@ body{
             button {
                 font-size: .875rem;
                 gap: .15rem;
+            }
+            .rakpick:hover,
+            .rakpick:hover a{
+                color: #ffc800;
             }
         }
     }
