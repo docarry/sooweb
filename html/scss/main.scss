@@ -43,11 +43,11 @@ body{
         padding: .625rem 1.875rem;
     }
     .more-btn.more-w::before {
-        content: url("/img/icon/web-icon1.svg");
+        content: url("/img/icon/web-icon-white.svg");
         display: inline-block;
     }
     .more-btn.more-w:hover::before {
-        content: url("/img/icon/web-icon-white.svg");
+        content: url("/img/icon/web-icon1.svg");
     }
     .more-btn.more-n::before {
         content: url("/img/icon/notion-icon1.svg");
