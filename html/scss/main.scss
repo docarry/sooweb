@@ -64,11 +64,11 @@ body{
         content: url("/img/icon/git-icon1.svg");
     }
     .more-btn.more-f::before {
-        content: url("/img/icon/figma-icon1.svg");
+        content: url("/img/icon/figma-icon-white.svg");
         display: inline-block;
     }
     .more-btn.more-f:hover::before {
-        content: url("/img/icon/figma-icon-white.svg");
+        content: url("/img/icon/figma-icon1.svg");
     }
 }
 .accent-wrap {
