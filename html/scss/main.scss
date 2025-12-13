@@ -35,6 +35,21 @@ body{
         font-weight: 600;
         border: solid 1px #f12711;
         box-sizing: border-box;
+        .icon-wrap {
+        position: relative;
+        width: 16px;
+        height: 24px;
+        display: inline-block;
+        margin-right: 6px;
+        .icon {
+            position: absolute;
+            inset: 0;
+            transition: opacity 0.2s ease;
+            &.hover {
+                opacity: 0;
+                }
+            }
+        }
         &:hover {
             background: #000;
             color: #f12711;
@@ -44,11 +59,15 @@ body{
     .more-btn.more-o {
         padding: .625rem 1.875rem;
     }
+    .more-btn.more-w:hover {
+    .icon.default { opacity: 0; }
+    .icon.hover   { opacity: 1; }
+    }
     // .more-btn.more-w::before {
     //     content: url("/img/icon/web-icon-white.svg");
     //     display: inline-block;
     // }
-    // .more-btn.more-w:hover::before {
+    // .more-btn.more-w:hover img {
     //     content: url("/img/icon/web-icon1.svg");
     // }
     // .more-btn.more-n::before {
